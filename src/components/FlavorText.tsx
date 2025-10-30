@@ -139,14 +139,14 @@ const FlavorText: React.FC = () => {
     const { i18n } = useTranslation();
     const lng = i18n.language as keyof typeof randomText;
     const daysLeft = Math.ceil(
-        (new Date("November 30, 2025 22:00:00 UTC").getTime() -
+        (new Date("November 30, 2025 23:00:00 UTC").getTime() -
             new Date().getTime()) /
             (1000 * 60 * 60 * 24)
     ); // <---- ena5
     const quote =
         daysLeft < 0
             ? "Thank you, Mizuki~"
-            : `About ${daysLeft} ${
+            : `${daysLeft} ${
                   daysLeft === 1 ? "day remains" : "days remain"
               }.`;
     randomText.en.push(quote);
