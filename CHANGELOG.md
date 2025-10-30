@@ -1,3 +1,10 @@
+# 5.8.10
+Release date: October 30, 2025
+- Removed block on October Default Scenes
+- Updated Thai Translation
+- Updated Chinese (Taiwan and Hong Kong) Translation
+- Removed "About" on the countdown flavor text
+
 # 5.8.9
 Release date: October 20, 2025
 - Bring back default scenes
