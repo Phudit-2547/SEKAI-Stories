@@ -93,6 +93,7 @@ const randomText = {
         "寧寧在打maimai，鋪面是Xaleid◆scopiX",
         "你能聽到那個不祥的鐘聲嗎？",
         "神代類給某人發送了一個信息。 他並沒有得到回覆。",// 類帶著他的Thinkpad筆電
+        "在mizu5之後再了看一遍《神山高校祭》。 我好心痛💔",
         "司君像個孩子般又在神高走廊大笑了",
         "笑夢醬打破了第四面牆，對著你說：“旺大吼！！！”",
         "一歌依然是第一Miku推",
@@ -128,7 +129,6 @@ const randomText = {
         "我繪我名",
         "是唸「デコ　ニナ」啦！",
         // "瑞繪99", // Uncomment after Nov 30, 2025
-        // "瑞希就是跨女！可愛就是正義！", // #SHEHERFORMIZUKI related, remove if needed
     ],
 	
 	zhHK:[] as string[],
