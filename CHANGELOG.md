@@ -1,3 +1,7 @@
+# 5.8.11
+Release date: November 4, 2025
+- Added colored backgrounds for keying models
+
 # 5.8.10
 Release date: October 30, 2025
 - Removed block on October Default Scenes
