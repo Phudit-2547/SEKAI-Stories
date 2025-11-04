@@ -1,6 +1,8 @@
 # 5.8.11
 Release date: November 4, 2025
 - Added colored backgrounds for keying models
+- Added transparent background option
+- Allow PNG selection on BackgroundPicker.tsx
 
 # 5.8.10
 Release date: October 30, 2025
