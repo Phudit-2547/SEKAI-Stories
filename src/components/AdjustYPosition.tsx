@@ -70,7 +70,7 @@ const AdjustYPosition: React.FC<AdjustYPositionProps> = ({
                 stroke: 0x5d5d79,
                 strokeThickness: 8,
             });
-            textNameTag.position.set(46, 54);
+            textNameTag.position.set(46, 49);
             const textDialogue = new PIXI.Text(message, {
                 fontFamily: "FOT-RodinNTLGPro-DB",
                 fontSize: 44,
@@ -104,7 +104,7 @@ const AdjustYPosition: React.FC<AdjustYPositionProps> = ({
             textContainer.y = 0 + value;
         }
         if (text) {
-            text.nameTag.y = 780 + value;
+            text.nameTag.y = 775 + value;
             text.dialogue.y = 845 + value;
             setText({
                 ...text,

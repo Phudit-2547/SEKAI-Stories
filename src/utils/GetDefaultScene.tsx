@@ -462,7 +462,7 @@ const LoadText = async (
         stroke: 0x5d5d79,
         strokeThickness: 8,
     });
-    textNameTag.position.set(225, 780 + textAlignmentCookie);
+    textNameTag.position.set(225, 775 + textAlignmentCookie);
 
     const textDialogue = new PIXI.Text(dialogue, {
         fontFamily: "FOT-RodinNTLGPro-DB",
