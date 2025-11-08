@@ -241,7 +241,7 @@ const personaScenes: InitialScene[] = [
 const LoadInitialScene = (scene?: string): InitialScene => {
     if (scene === "blank") {
         return {
-            background: "/background_compressed/bg00026.jpg",
+            background: "/background_compressed/bg_white.jpg",
             model: "01ichika_cloth001",
             text: "<insert text here>",
             nameTag: "<name>",
@@ -255,7 +255,7 @@ const LoadInitialScene = (scene?: string): InitialScene => {
 
     if (scene === "blankoctober") {
         return {
-            background: "/background_compressed/bg00026.jpg",
+            background: "/background_compressed/bg_white.jpg",
             model: "01ichika_cloth001",
             text: "<oooo spooky month>",
             nameTag: "<name>",
