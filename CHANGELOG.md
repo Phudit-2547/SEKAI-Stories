@@ -1,3 +1,9 @@
+# 5.8.12
+Release date: November 7, 2025
+- Fixed issue on missing white background when blank canvas is checked (#47)
+- Increased distance between name tag and dialogue text
+- Change content background when split location is visible
+
 # 5.8.11
 Release date: November 4, 2025
 - Added colored backgrounds for keying models
