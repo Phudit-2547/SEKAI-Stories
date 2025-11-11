@@ -444,7 +444,7 @@ const LoadText = async (
     dialogue: string
 ): Promise<IText> => {
     const textAlignmentCookie = Number(
-        localStorage.getItem("textAlignment") ?? 0
+        localStorage.getItem("textAlignment-v2") ?? 0
     );
 
     const textContainer = new PIXI.Container();

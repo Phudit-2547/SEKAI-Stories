@@ -98,7 +98,7 @@ const AdjustYPosition: React.FC<AdjustYPositionProps> = ({
         event: React.ChangeEvent<HTMLInputElement>
     ) => {
         const value = Number(event.target.value);
-        localStorage.setItem("textAlignment", String(value));
+        localStorage.setItem("textAlignment-v2", String(value));
 
         if (textContainer) {
             textContainer.y = 0 + value;
