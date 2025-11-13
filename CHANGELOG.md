@@ -1,3 +1,8 @@
+# 5.8.13
+Release date: November 13, 2025
+- Fixed font-family inconsistencies on every language
+- Updated Simple Chinese Translation
+
 # 5.8.12
 Release date: November 7, 2025
 - Fixed issue on missing white background when blank canvas is checked (#47)
