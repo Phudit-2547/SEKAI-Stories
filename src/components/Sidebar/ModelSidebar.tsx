@@ -55,7 +55,7 @@ const ModelSidebar: React.FC = () => {
     const abortController = useRef<AbortController | null>(null);
 
     const [currentSelectedCharacter, setCurrentSelectedCharacter] =
-        useState<string>("");
+        useState<string>("custom");
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [loadingMsg, setLoadingMsg] = useState<string>("");
 
@@ -261,8 +261,7 @@ const ModelSidebar: React.FC = () => {
                 />
             </SidebarOption>
 
-            {(currentModel?.model instanceof Live2DModel ||
-                currentModel?.character == "none") && (
+            {currentSelectedCharacter != "custom" && (
                 <>
                     <SidebarOption
                         header={t("model.costume")}
@@ -284,23 +283,25 @@ const ModelSidebar: React.FC = () => {
                             setLoadingMsg={setLoadingMsg}
                         />
                     </SidebarOption>
-                    <SidebarOption
-                        header={t("model.emotion")}
-                        option={openModelOption}
-                        setOption={setOpenModelOption}
-                        optionName="emotion"
-                    >
-                        <Emotion
-                            setIsLoading={setIsLoading}
-                            setLoadingMsg={setLoadingMsg}
-                            bookmarkEmotions={bookmarkEmotions}
-                            setBookmarkEmotion={setBookmarkEmotion}
-                            nameEmotions={nameEmotions}
-                            setNameEmotions={setNameEmotions}
-                            updateModelState={updateModelState}
-                        />
-                    </SidebarOption>
                 </>
+            )}
+            {currentModel?.model instanceof Live2DModel && (
+                <SidebarOption
+                    header={t("model.emotion")}
+                    option={openModelOption}
+                    setOption={setOpenModelOption}
+                    optionName="emotion"
+                >
+                    <Emotion
+                        setIsLoading={setIsLoading}
+                        setLoadingMsg={setLoadingMsg}
+                        bookmarkEmotions={bookmarkEmotions}
+                        setBookmarkEmotion={setBookmarkEmotion}
+                        nameEmotions={nameEmotions}
+                        setNameEmotions={setNameEmotions}
+                        updateModelState={updateModelState}
+                    />
+                </SidebarOption>
             )}
             <SidebarOption
                 header={t("model.transform")}
