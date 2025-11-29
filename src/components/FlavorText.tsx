@@ -7,48 +7,50 @@ import { useTranslation } from "react-i18next";
 
 const randomText = {
     en: [
-        "Can you hear the ominous bells tolling?",
-        "If you re-read \"Kamiyama High Festival\" story after Mizu5, it'll hit you even hard.",
-        "Nene is playing maimai. The map is Xaleid◆scopiX.",
-        "Rui messaged someone. He didn't get any response.", // Change this after Nov 30, 2025. Original: Rui with his ThinkPad laptop.
-        "Tsukasa is laughing in the hallway like a kid again.",
-        'Emu breaks the fourth wall, staring at you and says "Wonderhoy!"',
-        "Ichika is fangirling over Miku. Again.",
-        "Saki. Saki on fire?",
-        "Honami is driving without her driver license.",
-        "Shiho is forming a new band with her little Phennies.",
-        "Shizuku is giving Shiho some make up.",
-        "In a parallel universe, where Minori is the leader of ASRUN.",
-        "Haruka becomes the wife of Minori.",
-        "Airi lost her fang.",
-        "Setsuna has been mistakenly called Kanade for the 1888th time.",
-        "ReferenceError: mizuki is not defined", // Change this after Nov 30, 2025. Original: Mizuki is 18 kilometers away from your house
-        "Mafuyu is just eating some squid.", // Change this after Nov 30, 2025. Original: Mafuyu scares Emu from breaking the fourth wall.
-        "Ena is looking for someone.", // Change this after Nov 30, 2025. Original: Ena throw a large basin on Akito.
-        "Ena fights against AI Art.",
-        "Toya is enjoying Tsukasa's loud laugh.",
-        "Kohane has been bitten by her pet snake.",
-        "An woke up and started speaking in English.",
-        "Akito is wondering why Ena is sad right now.", // Change this after Nov 30, 2025
-        "ABSOLUTE CINEMA",
-        "The Disapperance of Hatsune Miku",
-        "Listening to / / // / /",
-        "Do not overdose yourself with shipping~",
-        "Please take only the recommended shipping dosage.",
-        "Just Monika.",
-        "What if Movie Miku appeared on my screen all of the sudden?",
-        "私は雨。(turns into ame-chan)",
-        "MinoHaru is canon.",
-        "AnHane is canon.",
-        // "MizuEna is canon.", // Uncomment after Nov 30, 2025
-        "Won won!?",
-        "WONDERHOY!",
-        "Lovely, Fairy, Momoi Airi!",
-        "恋をして",
-        "Meet SEKAI Stories's cousin, SIFAS Dialogue Sandbox!",
-        "It's pronounced 'DEKO-NINA'.",
-        "saa anyo anyo kocchi oide",
-        "Untitled.",
+        // "Can you hear the ominous bells tolling?",
+        // "Nene is playing maimai. The map is Xaleid◆scopiX.",
+        // "Rui with his ThinkPad laptop.",
+        // "Tsukasa is laughing in the hallway like a kid again.",
+        // 'Emu breaks the fourth wall, staring at you and says "Wonderhoy!"',
+        // "Ichika is fangirling over Miku. Again.",
+        // "Saki. Saki on fire?",
+        // "Honami is driving without her driver license.",
+        // "Shiho is forming a new band with her little Phennies.",
+        // "Shizuku is giving Shiho some make up.",
+        // "In a parallel universe, where Minori is the leader of ASRUN.",
+        // "Haruka becomes the wife of Minori.",
+        // "Airi lost her fang.",
+        // "Setsuna has been mistakenly called Kanade for the 1888th time.",
+        "Mizuki has reached the rooftop and finally burning her dread.", 
+        "Mizuki has finally pursuing her true self.", 
+        // "Mizuki is five kilometers away from your house."
+        // "Mafuyu ", 
+        // "Ena threw a large basin on Akito.",
+        // "Ena fights against AI Art.",
+        // "Toya is enjoying Tsukasa's loud laugh.",
+        // "Kohane has been bitten by her pet snake.",
+        // "An woke up and started speaking in English.",
+        // "Akito is spotted unconscious after eating Ena's favorite cheesecake.",
+        // "ABSOLUTE CINEMA",
+        // "The Disapperance of Hatsune Miku",
+        // "Listening to / / // / /",
+        // "Do not overdose yourself with shipping~",
+        // "Please take only the recommended shipping dosage.",
+        // "Just Monika.",
+        // "What if Movie Miku appeared on my screen all of the sudden?",
+        // "私は雨。(turns into ame-chan)",
+        // "MinoHaru is canon.",
+        // "AnHane is canon.",
+        "MizuEna is canon.", 
+        // "Won won!?",
+        // "WONDERHOY!",
+        // "Lovely, Fairy, Momoi Airi!",
+        // "恋をして",
+        // "Meet SEKAI Stories's cousin, SIFAS Dialogue Sandbox!",
+        // "It's pronounced 'DEKO-NINA'.",
+        // "saa anyo anyo kocchi oide",
+        "Bonds of people is the true power.",
+        // "Untitled.",
     ],
     zh: [
         "宁宁在玩乌蒙地插，铺面是系ぎて",
@@ -179,7 +181,7 @@ const FlavorText: React.FC = () => {
 export default FlavorText;
 
 /* 
-    LAST UPDATE: 10/16/2025
+    LAST UPDATE: 11/30/2025
     Will not list the obvious PJSK references.
     Placed here for people who needs explaination when translating.
 
@@ -201,6 +203,10 @@ export default FlavorText;
         -> She's is the character on the Don't Fight The Music's jacket.
         -> People mistakenly thought it was Kanade on the said jacket.
         -> 1888 is the maximum Master combo on the said chart.
+    "Mizuki has reached the rooftop and finally burning her dread."
+        -> Persona 3 Song Reference: "Burn My Dread"
+    "Mizuki has finally pursuing her true self."
+        -> Persona 4 Song Reference: "Pursuing My True Self"
     "Listening to / / // / /"
         -> x0o0x's song about Kisaragi Station
     "Do not overdose yourself with shipping~"
@@ -220,5 +226,6 @@ export default FlavorText;
         -> lezzthanthree's Love Live! SIFAS Story Generator
     "It's pronounced 'DEKO-NINA'."
         -> DECO*27
-
+    "Bonds of people is the true power.",
+        -> A Reference to Persona 4 Animation ED 1: "Beauty of Destiny"
 */
