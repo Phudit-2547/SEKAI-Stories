@@ -1,0 +1,32 @@
+[
+    {
+        "background": "/background_special/Background_Other_Kamiyama.png",
+        "model": "20mizuki_normal",
+        "text": "I am a shadow of your true inner self.",
+        "nameTag": "Mizuki?",
+        "modelX": 960,
+        "modelY": 545,
+        "pngName": "mizuki_shadow",
+        "sceneText": "Kamiyama High School Rooftop?"
+    },
+    {
+        "background": "/background_special/Background_Mizuki's_Room_(Abyss).png",
+        "model": "20mizuki_normal",
+        "text": "Hmm... MiraMagi just hit me so hard...",
+        "nameTag": "Mizuki",
+        "modelX": 960,
+        "modelY": 545,
+        "pngName": "mizuki_p3",
+        "sceneText": "Mizuki's Room"
+    },
+    {
+        "background": "/background_compressed/bg00026.jpg",
+        "model": "v2_20mizuki_casual",
+        "text": "a lot of you guys use this site whose owner is a huge ruinene fan but there are 14k of you every week and i don't wanna get jumped.",
+        "nameTag": "Mizuki",
+        "modelX": 940,
+        "modelY": 550,
+        "pngName": "mizuki_lookaway",
+        "sceneText": "white"
+    }
+]

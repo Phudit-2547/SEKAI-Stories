@@ -198,24 +198,36 @@ const randomOctoberScene: InitialScene[] = [
 
 const personaScenes: InitialScene[] = [
     {
-        background: "/background_special/Background_Other_Kamiyama.png",
+        background:
+            "/background_special/Background_Other_Kamiyama_(Resolved).png",
         model: "20mizuki_normal",
-        text: "I am a shadow of your true inner self.",
-        nameTag: "Mizuki?",
-        modelX: 960,
-        modelY: 545,
-        pngName: "mizuki_shadow",
-        sceneText: "Kamiyama High School Rooftop?",
-    },
-    {
-        background: "/background_special/Background_Mizuki's_Room_(Abyss).png",
-        model: "20mizuki_normal",
-        text: "Hmm... MiraMagi just hit me so hard...",
+        text: "You are a part of me...",
         nameTag: "Mizuki",
         modelX: 960,
         modelY: 545,
-        pngName: "mizuki_p3",
-        sceneText: "Mizuki's Room",
+        pngName: "mizuki_accept",
+        sceneText: "I've been running for so long. I'll face it right on.",
+    },
+    {
+        background: "/background_special/Background_Dread.png",
+        model: "20mizuki_normal",
+        text: "Remember you will disappear. Remember to live.",
+        nameTag: "Tagline",
+        modelX: 960,
+        modelY: 545,
+        pngName: "transparent",
+        sceneText:
+            "I will break the chain, and run 'til I see the sunlight again",
+    },
+    {
+        background: "/background_special/Background_Pursuing.png",
+        model: "20mizuki_normal",
+        text: "We're all trapped in a maze of relationships.",
+        nameTag: "Tagline",
+        modelX: 960,
+        modelY: 540,
+        pngName: "mizuki_pursuing",
+        sceneText: "I search for your heart, pursuing my true self",
     },
 ];
 
@@ -226,7 +238,7 @@ const LoadInitialScene = (scene?: string): InitialScene => {
             model: "01ichika_cloth001",
             text: "<insert text here>",
             nameTag: "<name>",
-            modelX: 960,
+            modelX: 900,
             modelY: 550,
             pngName: "blank",
             sceneText: "<white>",
@@ -246,26 +258,13 @@ const LoadInitialScene = (scene?: string): InitialScene => {
         };
     }
 
-    if (scene === "getjumped") {
-        return {
-            background: "/background_compressed/bg00026.jpg",
-            model: "v2_20mizuki_casual",
-            text: "a lot of you guys use this site whose owner is a huge ruinene fan but there are 14k of you every week and i don't wanna get jumped.",
-            nameTag: "Mizuki",
-            modelX: 940,
-            modelY: 550,
-            pngName: "mizuki_lookaway",
-            sceneText: "white",
-        };
-    }
-
     if (scene === "october") {
         return randomOctoberScene[
             Math.floor(Math.random() * randomOctoberScene.length)
         ];
     }
 
-    if (scene === "pmizu5") {
+    if (scene === "pena5") {
         return personaScenes[Math.floor(Math.random() * personaScenes.length)];
     }
 

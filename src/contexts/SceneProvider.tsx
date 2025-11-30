@@ -84,7 +84,7 @@ export const SceneProvider: React.FC<SceneProviderProps> = ({ children }) => {
             setStartingMessage,
             setLoading,
             ...(!blankCanvas
-                ? { scene: month === 10 ? "october" : "random" }
+                ? { scene: month === 10 ? "october" : "pena5" }
                 : {
                       scene: "blank",
                   }),

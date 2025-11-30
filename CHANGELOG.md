@@ -1,3 +1,11 @@
+# 5.8.15
+Release date: November 30, 2025
+- Added Ena5 Default Scenes
+
+# 5.8.14
+Release date: November 24, 2025
+- Show Costume option when initial costume load from selecting characters fail
+
 # 5.8.13
 Release date: November 13, 2025
 - Fixed font-family inconsistencies on every language
