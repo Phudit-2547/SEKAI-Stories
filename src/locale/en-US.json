@@ -25,7 +25,11 @@
         "filters": "Filters",
         "flashback": "Flashback",
         "sick": "Sick",
-        "drooping-lines": "Drooping Lines"
+        "drooping-lines": "Drooping Lines",
+        "pov": "POV/FOV",
+        "zoom": "Zoom",
+        "povx": "X-Position",
+        "povy": "Y-Position"
     },
 
     "text": {
@@ -77,6 +81,7 @@
         "y-position": "Y-Position",
         "scale": "Scale",
         "rotation": "Rotation",
+        "blur": "Blur",
         "mouth": "Mouth",
         "ParamMouthForm": "Primary Shape",
         "ParamMouthOpenY": "Opening",
