@@ -4,6 +4,7 @@ import { SceneContext } from "../../../../contexts/SceneContext";
 import IModel from "../../../../types/IModel";
 import { Checkbox } from "../../../UI/Checkbox";
 import InputWindow from "../../../UI/InputWindow";
+import { BlurFilter } from "pixi.js";
 
 const SNAP = 50;
 interface TransformProps {
@@ -89,6 +90,17 @@ const Transform: React.FC<TransformProps> = ({ updateModelState }) => {
         updateModelState({ modelRotation: rotation });
     };
 
+    const handleBlurTransform = async (
+        event: React.ChangeEvent<HTMLInputElement>
+    ) => {
+        const blur = Number(event?.target.value);
+        if (currentModel?.root && currentModel.root.filters) {
+            const blurFilter = currentModel.root.filters[0] as BlurFilter;
+            blurFilter.blur = blur;
+        }
+        updateModelState({ modelBlur: blur });
+    };
+
     const handleVisible = (event: React.ChangeEvent<HTMLInputElement>) => {
         const visible = Boolean(event?.target.checked);
         if (currentModel?.model) {
@@ -121,6 +133,15 @@ const Transform: React.FC<TransformProps> = ({ updateModelState }) => {
             case "rotation": {
                 currentModel.root.angle = toChange;
                 updateModelState({ modelRotation: toChange });
+                break;
+            }
+            case "blur": {
+                if (currentModel?.root && currentModel.root.filters) {
+                    const blurFilter = currentModel.root
+                        .filters[0] as BlurFilter;
+                    blurFilter.blur = toChange;
+                }
+                updateModelState({ modelBlur: toChange });
                 break;
             }
         }
@@ -228,6 +249,32 @@ const Transform: React.FC<TransformProps> = ({ updateModelState }) => {
                     step={1}
                     value={currentModel?.modelRotation}
                     onChange={handleRotationTransform}
+                />
+            </div>
+            <div className="option__content">
+                <div className="transform-icons">
+                    <h3>
+                        {t("model.blur")} ({currentModel?.modelBlur})
+                    </h3>
+                    <div>
+                        <i
+                            className="bi bi-pencil-fill"
+                            onClick={() => {
+                                setTransformType("blur");
+                                setShowTransformInput(true);
+                            }}
+                        ></i>
+                    </div>
+                </div>
+                <input
+                    type="range"
+                    name="blur"
+                    id="blur"
+                    min={0}
+                    max={5}
+                    step={0.1}
+                    value={currentModel?.modelBlur}
+                    onChange={handleBlurTransform}
                 />
             </div>
             <div className="option__content">

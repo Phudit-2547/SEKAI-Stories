@@ -98,6 +98,7 @@ const Character: React.FC<CharacterProps> = ({
                 modelX: initialState ? 640 : currentModel?.modelX,
                 modelY: initialState ? 870 : currentModel?.modelY,
                 modelScale: initialState ? 0.5 : currentModel?.modelScale,
+                modelBlur: currentModel?.modelBlur,
                 parametersChanged: {},
                 from:
                     currentModel.from === "upload"

@@ -11,6 +11,7 @@ export default interface IModel {
     modelY: number;
     modelScale: number;
     modelRotation: number;
+    modelBlur: number;
     virtualEffect: boolean;
     modelData: ILive2DModelData | undefined;
     expression: number;

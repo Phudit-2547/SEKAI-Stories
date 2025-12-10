@@ -386,6 +386,9 @@ const LoadModel = async (
     const adjustmentFilter = new AdjustmentFilter(lighting);
     modelWrapper.filters = [adjustmentFilter];
 
+    const blurFilter = new PIXI.BlurFilter(0);
+    modelContainer.filters = [blurFilter];
+
     container.addChildAt(modelWrapper, childAt);
     return {
         model: {
@@ -398,6 +401,7 @@ const LoadModel = async (
                 modelY: modelContainer.y,
                 modelScale: modelContainer.scale.x,
                 modelRotation: 0,
+                modelBlur: 0,
                 modelData: undefined,
                 virtualEffect: false,
                 expression: 0,

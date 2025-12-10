@@ -78,6 +78,8 @@ const SelectedLayer: React.FC<SelectedLayerProps> = ({
         const modelContainer = new PIXI.Container();
         modelContainer.addChildAt(sprite, 0);
         modelWrapper?.addChildAt(modelContainer, layers);
+        const blurFilter = new PIXI.BlurFilter(0);
+        modelContainer.filters = [blurFilter];
         const newLayer = {
             [`character${nextLayer + 1}`]: {
                 character: "none",
@@ -88,6 +90,7 @@ const SelectedLayer: React.FC<SelectedLayerProps> = ({
                 modelY: 870,
                 modelRotation: 0,
                 modelScale: 0.5,
+                modelBlur: 0,
                 virtualEffect: false,
                 expression: 99999,
                 pose: 99999,
@@ -123,6 +126,8 @@ const SelectedLayer: React.FC<SelectedLayerProps> = ({
             modelContainer.height / 2
         );
         modelContainer.position.set(960, 540);
+        const blurFilter = new PIXI.BlurFilter(0);
+        modelContainer.filters = [blurFilter];
         const newLayer = {
             [`character${nextLayer + 1}`]: {
                 character: "custom",
@@ -133,6 +138,7 @@ const SelectedLayer: React.FC<SelectedLayerProps> = ({
                 modelY: 540,
                 modelRotation: 0,
                 modelScale: sprite.scale.x,
+                modelBlur: 0,
                 virtualEffect: false,
                 expression: 99999,
                 pose: 99999,
@@ -160,9 +166,9 @@ const SelectedLayer: React.FC<SelectedLayerProps> = ({
 
         if (currentModel?.model) {
             if (currentModel.character == "blank") {
-                setErrorInformation(" ")
-                return
-            };
+                setErrorInformation(" ");
+                return;
+            }
             currentModel.root.visible = !visible;
         }
         updateModelState({ visible: !visible });
