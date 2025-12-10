@@ -590,6 +590,9 @@ export const LoadScene = async ({
     setLoading(30);
     // Load Filter Container
     const filterContainer = new PIXI.Container();
+    filterContainer.pivot.set(1920 / 2, 1080 / 2);
+    filterContainer.position.set(1920 / 2, 1080 / 2);
+    filterContainer.scale.set(1, 1);
     initApplication.stage.addChildAt(filterContainer, 1);
     const filter: IFilter = { container: filterContainer };
 

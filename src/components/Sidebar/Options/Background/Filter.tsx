@@ -6,6 +6,7 @@ import { sickEffect } from "../../../../utils/SickEffect";
 import { getBackground } from "../../../../utils/GetBackground";
 import * as PIXI from "pixi.js";
 import { useTranslation } from "react-i18next";
+import POVFilter from "./POVFilter";
 
 const Filter: React.FC = () => {
     const scene = useContext(SceneContext);
@@ -98,6 +99,32 @@ const Filter: React.FC = () => {
             });
         }
     };
+    const handlePOV = async (event: React.ChangeEvent<HTMLInputElement>) => {
+        if (!filter?.container) return;
+        const value = event.target.checked;
+        if (value) {
+            setFilter({
+                ...filter,
+                pov: {
+                    show: true,
+                    x: 0,
+                    y: 0,
+                    zoom: 1,
+                },
+            });
+        } else {
+            filter.droop?.container?.destroy();
+            setFilter({
+                ...filter,
+                pov: {
+                    show: false,
+                    x: 0,
+                    y: 0,
+                    zoom: 1,
+                },
+            });
+        }
+    };
 
     return (
         <div>
@@ -119,6 +146,15 @@ const Filter: React.FC = () => {
                 checked={filter?.droop?.show}
                 onChange={handleDroop}
             />
+            <Checkbox
+                id="drooping-lines"
+                label={t("background.pov")}
+                checked={filter?.pov?.show}
+                onChange={handlePOV}
+            />
+            {filter?.pov?.show && (
+                <POVFilter filter={filter} setFilter={setFilter} />
+            )}
         </div>
     );
 };

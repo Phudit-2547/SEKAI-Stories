@@ -5,4 +5,10 @@ export interface IFilter {
     flashback?: boolean;
     sick?: { container?: PIXI.Container | null; show?: boolean };
     droop?: { container?: PIXI.Container | null; show?: boolean };
+    pov?: {
+        show?: boolean;
+        zoom: number;
+        x: number;
+        y: number;
+    };
 }
