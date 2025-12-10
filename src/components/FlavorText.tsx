@@ -7,50 +7,48 @@ import { useTranslation } from "react-i18next";
 
 const randomText = {
     en: [
-        // "Can you hear the ominous bells tolling?",
-        // "Nene is playing maimai. The map is Xaleid◆scopiX.",
-        // "Rui with his ThinkPad laptop.",
-        // "Tsukasa is laughing in the hallway like a kid again.",
-        // 'Emu breaks the fourth wall, staring at you and says "Wonderhoy!"',
-        // "Ichika is fangirling over Miku. Again.",
-        // "Saki. Saki on fire?",
-        // "Honami is driving without her driver license.",
-        // "Shiho is forming a new band with her little Phennies.",
-        // "Shizuku is giving Shiho some make up.",
-        // "In a parallel universe, where Minori is the leader of ASRUN.",
-        // "Haruka becomes the wife of Minori.",
-        // "Airi lost her fang.",
-        // "Setsuna has been mistakenly called Kanade for the 1888th time.",
-        "Mizuki has reached the rooftop and finally burning her dread.", 
-        "Mizuki has finally pursuing her true self.", 
-        // "Mizuki is five kilometers away from your house."
-        // "Mafuyu ", 
-        // "Ena threw a large basin on Akito.",
-        // "Ena fights against AI Art.",
-        // "Toya is enjoying Tsukasa's loud laugh.",
-        // "Kohane has been bitten by her pet snake.",
-        // "An woke up and started speaking in English.",
-        // "Akito is spotted unconscious after eating Ena's favorite cheesecake.",
-        // "ABSOLUTE CINEMA",
-        // "The Disapperance of Hatsune Miku",
-        // "Listening to / / // / /",
-        // "Do not overdose yourself with shipping~",
-        // "Please take only the recommended shipping dosage.",
-        // "Just Monika.",
-        // "What if Movie Miku appeared on my screen all of the sudden?",
-        // "私は雨。(turns into ame-chan)",
-        // "MinoHaru is canon.",
-        // "AnHane is canon.",
-        "MizuEna is canon.", 
-        // "Won won!?",
-        // "WONDERHOY!",
-        // "Lovely, Fairy, Momoi Airi!",
-        // "恋をして",
-        // "Meet SEKAI Stories's cousin, SIFAS Dialogue Sandbox!",
-        // "It's pronounced 'DEKO-NINA'.",
-        // "saa anyo anyo kocchi oide",
+        "Can you hear the ominous bells tolling?",
+        "Nene is playing maimai. The map is Xaleid◆scopiX.",
+        "Rui with his ThinkPad laptop.",
+        "Tsukasa is laughing in the hallway like a kid again.",
+        'Emu breaks the fourth wall, staring at you and says "Wonderhoy!"',
+        "Ichika is fangirling over Miku. Again.",
+        "Saki. Saki on fire?",
+        "Honami is driving without her driver license.",
+        "Shiho is forming a new band with her little Phennies.",
+        "Shizuku is giving Shiho some make up.",
+        "In a parallel universe, where Minori is the leader of ASRUN.",
+        "Haruka becomes the wife of Minori.",
+        "Airi lost her fang.",
+        "Setsuna has been mistakenly called Kanade for the 1888th time.",
+        "Mizuki is five kilometers away from your house.",
+        "Come here, Mafuyu-chan.",
+        "Ena threw a large basin on Akito.",
+        "Ena fights against AI Art.",
+        "Toya is enjoying Tsukasa's loud laugh.",
+        "Kohane has been bitten by her pet snake.",
+        "An woke up and started speaking in English.",
+        "Akito is spotted unconscious after eating Ena's favorite cheesecake.",
+        "ABSOLUTE CINEMA",
+        "The Disapperance of Hatsune Miku",
+        "Listening to / / // / /",
+        "Do not overdose yourself with shipping~",
+        "Please take only the recommended shipping dosage.",
+        "Just Monika.",
+        "What if Movie Miku appeared on my screen all of the sudden?",
+        "私は雨。(turns into ame-chan)",
+        "MinoHaru is canon.",
+        "AnHane is canon.",
+        "MizuEna is canon.",
+        "Won won!?",
+        "WONDERHOY!",
+        "Lovely, Fairy, Momoi Airi!",
+        "恋をして",
+        "Meet SEKAI Stories's cousin, SIFAS Dialogue Sandbox!",
+        "It's pronounced 'DEKO-NINA'.",
+        "saa anyo anyo kocchi oide",
         "Bonds of people is the true power.",
-        // "Untitled.",
+        "Untitled.",
     ],
     zh: [
         "宁宁在玩乌蒙地插，铺面是系ぎて",
@@ -94,7 +92,7 @@ const randomText = {
     zhTW: [
         "寧寧在打maimai，鋪面是Xaleid◆scopiX",
         "你能聽到那個不祥的鐘聲嗎？",
-        "神代類給某人發送了一個信息。 他並沒有得到回覆。",// 類帶著他的Thinkpad筆電
+        "神代類給某人發送了一個信息。 他並沒有得到回覆。", // 類帶著他的Thinkpad筆電
         "在mizu5之後再了看一遍《神山高校祭》。 我好心痛💔",
         "司君像個孩子般又在神高走廊大笑了",
         "笑夢醬打破了第四面牆，對著你說：“旺大吼！！！”",
@@ -132,39 +130,15 @@ const randomText = {
         "是唸「デコ　ニナ」啦！",
         // "瑞繪99", // Uncomment after Nov 30, 2025
     ],
-	
-	zhHK:[] as string[],
+
+    zhHK: [] as string[],
 };
 
 const FlavorText: React.FC = () => {
     const [text, setText] = useState<string>("");
     const { i18n } = useTranslation();
     const lng = i18n.language as keyof typeof randomText;
-    const daysLeft = Math.ceil(
-        (new Date("November 30, 2025 23:00:00 UTC").getTime() -
-            new Date().getTime()) /
-            (1000 * 60 * 60 * 24)
-    ); // <---- ena5
-    const quote =
-        daysLeft < 0
-            ? "Thank you, Mizuki~"
-            : `${daysLeft} ${
-                  daysLeft === 1 ? "day remains" : "days remain"
-              }.`;
-    randomText.en.push(quote);
-	
-    const quote_zh =
-        daysLeft < 0
-            ? "我们在一起吧，瑞希"
-            : `还有大约${daysLeft}天。`;
 
-    const quote_zhTW =
-        daysLeft < 0
-            ? "我們在一起吧，瑞希"
-            : `還有大約${daysLeft}天。`;
-    randomText.zh.push(quote_zh);
-    randomText.zhTW.push(quote_zhTW);
-    randomText.zhHK.push(...(randomText.zhTW));
     useEffect(() => {
         const languageRandomText = randomText[lng]
             ? randomText[lng]
@@ -181,7 +155,7 @@ const FlavorText: React.FC = () => {
 export default FlavorText;
 
 /* 
-    LAST UPDATE: 11/30/2025
+    LAST UPDATE: 12/11/2025
     Will not list the obvious PJSK references.
     Placed here for people who needs explaination when translating.
 
@@ -203,10 +177,9 @@ export default FlavorText;
         -> She's is the character on the Don't Fight The Music's jacket.
         -> People mistakenly thought it was Kanade on the said jacket.
         -> 1888 is the maximum Master combo on the said chart.
-    "Mizuki has reached the rooftop and finally burning her dread."
-        -> Persona 3 Song Reference: "Burn My Dread"
-    "Mizuki has finally pursuing her true self."
-        -> Persona 4 Song Reference: "Pursuing My True Self"
+    "Come here, Mafuyu-chan."
+        -> A popular Akito/Mafuyu ship fanfic
+        -> https://old.reddit.com/r/ProjectSekai/comments/11j0ih2/come_here_mafuyuchan/jb363p0/
     "Listening to / / // / /"
         -> x0o0x's song about Kisaragi Station
     "Do not overdose yourself with shipping~"
