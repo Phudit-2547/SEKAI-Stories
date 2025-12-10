@@ -21,6 +21,7 @@ export interface IJsonSave {
             y?: number;
             scale?: number;
             rotation?: number;
+            blur?: number;
         };
         modelExpression?: number;
         modelPose?: number;

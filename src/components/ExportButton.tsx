@@ -111,6 +111,7 @@ const ExportButton: React.FC = () => {
                         y: model.modelY,
                         scale: model.modelScale,
                         rotation: model.modelRotation,
+                        blur: model.modelBlur,
                     },
                     modelExpression: model.expression,
                     modelPose: model.pose,
@@ -220,6 +221,10 @@ const ExportButton: React.FC = () => {
                 model.modelTransform?.y ?? 870
             );
             modelContainer.angle = model.modelTransform?.rotation ?? 0;
+            const blurFilter = new PIXI.BlurFilter(
+                model.modelTransform?.blur ?? 0
+            );
+            modelContainer.filters = [blurFilter];
             modelWrapper?.addChildAt(modelContainer, idx);
             if (model.modelExpression && model.modelExpression !== 99999) {
                 const manager =
@@ -232,6 +237,7 @@ const ExportButton: React.FC = () => {
                 manager.startMotion("Motion", model.modelPose);
             }
 
+            await new Promise((resolve) => setTimeout(resolve, 2000));
             if (model?.modelParametersChanged) {
                 const coreModel = live2DModel.internalModel
                     .coreModel as Cubism4InternalModel["coreModel"];
@@ -266,6 +272,7 @@ const ExportButton: React.FC = () => {
                     modelY: modelContainer.y,
                     modelScale: modelContainer.scale.x,
                     modelRotation: modelContainer.angle,
+                    modelBlur: model.modelTransform?.blur ?? 0,
                     modelData: modelData,
                     virtualEffect: false,
                     expression: model.modelExpression ?? 99999,
