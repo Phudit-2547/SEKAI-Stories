@@ -113,7 +113,8 @@ const Filter: React.FC = () => {
                 },
             });
         } else {
-            filter.droop?.container?.destroy();
+            filter.container.position.set(1920 / 2, 1080 / 2);
+            filter.container.scale.set(1, 1);
             setFilter({
                 ...filter,
                 pov: {
