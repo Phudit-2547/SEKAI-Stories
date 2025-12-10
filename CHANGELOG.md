@@ -1,3 +1,10 @@
+# 5.9.0
+Release date: December 11, 2025
+- Added POV Filter (directly inspired from Mizuki's Ena5 POV Scene)
+- Added Blur Transform for models
+- Bring back default flavor texts
+- Bring back default scenes
+
 # 5.8.15
 Release date: November 30, 2025
 - Added Ena5 Default Scenes
