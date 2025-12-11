@@ -13,14 +13,30 @@ const SupportButton: React.FC = () => {
                 className="btn-circle btn-orange"
                 onClick={() => setShow(true)}
             >
-                <i className="bi bi-suit-heart-fill sidebar__select"></i>
+                <i className="bi bi-question-circle-fill sidebar__select"></i>
             </button>
             {show && (
                 <Window show={setShow}>
                     <div className="window__content">
                         <div className="window__divider">
                             <h1>{t("support.header")}</h1>
-                            <p>{t("support.details")}</p>
+                            <div className="window__divider">
+                                <h2>{t("support.report-header")}</h2>
+                                <p>
+                                    {t("support.report-details")}
+                                </p>
+                                <button
+                                    className="btn-blue btn-extend-width btn-regular"
+                                    onClick={() => {
+                                        window.open(
+                                            "https://github.com/lezzthanthree/SEKAI-Stories/issues",
+                                            "_blank"
+                                        );
+                                    }}
+                                >
+                                    {t("support.report-button")}
+                                </button>
+                            </div>
                             <div className="window__divider">
                                 <h2>Ko-fi</h2>
                                 <p>{t("support.ko-fi-details")}</p>

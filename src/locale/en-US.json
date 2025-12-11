@@ -135,6 +135,9 @@
 
     "support": {
         "header": "Support",
+        "report-header": "Found a bug?",
+        "report-details": "If you encounter any bugs or glitches, please report them on our GitHub repository.",
+        "report-button": "Report an issue",
         "details": "If you enjoy using SEKAI Stories, you can support me through one of the following ways:",
         "ko-fi-details": "Donations are optional! I will also be posting the website updates there as well.",
         "github-details": "This project is completely open-source! You can report issues or open a pull request to contribute!",
