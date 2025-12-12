@@ -28,5 +28,15 @@
         "modelY": 550,
         "pngName": "mizuki_lookaway",
         "sceneText": "white"
+    },
+    {
+        "background": "/background_compressed/bg_a001101.jpg",
+        "model": "v2_19ena_casual",
+        "text": "Mizuki, that's not how you break a KitKat!",
+        "nameTag": "Ena",
+        "modelX": 960,
+        "modelY": 630,
+        "pngName": "ena",
+        "sceneText": "Diner"
     }
 ]

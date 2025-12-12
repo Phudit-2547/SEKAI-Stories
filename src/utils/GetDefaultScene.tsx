@@ -42,16 +42,6 @@ const randomInitialScene: InitialScene[] = [
         sceneText: "Uranohoshi High School Rooftop",
     },
     {
-        background: "/background_compressed/bg_a001101.jpg",
-        model: "v2_19ena_casual",
-        text: "Mizuki, that's not how you break a KitKat!",
-        nameTag: "Ena",
-        modelX: 960,
-        modelY: 630,
-        pngName: "ena",
-        sceneText: "Diner",
-    },
-    {
         background: "/background_compressed/bg_a000702.jpg",
         model: "v2_19ena_casual",
         text: "MIZUKI, NO.",
@@ -80,6 +70,26 @@ const randomInitialScene: InitialScene[] = [
         modelY: 610,
         pngName: "shiho",
         sceneText: "Music Shop",
+    },
+    {
+        background: "/background_compressed/bg_a001701.jpg",
+        model: "07airi_qtnormal",
+        text: "...!",
+        nameTag: "Airi",
+        modelX: 960,
+        modelY: 540,
+        pngName: "girlfriend_meme",
+        sceneText: "Mall",
+    },
+    {
+        background: "/background_special/Background_Akarin.jpg",
+        model: "14emu_normal",
+        text: "Haiii～!",
+        nameTag: "Emu",
+        modelX: 960,
+        modelY: 540,
+        pngName: "emu_channnnn",
+        sceneText: "???",
     },
 ];
 
@@ -183,16 +193,6 @@ const randomOctoberScene: InitialScene[] = [
         modelY: 545,
         pngName: "emu_jumpscare",
         sceneText: "Emu's Room",
-    },
-    {
-        background: "/background_special/Background_Akarin.jpg",
-        model: "14emu_normal",
-        text: "Haiii～!",
-        nameTag: "Emu",
-        modelX: 960,
-        modelY: 540,
-        pngName: "emu_channnnn",
-        sceneText: "???",
     },
 ];
 
