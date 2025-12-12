@@ -119,6 +119,9 @@ const Dialogue: React.FC<DialogueProps> = ({
         text.dialogue.style.fontSize = changedFontSize;
         text.dialogue.style.strokeThickness =
             8 + (changedFontSize / 44 - 1) * 2;
+        text.dialogue.style.lineHeight = Math.floor(
+            55 + (changedFontSize / 44 - 1) * 40
+        );
         text.dialogue.updateText(true);
         setText({
             ...text,
