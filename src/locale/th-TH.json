@@ -25,7 +25,11 @@
         "filters": "ฟิลเตอร์",
         "flashback": "ย้อนอดีต",
         "sick": "ป่วย",
-        "drooping-lines": "อึดอัด"
+        "drooping-lines": "อึดอัด",
+        "pov": "POV/FOV",
+        "zoom": "ซูม",
+        "povx": "ตำแหน่ง X",
+        "povy": "ตำแหน่ง Y"
     },
 
     "text": {
@@ -77,6 +81,7 @@
         "y-position": "ตำแหน่ง Y",
         "scale": "ขนาด",
         "rotation": "หมุน",
+        "blur": "เบลอ",
         "mouth": "ปาก",
         "ParamMouthForm": "รูปทรงหลัก",
         "ParamMouthOpenY": "อ้าปาก",
@@ -130,6 +135,9 @@
 
     "support": {
         "header": "สนับสนุน",
+        "report-header": "เจอปัญหา?",
+        "report-details": "หากพบปัญหาหรือข้อผิดพลาดใดๆ โปรดรายงานใน GitHub repository ของพวกเรา",
+        "report-button": "รายงานปัญหา",
         "details": "ถ้าคุณสนุกกับการใช้ SEKAI Stories คุณสามารถสนับสนุนเราได้ผ่านช่องทางได้ดังนี้",
         "ko-fi-details": "การบริจาคเป็นทางเลือก! ฉันจะโพสต์อัปเดตเว็บไซต์ที่นั่นด้วยเช่นกัน",
         "github-details": "โครงการนี้เป็นโอเพนซอร์สอย่างสมบูรณ์! คุณสามารถรายงานปัญหาหรือเปิดคำขอ Pull Request เพื่อร่วมแบ่งปันได้!",
