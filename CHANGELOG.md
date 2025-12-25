@@ -1,3 +1,9 @@
+# 5.9.1
+Release date: December 25, 2025
+- Updated French and Thai locales
+- Added mental health warning when detected
+- Fixed POV/FOV label issue
+
 # 5.9.0
 Release date: December 11, 2025
 - Added POV Filter (directly inspired from Mizuki's Ena5 POV Scene)
