@@ -231,20 +231,15 @@ const Dialogue: React.FC<DialogueProps> = ({
                             }}
                             className="btn-regular btn-blue"
                         >
-                            Take me there
+                            {t("mental-health.button")}
                         </button>
                     }
                     danger
                 >
                     <div className="window__content">
-                        <h1>It's okay to reach out</h1>
-                        <p>
-                            What you are feeling matters and you are not alone.
-                            If you're going through a difficult moment, you can
-                            click the button below to find resources and people
-                            who are there to help.
-                        </p>
-                        <p>You can disable this message on Settings.</p>
+                        <h1> {t("mental-health.header")}</h1>
+                        <p>{t("mental-health.details")}</p>
+                        <p> {t("mental-health.settings-details")}</p>
                     </div>
                 </Window>
             )}

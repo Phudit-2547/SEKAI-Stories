@@ -215,6 +215,7 @@
         "expand": "Expand all menu options",
         "tutorial": "Tutorial",
         "show-tutorial": "Show one more time",
+        "mentalHealthWindow": "Show mental health warning",
         "saveDialog": "Show save dialog",
         "blankCanvas": "Start with a blank canvas"
     },
@@ -300,5 +301,11 @@
         "name-tag-inputs-limit": "The limit is 2 to 6 inputs for name tag.",
         "background-bookmark": "You cannot set a bookmark for a custom background.",
         "hide-everything-warning": "The \"Hide models and dialogue\" option under Scene Text is enabled.\nPlease disable this option on Text Menu."
+    },
+    "mental-health": {
+        "header": "It's okay to reach out",
+        "details": "What you are feeling matters and you are not alone. If you're going through a difficult moment, you can click the button below to find resources and people who are there to help.",
+        "settings-details": "You can disable this message on Settings.",
+        "button": "Take me there"
     }
 }
