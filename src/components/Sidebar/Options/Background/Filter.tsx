@@ -148,7 +148,7 @@ const Filter: React.FC = () => {
                 onChange={handleDroop}
             />
             <Checkbox
-                id="drooping-lines"
+                id="pov"
                 label={t("background.pov")}
                 checked={filter?.pov?.show}
                 onChange={handlePOV}
