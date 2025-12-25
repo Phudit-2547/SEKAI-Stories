@@ -15,6 +15,7 @@ const TextSidebar: React.FC = () => {
     const settings = useContext(SettingsContext);
     const error = useContext(SoftErrorContext);
     const [bell, setBell] = useState<boolean>(false);
+    const [mentalFound, setMentalFound] = useState<boolean>(false);
     const [easyNameTagSelected, setEasyNameTagSelected] = useState<string>("");
 
     const lockFontSize = localStorage.getItem("lockFontSize");
@@ -54,6 +55,8 @@ const TextSidebar: React.FC = () => {
                 <Dialogue
                     bell={bell}
                     setBell={setBell}
+                    mentalFound={mentalFound}
+                    setMentalFound={setMentalFound}
                     lockFontSizeState={lockFontSizeState}
                     setLockFontSizeState={setLockFontSizeState}
                 />

@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 import { Checkbox } from "../../../UI/Checkbox";
 import InputWindow from "../../../UI/InputWindow";
 import { SoftErrorContext } from "../../../../contexts/SoftErrorContext";
+import Window from "../../../UI/Window";
+import { mentalCheck } from "../../../../utils/MentalCheck";
 
 const symbols = {
     star: "☆",
@@ -24,6 +26,8 @@ const symbols = {
 interface DialogueProps {
     bell: boolean;
     setBell: Dispatch<SetStateAction<boolean>>;
+    mentalFound: boolean;
+    setMentalFound: Dispatch<SetStateAction<boolean>>;
     lockFontSizeState: boolean;
     setLockFontSizeState: Dispatch<SetStateAction<boolean>>;
 }
@@ -31,6 +35,8 @@ interface DialogueProps {
 const Dialogue: React.FC<DialogueProps> = ({
     bell,
     setBell,
+    mentalFound,
+    setMentalFound,
     lockFontSizeState,
     setLockFontSizeState,
 }) => {
@@ -42,6 +48,7 @@ const Dialogue: React.FC<DialogueProps> = ({
     const { text, setText } = scene;
     const { setErrorInformation } = error;
     const [showFontSizeInput, setShowFontSizeInput] = useState<boolean>(false);
+    const [mentalWindow, setMentalWindow] = useState<boolean>(false);
 
     if (!text) return <p>{t("please-wait")}</p>;
 
@@ -76,7 +83,11 @@ const Dialogue: React.FC<DialogueProps> = ({
             setErrorInformation("Let Mizuki rest. She's happy now.");
             setBell(true);
         }
-
+        const mentalResult = mentalCheck(changedDialogue);
+        if (mentalResult && !mentalFound) {
+            setMentalWindow(true);
+            setMentalFound(true);
+        }
         setText({
             ...text,
             dialogueString: changedDialogue,
@@ -201,6 +212,36 @@ const Dialogue: React.FC<DialogueProps> = ({
                     }
                     description={t("text.enter-font-size")}
                 />
+            )}
+            {mentalWindow && (
+                <Window
+                    show={setMentalWindow}
+                    buttons={
+                        <button
+                            onClick={() => {
+                                window.open(
+                                    "https://www.google.com/search?q=suicide+hotline",
+                                    "_blank"
+                                );
+                                setMentalFound(true);
+                            }}
+                            className="btn-regular btn-blue"
+                        >
+                            Take me there
+                        </button>
+                    }
+                    danger
+                >
+                    <div className="window__content">
+                        <h1>Trigger Warning</h1>
+                        <p>
+                            What you are feeling matters and you are not alone.
+                            If you're going through a difficult moment, you can
+                            click the button below to find resources and people
+                            who are there to help.
+                        </p>
+                    </div>
+                </Window>
             )}
         </>
     );
