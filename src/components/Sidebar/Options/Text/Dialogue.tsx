@@ -6,6 +6,7 @@ import InputWindow from "../../../UI/InputWindow";
 import { SoftErrorContext } from "../../../../contexts/SoftErrorContext";
 import Window from "../../../UI/Window";
 import { mentalCheck } from "../../../../utils/MentalCheck";
+import { SettingsContext } from "../../../../contexts/SettingsContext";
 
 const symbols = {
     star: "☆",
@@ -43,10 +44,12 @@ const Dialogue: React.FC<DialogueProps> = ({
     const { t } = useTranslation();
 
     const scene = useContext(SceneContext);
+    const settings = useContext(SettingsContext);
     const error = useContext(SoftErrorContext);
-    if (!scene || !error) throw new Error("Context not loaded");
+    if (!scene || !error || !settings) throw new Error("Context not loaded");
     const { text, setText } = scene;
     const { setErrorInformation } = error;
+    const { showMentalHealthWindow } = settings;
     const [showFontSizeInput, setShowFontSizeInput] = useState<boolean>(false);
     const [mentalWindow, setMentalWindow] = useState<boolean>(false);
 
@@ -84,9 +87,10 @@ const Dialogue: React.FC<DialogueProps> = ({
             setBell(true);
         }
         const mentalResult = mentalCheck(changedDialogue);
-        if (mentalResult && !mentalFound) {
+        if (mentalResult && !mentalFound && showMentalHealthWindow) {
             setMentalWindow(true);
             setMentalFound(true);
+            localStorage.setItem("mentalHealthWordFound", "true");
         }
         setText({
             ...text,
@@ -233,13 +237,14 @@ const Dialogue: React.FC<DialogueProps> = ({
                     danger
                 >
                     <div className="window__content">
-                        <h1>Trigger Warning</h1>
+                        <h1>It's okay to reach out</h1>
                         <p>
                             What you are feeling matters and you are not alone.
                             If you're going through a difficult moment, you can
                             click the button below to find resources and people
                             who are there to help.
                         </p>
+                        <p>You can disable this message on Settings.</p>
                     </div>
                 </Window>
             )}

@@ -29,6 +29,8 @@ const SettingsButton: React.FC = () => {
         setOpenAll,
         showExperimental,
         setShowExperimental,
+        showMentalHealthWindow,
+        setShowMentalHealthWindow,
         showSaveDialog,
         setShowSaveDialog,
         blankCanvas,
@@ -38,6 +40,8 @@ const SettingsButton: React.FC = () => {
         setAudio,
     } = settings;
     const { setErrorInformation } = softError;
+    const mentalHealthCookie =
+        localStorage.getItem("mentalHealthWordFound") === "true";
 
     const handleGetAutoSaveData = () => {
         const data = localStorage.getItem("autoSave");
@@ -96,12 +100,18 @@ const SettingsButton: React.FC = () => {
         localStorage.setItem("saveDialog", String(value));
         setShowSaveDialog(value);
     };
+    const handleMentalHealthWindow = (
+        e: React.ChangeEvent<HTMLInputElement>
+    ) => {
+        const value = e.target.checked;
+        localStorage.setItem("mentalHealthWindow", String(value));
+        setShowMentalHealthWindow(value);
+    };
     const handleBlankCanvas = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.checked;
         localStorage.setItem("blankCanvas", String(value));
         setBlankCanvas(value);
     };
-   
 
     return (
         <>
@@ -192,6 +202,14 @@ const SettingsButton: React.FC = () => {
                                 checked={openAll}
                                 onChange={handleExpand}
                             />
+                            {mentalHealthCookie && (
+                                <Checkbox
+                                    id="mentalHealth"
+                                    label={t("settings.mentalHealthWindow")}
+                                    checked={showMentalHealthWindow}
+                                    onChange={handleMentalHealthWindow}
+                                />
+                            )}
                             <Checkbox
                                 id="guideline"
                                 label={t("settings.guidelines")}
@@ -211,7 +229,6 @@ const SettingsButton: React.FC = () => {
                     </div>
                 </Window>
             )}
-            
         </>
     );
 };

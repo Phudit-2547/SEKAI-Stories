@@ -14,6 +14,8 @@ export default interface ISettingsContextType {
     setBlankCanvas: Dispatch<SetStateAction<boolean>>;
     showExperimental: boolean;
     setShowExperimental: Dispatch<SetStateAction<boolean>>;
+    showMentalHealthWindow: boolean;
+    setShowMentalHealthWindow: Dispatch<SetStateAction<boolean>>;
     showSaveDialog: boolean;
     setShowSaveDialog: Dispatch<SetStateAction<boolean>>;
     openAll: boolean;
