@@ -38,5 +38,35 @@
         "modelY": 630,
         "pngName": "ena",
         "sceneText": "Diner"
+    },
+    {
+        "background": "/background_special/Background_Other_Kamiyama_(Resolved).png",
+        "model": "20mizuki_normal",
+        "text": "You are a part of me...",
+        "nameTag": "Mizuki",
+        "modelX": 960,
+        "modelY": 545,
+        "pngName": "mizuki_accept",
+        "sceneText": "I've been running for so long. I'll face it right on."
+    },
+    {
+        "background": "/background_special/Background_Dread.png",
+        "model": "20mizuki_normal",
+        "text": "Remember you will disappear. Remember to live.",
+        "nameTag": "Tagline",
+        "modelX": 960,
+        "modelY": 545,
+        "pngName": "transparent",
+        "sceneText": "I will break the chain, and run 'til I see the sunlight again"
+    },
+    {
+        "background": "/background_special/Background_Pursuing.png",
+        "model": "20mizuki_normal",
+        "text": "We're all trapped in a maze of relationships.",
+        "nameTag": "Tagline",
+        "modelX": 960,
+        "modelY": 540,
+        "pngName": "mizuki_pursuing",
+        "sceneText": "I search for your heart, pursuing my true self"
     }
 ]

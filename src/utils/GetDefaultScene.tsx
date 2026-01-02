@@ -17,225 +17,231 @@ interface GetDefaultSceneProps {
     app: PIXI.Application | undefined;
     setStartingMessage: Dispatch<SetStateAction<string>>;
     setLoading: Dispatch<SetStateAction<number>>;
-    scene?: string;
+    blankCanvas: boolean;
 }
 interface InitialScene {
     background: string;
-    model: string;
     text: string;
     nameTag: string;
     modelX: number;
     modelY: number;
+    modelScale?: number;
     pngName: string;
     sceneText: string;
 }
 
-const randomInitialScene: InitialScene[] = [
-    {
-        background: "/background_special/Background_Uranohoshi_Rooftop.jpg",
-        model: "07airi_qtnormal",
-        text: "I'm ○○○-sama's little demon number four...\nM-Momoi Airi...",
-        nameTag: "Airi",
-        modelX: 960,
-        modelY: 590,
-        pngName: "airi_littledemon",
-        sceneText: "Uranohoshi High School Rooftop",
-    },
-    {
-        background: "/background_compressed/bg_a000702.jpg",
-        model: "v2_19ena_casual",
-        text: "MIZUKI, NO.",
-        nameTag: "Ena",
-        modelX: 960,
-        modelY: 700,
-        pngName: "mizuki-nui",
-        sceneText: "Kamiyama High School - Rooftop",
-    },
-    {
-        background: "/background_special/Background_Nijigasaki.jpg",
-        model: "v2_17kanade_casual",
-        text: "A-am I doing it right?",
-        nameTag: "Kanade",
-        modelX: 960,
-        modelY: 630,
-        pngName: "kanade-idol",
-        sceneText: "Nijigasaki School Idol Club",
-    },
-    {
-        background: "/background_compressed/bg_a001801.jpg",
-        model: "04shiho_cloth01",
-        text: "...",
-        nameTag: "Shiho",
-        modelX: 960,
-        modelY: 610,
-        pngName: "shiho",
-        sceneText: "Music Shop",
-    },
-    {
-        background: "/background_compressed/bg_a001701.jpg",
-        model: "07airi_qtnormal",
-        text: "...!",
-        nameTag: "Airi",
-        modelX: 960,
-        modelY: 540,
-        pngName: "girlfriend_meme",
-        sceneText: "Mall",
-    },
-    {
-        background: "/background_special/Background_Akarin.jpg",
-        model: "14emu_normal",
-        text: "Haiii～!",
-        nameTag: "Emu",
-        modelX: 960,
-        modelY: 540,
-        pngName: "emu_channnnn",
-        sceneText: "???",
-    },
-];
+const randomInitialScene: Record<string, InitialScene[]> = {
+    default: [
+        {
+            background: "/background_special/Background_Uranohoshi_Rooftop.jpg",
+            text: "I'm ○○○-sama's little demon number four...\nM-Momoi Airi...",
+            nameTag: "Airi",
+            modelX: 960,
+            modelY: 590,
+            pngName: "airi_littledemon",
+            sceneText: "Uranohoshi High School Rooftop",
+        },
 
-const randomOctoberScene: InitialScene[] = [
-    {
-        background: "/background_special/Background_Cheat_to_Happiness.jpg",
-        model: "18mafuyu_cloth001",
-        text: "→↓↑→→↓→→↑↑↓↓←→←→",
-        nameTag: "Mafuyu",
-        modelX: 960,
-        modelY: 545,
-        pngName: "mafuyu_oct",
-        sceneText: "Mafuyu's Room",
-    },
-    {
-        background: "/background_special/Background_Cheat_to_Happiness_2.png",
-        model: "18mafuyu_cloth001",
-        text: "If you've entered the secret code properly up to this point, perhaps you'll take on a happier form?",
-        nameTag: "(Translation)",
-        modelX: 960,
-        modelY: 545,
-        pngName: "transparent",
-        sceneText: "???",
-    },
-    {
-        background: "/background_special/Background_BIRDBRAIN.jpg",
-        model: "20mizuki_normal",
-        text: "#$%@!",
-        nameTag: "Mizuki",
-        modelX: 960,
-        modelY: 540,
-        pngName: "mizuki_birdbrain",
-        sceneText: "???",
-    },
-    {
-        background: "/background_special/Background_Kisaragi.png",
-        model: "20mizuki_normal",
-        text: "",
-        nameTag: "",
-        modelX: 1000,
-        modelY: 640,
-        pngName: "mizuki_kisaragi",
-        sceneText: "",
-    },
-    {
-        background: "/background_special/Background_Nemui.png",
-        model: "19ena_jc",
-        text: "Let's take some medicine and go to bed!",
-        nameTag: "Ena",
-        modelX: 960,
-        modelY: 540,
-        pngName: "ena_nemui",
-        sceneText: "???",
-    },
-    {
-        background: "/background_special/Background_Ame.jpg",
-        model: "19ena_cloth001",
-        text: "... where the hell am I?!",
-        nameTag: "Ena",
-        modelX: 960,
-        modelY: 605,
-        pngName: "ena_kangel",
-        sceneText: "???",
-    },
-    {
-        background: "/background_special/Background_Exit8.png",
-        model: "v2_17kanade_casual",
-        text: "...!",
-        nameTag: "Kanade",
-        modelX: 960,
-        modelY: 540,
-        pngName: "k_parents",
-        sceneText: "???",
-    },
-    {
-        background: "/background_compressed/bg_a002301.jpg",
-        model: "01ichika_cloth001",
-        text: "Ah, wrong series!",
-        nameTag: "???",
-        modelX: 960,
-        modelY: 570,
-        pngName: "setsuna",
-        sceneText: "Scramble Crossing",
-    },
-    {
-        background: "/background_special/Background_Perfect.jpg",
-        model: "v2_05minori_unit",
-        text: "(Everything that I can say is spoken for me.)",
-        nameTag: "Minori",
-        modelX: 960,
-        modelY: 545,
-        pngName: "minori_spoken_for",
-        sceneText: "Stage",
-    },
-    {
-        background: "/background_compressed/bg_a003003.jpg",
-        model: "14emu_cloth001",
-        text: "Jumpscare Wonderhoy!",
-        nameTag: "Emu",
-        modelX: 960,
-        modelY: 545,
-        pngName: "emu_jumpscare",
-        sceneText: "Emu's Room",
-    },
-];
+        {
+            background: "/background_special/Background_Nijigasaki.jpg",
+            text: "A-am I doing it right?",
+            nameTag: "Kanade",
+            modelX: 960,
+            modelY: 630,
+            pngName: "kanade-idol",
+            sceneText: "Nijigasaki School Idol Club",
+        },
+        {
+            background: "/background_special/Background_Circle.png",
+            text: "...",
+            nameTag: "Shiho",
+            modelX: 960,
+            modelY: 610,
+            pngName: "shiho",
+            sceneText: "Music Shop(?)",
+        },
+        {
+            background: "/background_compressed/bg_a001701.jpg",
+            text: "...!",
+            nameTag: "Airi",
+            modelX: 960,
+            modelY: 540,
+            pngName: "girlfriend_meme",
+            sceneText: "Mall",
+        },
+        {
+            background: "/background_special/Background_Akarin.jpg",
+            text: "Haiii～!",
+            nameTag: "Emu",
+            modelX: 960,
+            modelY: 540,
+            pngName: "emu_channnnn",
+            sceneText: "???",
+        },
+    ],
+    halloween: [
+        {
+            background: "/background_special/Background_Cheat_to_Happiness.jpg",
+            text: "→↓↑→→↓→→↑↑↓↓←→←→",
+            nameTag: "Mafuyu",
+            modelX: 960,
+            modelY: 545,
+            pngName: "mafuyu_oct",
+            sceneText: "Mafuyu's Room",
+        },
+        {
+            background:
+                "/background_special/Background_Cheat_to_Happiness_2.png",
+            text: "If you've entered the secret code properly up to this point, perhaps you'll take on a happier form?",
+            nameTag: "(Translation)",
+            modelX: 960,
+            modelY: 545,
+            pngName: "transparent",
+            sceneText: "???",
+        },
 
-const personaScenes: InitialScene[] = [
-    {
-        background:
-            "/background_special/Background_Other_Kamiyama_(Resolved).png",
-        model: "20mizuki_normal",
-        text: "You are a part of me...",
-        nameTag: "Mizuki",
-        modelX: 960,
-        modelY: 545,
-        pngName: "mizuki_accept",
-        sceneText: "I've been running for so long. I'll face it right on.",
-    },
-    {
-        background: "/background_special/Background_Dread.png",
-        model: "20mizuki_normal",
-        text: "Remember you will disappear. Remember to live.",
-        nameTag: "Tagline",
-        modelX: 960,
-        modelY: 545,
-        pngName: "transparent",
-        sceneText:
-            "I will break the chain, and run 'til I see the sunlight again",
-    },
-    {
-        background: "/background_special/Background_Pursuing.png",
-        model: "20mizuki_normal",
-        text: "We're all trapped in a maze of relationships.",
-        nameTag: "Tagline",
-        modelX: 960,
-        modelY: 540,
-        pngName: "mizuki_pursuing",
-        sceneText: "I search for your heart, pursuing my true self",
-    },
-];
+        {
+            background: "/background_special/Background_Kisaragi.png",
+            text: "",
+            nameTag: "",
+            modelX: 1000,
+            modelY: 640,
+            pngName: "mizuki_kisaragi",
+            sceneText: "",
+        },
+        {
+            background: "/background_special/Background_Nemui.png",
+            text: "Let's take some medicine and go to bed!",
+            nameTag: "Ena",
+            modelX: 960,
+            modelY: 540,
+            pngName: "ena_nemui",
+            sceneText: "???",
+        },
+        {
+            background: "/background_special/Background_Ame.jpg",
+            text: "... where the hell am I?!",
+            nameTag: "Ena",
+            modelX: 960,
+            modelY: 605,
+            pngName: "ena_kangel",
+            sceneText: "???",
+        },
+        {
+            background: "/background_special/Background_Exit8.png",
+            text: "...!",
+            nameTag: "Kanade",
+            modelX: 960,
+            modelY: 540,
+            pngName: "k_parents",
+            sceneText: "???",
+        },
+        {
+            background: "/background_compressed/bg_a002301.jpg",
+            text: "Ah, wrong series!",
+            nameTag: "???",
+            modelX: 960,
+            modelY: 570,
+            pngName: "setsuna",
+            sceneText: "Scramble Crossing",
+        },
+        {
+            background: "/background_special/Background_Perfect.jpg",
+            text: "(Everything that I can say is spoken for me.)",
+            nameTag: "Minori",
+            modelX: 960,
+            modelY: 545,
+            pngName: "minori_spoken_for",
+            sceneText: "Stage",
+        },
+        {
+            background: "/background_compressed/bg_a003003.jpg",
+            text: "Jumpscare Wonderhoy!",
+            nameTag: "Emu",
+            modelX: 960,
+            modelY: 545,
+            pngName: "emu_jumpscare",
+            sceneText: "Emu's Room",
+        },
+    ],
+    anniversary: [],
+    "727": [
+        {
+            background: "/background_special/Background_BlueZenith.jpg",
+            text: "...",
+            nameTag: "Ena",
+            modelX: 640,
+            modelY: 620,
+            modelScale: 1.25,
+            pngName: "mizuki_wysi",
+            sceneText: "Blue Zenith",
+        },
+    ],
+    mizuki: [
+        {
+            background:
+                "/background_special/Background_Other_Kamiyama_(Resolved).png",
+            text: "You are a part of me...",
+            nameTag: "Mizuki",
+            modelX: 960,
+            modelY: 545,
+            pngName: "mizuki_accept",
+            sceneText: "Kamiyama High School Rooftop(?)",
+        },
+        {
+            background: "/background_special/Background_Pursuing.png",
+            text: "We're all trapped in a maze of relationships.",
+            nameTag: "Tagline",
+            modelX: 960,
+            modelY: 540,
+            pngName: "mizuki_pursuing",
+            sceneText: "I search for your heart, pursuing my true self",
+        },
+        {
+            background: "/background_special/Background_BIRDBRAIN.jpg",
+            text: "#$%@!",
+            nameTag: "Mizuki",
+            modelX: 960,
+            modelY: 540,
+            pngName: "mizuki_birdbrain",
+            sceneText: "???",
+        },
+    ],
+};
 
-const LoadInitialScene = (scene?: string): InitialScene => {
+const CheckDate = (blank: boolean): string => {
+    if (blank) return "blank";
+
+    const date = new Date();
+    const [month, day] = [date.getMonth() + 1, date.getDate()];
+
+    const months: Record<number, string> = {
+        10: "halloween",
+        // 12: "christmas", # TODO
+    };
+
+    if (month in months) return months[month];
+
+    // const range: Array<[number, number, number, string]> = [
+    //     [4, 10, 30, "anniversary"],
+    // ];
+
+    // for (const [m, start, end, value] of range) {
+    //     if (month === m && day >= start && day <= end) return value;
+    // }
+
+    const exact: Record<string, string> = {
+        "7-27": "727",
+        "8-27": "mizuki",
+    };
+
+    return exact[`${month}-${day}`] ?? "halloween";
+};
+
+const LoadInitialScene = (scene: string): InitialScene => {
     if (scene === "blank") {
         return {
             background: "/background_compressed/bg_white.jpg",
-            model: "01ichika_cloth001",
             text: "<insert text here>",
             nameTag: "<name>",
             modelX: 900,
@@ -245,31 +251,8 @@ const LoadInitialScene = (scene?: string): InitialScene => {
         };
     }
 
-    if (scene === "blankoctober") {
-        return {
-            background: "/background_compressed/bg_white.jpg",
-            model: "01ichika_cloth001",
-            text: "<oooo spooky month>",
-            nameTag: "<name>",
-            modelX: 960,
-            modelY: 550,
-            pngName: "blankoctober",
-            sceneText: "<white>",
-        };
-    }
-
-    if (scene === "october") {
-        return randomOctoberScene[
-            Math.floor(Math.random() * randomOctoberScene.length)
-        ];
-    }
-
-    if (scene === "pena5") {
-        return personaScenes[Math.floor(Math.random() * personaScenes.length)];
-    }
-
-    return randomInitialScene[
-        Math.floor(Math.random() * randomInitialScene.length)
+    return randomInitialScene[scene][
+        Math.floor(Math.random() * randomInitialScene[scene].length)
     ];
 };
 
@@ -357,9 +340,9 @@ const LoadModel = async (
     container: PIXI.Container,
     childAt: number,
     file: string,
-    model: string,
     x: number,
-    y: number
+    y: number,
+    scale?: number
 ): Promise<{
     model: Record<string, IModel>;
     modelWrapper: PIXI.Container;
@@ -367,7 +350,7 @@ const LoadModel = async (
 }> => {
     const modelWrapper = new PIXI.Container();
     const modelContainer = new PIXI.Container();
-    const texture = await PIXI.Texture.fromURL(`/img/${file}.png`);
+    const texture = await PIXI.Texture.fromURL(`/img/characters/${file}.png`);
     const sprite = new PIXI.Sprite(texture);
     modelContainer.addChildAt(sprite, 0);
     modelWrapper.addChildAt(modelContainer, 0);
@@ -376,6 +359,7 @@ const LoadModel = async (
         modelContainer.height / 2
     );
     modelContainer.position.set(x, y);
+    modelContainer.scale.set(scale, scale);
     const lighting: ILighting = {
         red: 1,
         green: 1,
@@ -396,7 +380,7 @@ const LoadModel = async (
                 character: "custom",
                 root: modelContainer,
                 model: sprite,
-                modelName: model,
+                modelName: file,
                 modelX: modelContainer.x,
                 modelY: modelContainer.y,
                 modelScale: modelContainer.scale.x,
@@ -560,8 +544,10 @@ export const LoadScene = async ({
     app,
     setStartingMessage,
     setLoading,
-    scene,
+    blankCanvas,
 }: GetDefaultSceneProps) => {
+    const scene = CheckDate(blankCanvas);
+
     setLoading(0);
     const initialScene: InitialScene = LoadInitialScene(scene);
 
@@ -619,9 +605,9 @@ export const LoadScene = async ({
         filterContainer,
         2,
         initialScene.pngName,
-        initialScene.model,
         initialScene.modelX,
-        initialScene.modelY
+        initialScene.modelY,
+        initialScene.modelScale ?? 1
     );
 
     setLoading(70);
