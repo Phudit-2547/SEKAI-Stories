@@ -147,6 +147,8 @@ const Transform: React.FC<TransformProps> = ({ updateModelState }) => {
         }
     };
 
+    if (currentModel.modelName.includes("kisaragi")) return <></>;
+
     return (
         <>
             <div className="option__content">

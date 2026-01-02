@@ -165,7 +165,7 @@ const SelectedLayer: React.FC<SelectedLayerProps> = ({
         const visible = currentModel?.visible;
 
         if (currentModel?.model) {
-            if (currentModel.character == "blank") {
+            if (currentModel.modelName.includes("kisaragi")) {
                 setErrorInformation(" ");
                 return;
             }
@@ -177,7 +177,7 @@ const SelectedLayer: React.FC<SelectedLayerProps> = ({
     const handleDeleteLayer = async () => {
         const modelsObjects = Object.entries(scene.models ?? {});
         if (modelsObjects.length === 1) {
-            if (currentModel.character === "blank") {
+            if (currentModel.modelName.includes("kisaragi")) {
                 setErrorInformation(" ");
             } else {
                 setErrorInformation(t("model.delete-model-warn"));
@@ -232,7 +232,9 @@ const SelectedLayer: React.FC<SelectedLayerProps> = ({
                     onClick={handleHideLayer}
                     disabled={isLoading}
                 >
-                    {!currentModel?.visible ? (
+                    {currentModel.modelName.includes("kisaragi") ? (
+                        <></>
+                    ) : !currentModel?.visible ? (
                         <i className="bi bi-eye-slash"></i>
                     ) : (
                         <i className="bi bi-eye"></i>
@@ -245,7 +247,11 @@ const SelectedLayer: React.FC<SelectedLayerProps> = ({
                     }}
                     disabled={isLoading}
                 >
-                    <i className="bi bi-x-circle"></i>
+                    {currentModel.modelName.includes("kisaragi") ? (
+                        <></>
+                    ) : (
+                        <i className="bi bi-x-circle"></i>
+                    )}
                 </button>
             </div>
         </>

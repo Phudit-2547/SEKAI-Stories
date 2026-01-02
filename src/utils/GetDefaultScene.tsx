@@ -235,7 +235,7 @@ const CheckDate = (blank: boolean): string => {
         "8-27": "mizuki",
     };
 
-    return exact[`${month}-${day}`] ?? "halloween";
+    return exact[`${month}-${day}`] ?? "default";
 };
 
 const LoadInitialScene = (scene: string): InitialScene => {

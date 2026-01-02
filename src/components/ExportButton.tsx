@@ -84,9 +84,7 @@ const ExportButton: React.FC = () => {
         const currentModels = Object.values(models)
             .map((model) => {
                 if (model.from === "upload") return undefined;
-                if (model.character === "none" || model.character === "custom")
-                    return undefined;
-                if (model.character === "blank")
+                if (model.modelName.includes("kisaragi"))
                     return {
                         from: "/ / // / /",
                         character: "",
@@ -102,6 +100,8 @@ const ExportButton: React.FC = () => {
                         modelParametersChanged: {},
                         modelIdle: false,
                     };
+                if (model.character === "none" || model.character === "custom")
+                    return undefined;
                 return {
                     from: model.from,
                     character: model.character,
