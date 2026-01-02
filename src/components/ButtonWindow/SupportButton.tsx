@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import Window from "./UI/Window";
+import Window from "../UI/Window";
 
 const SupportButton: React.FC = () => {
     const { t } = useTranslation();
@@ -22,9 +22,7 @@ const SupportButton: React.FC = () => {
                             <h1>{t("support.header")}</h1>
                             <div className="window__divider">
                                 <h2>{t("support.report-header")}</h2>
-                                <p>
-                                    {t("support.report-details")}
-                                </p>
+                                <p>{t("support.report-details")}</p>
                                 <button
                                     className="btn-blue btn-extend-width btn-regular"
                                     onClick={() => {

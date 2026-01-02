@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
-import { SceneContext } from "../contexts/SceneContext";
+import { SceneContext } from "../../contexts/SceneContext";
 import * as PIXI from "pixi.js";
 import { useTranslation } from "react-i18next";
-import Window from "./UI/Window";
-import { SettingsContext } from "../contexts/SettingsContext";
-import { Checkbox } from "./UI/Checkbox";
-import { SoftErrorContext } from "../contexts/SoftErrorContext";
+import Window from "../UI/Window";
+import { SettingsContext } from "../../contexts/SettingsContext";
+import { Checkbox } from "../UI/Checkbox";
+import { SoftErrorContext } from "../../contexts/SoftErrorContext";
 
 const DownloadButton: React.FC = () => {
     const [saveWindowShow, setSaveWindowShow] = useState(false);

@@ -1,7 +1,7 @@
 import React, { SetStateAction } from "react";
 import { useTranslation } from "react-i18next";
-import Window from "./UI/Window";
-import UploadImageButton from "./UI/UploadButton";
+import Window from "../UI/Window";
+import UploadImageButton from "../UI/UploadButton";
 
 interface AddModelSelectProps {
     addModel: (from: string) => void;

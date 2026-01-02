@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef } from "react";
-import { SceneContext } from "../contexts/SceneContext";
+import { SceneContext } from "../../contexts/SceneContext";
 
 const ContentBackground: React.FC = () => {
     const contentBackground = useRef<HTMLDivElement | null>(null);
@@ -21,12 +21,12 @@ const ContentBackground: React.FC = () => {
     useEffect(() => {
         if (!scene || !scene.splitBackground) return;
         if (splitBackground1.current && splitBackground2.current) {
-            splitBackground1.current.style.backgroundImage = scene?.splitBackground.first
-                .filename
+            splitBackground1.current.style.backgroundImage = scene
+                ?.splitBackground.first.filename
                 ? `url("${scene.splitBackground.first.filename}")`
                 : "";
-            splitBackground2.current.style.backgroundImage = scene?.splitBackground.first
-                .filename
+            splitBackground2.current.style.backgroundImage = scene
+                ?.splitBackground.first.filename
                 ? `url("${scene.splitBackground.second.filename}")`
                 : "";
         }

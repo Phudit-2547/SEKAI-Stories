@@ -3,7 +3,7 @@ import * as PIXI from "pixi.js";
 import { SceneContext } from "../../../../contexts/SceneContext";
 import { SoftErrorContext } from "../../../../contexts/SoftErrorContext";
 import { useTranslation } from "react-i18next";
-import AddModelSelect from "../../../AddModelSelect";
+import AddModelSelect from "../../../Window/AddModelSelect";
 import { Cubism4InternalModel } from "pixi-live2d-display-mulmotion";
 import IModel from "../../../../types/IModel";
 

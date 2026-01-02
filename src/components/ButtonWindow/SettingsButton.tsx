@@ -1,14 +1,14 @@
 import React, { useContext, useState } from "react";
 import { useTranslation } from "react-i18next";
 import SupportButton from "./SupportButton";
-import { Checkbox } from "./UI/Checkbox";
-import { SceneContext } from "../contexts/SceneContext";
-import { SettingsContext } from "../contexts/SettingsContext";
-import Window from "./UI/Window";
-import { handleChangeLanguage, languageNames } from "../utils/i18ninit";
-import { SoftErrorContext } from "../contexts/SoftErrorContext";
-import packageJson from "../../package.json";
-import Translators from "./Translators";
+import { Checkbox } from "../UI/Checkbox";
+import { SceneContext } from "../../contexts/SceneContext";
+import { SettingsContext } from "../../contexts/SettingsContext";
+import Window from "../UI/Window";
+import { handleChangeLanguage, languageNames } from "../../utils/i18ninit";
+import { SoftErrorContext } from "../../contexts/SoftErrorContext";
+import packageJson from "../../../package.json";
+import Translators from "../UI/Translators";
 
 const SettingsButton: React.FC = () => {
     const { t, i18n } = useTranslation();

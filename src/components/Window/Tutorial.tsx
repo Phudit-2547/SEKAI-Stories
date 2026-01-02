@@ -1,9 +1,9 @@
 import React, { Dispatch, SetStateAction, useContext, useState } from "react";
-import Window from "./UI/Window";
+import Window from "../UI/Window";
 import { useTranslation } from "react-i18next";
-import { handleChangeLanguage, languageNames } from "../utils/i18ninit";
-import { SceneContext } from "../contexts/SceneContext";
-import Translators from "./Translators";
+import { handleChangeLanguage, languageNames } from "../../utils/i18ninit";
+import { SceneContext } from "../../contexts/SceneContext";
+import Translators from "../UI/Translators";
 import AdjustYPosition from "./AdjustYPosition";
 
 interface TutorialProps {

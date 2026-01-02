@@ -16,7 +16,7 @@ import * as PIXI from "pixi.js";
 import { Checkbox } from "../../../UI/Checkbox";
 import IModel from "../../../../types/IModel";
 import { GetCharacterDataFromSekai } from "../../../../utils/GetCharacterDataFromSekai";
-import Live2DIssue from "../../../Live2DIssue";
+import Live2DIssue from "../../../UI/Live2DIssue";
 
 interface StaticCharacterData {
     [key: string]: string[];
@@ -41,7 +41,7 @@ interface CostumeProps {
     handleLive2DChange: (callback: () => void) => void;
     prepareModel: (
         character: string,
-        model: string | ILive2DModelList,
+        model: string | ILive2DModelList
     ) => Promise<[Live2DModel, ILive2DModelData]>;
     updateModelState: (updates: Partial<IModel>) => void;
 }
@@ -82,7 +82,7 @@ const Costume: React.FC<CostumeProps> = ({
             if (isStatic) {
                 [live2DModel, modelData] = await prepareModel(
                     currentModel.character,
-                    modelBase,
+                    modelBase
                 );
             } else {
                 const model = await GetCharacterDataFromSekai(
@@ -101,7 +101,7 @@ const Costume: React.FC<CostumeProps> = ({
 
                 [live2DModel, modelData] = await prepareModel(
                     currentModel.character,
-                    model,
+                    model
                 );
             }
 

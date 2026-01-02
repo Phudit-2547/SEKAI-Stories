@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { getBackground } from "../../../../utils/GetBackground";
-import BackgroundPicker from "../../../BackgroundPicker";
+import BackgroundPicker from "../../../UI/BackgroundPicker";
 import UploadImageButton from "../../../UI/UploadButton";
 import { Checkbox } from "../../../UI/Checkbox";
 import { SceneContext } from "../../../../contexts/SceneContext";

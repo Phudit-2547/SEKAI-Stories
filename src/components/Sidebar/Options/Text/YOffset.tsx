@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import AdjustYPosition from "../../../AdjustYPosition";
+import AdjustYPosition from "../../../Window/AdjustYPosition";
 
 const YOffset: React.FC = () => {
     const { t } = useTranslation();
@@ -8,17 +8,16 @@ const YOffset: React.FC = () => {
     const [showAdjust, setShowAdjust] = useState<boolean>(false);
     return (
         <>
-
             <button
                 className="btn-regular btn-100 btn-blue"
                 onClick={() => {
                     setShowAdjust(true);
                 }}
-                >
+            >
                 {t("adjust")}
             </button>
             {showAdjust && <AdjustYPosition show={setShowAdjust} />}
-                <p>{t("text.y-offset-details")}</p>
+            <p>{t("text.y-offset-details")}</p>
         </>
     );
 };

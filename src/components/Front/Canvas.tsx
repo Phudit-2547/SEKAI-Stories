@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { SceneContext } from "../contexts/SceneContext";
+import { SceneContext } from "../../contexts/SceneContext";
 
 const Canvas: React.FC = () => {
     const scene = useContext(SceneContext);

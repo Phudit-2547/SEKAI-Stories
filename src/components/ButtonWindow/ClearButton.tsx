@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
-import Window from "./UI/Window";
-import { Checkbox } from "./UI/Checkbox";
+import Window from "../UI/Window";
+import { Checkbox } from "../UI/Checkbox";
 import { useTranslation } from "react-i18next";
-import { SettingsContext } from "../contexts/SettingsContext";
-import { SceneContext } from "../contexts/SceneContext";
+import { SettingsContext } from "../../contexts/SettingsContext";
+import { SceneContext } from "../../contexts/SceneContext";
 
 const ClearButton: React.FC = () => {
     const { t } = useTranslation();

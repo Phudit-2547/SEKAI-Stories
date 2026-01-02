@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import TextSidebar from "./Sidebar/TextSidebar";
-import { SceneContext } from "../contexts/SceneContext";
-import BackgroundSidebar from "./Sidebar/BackgroundSidebar";
-import ModelSidebar from "./Sidebar/ModelSidebar";
-import { SettingsContext } from "../contexts/SettingsContext";
-import Experimental from "./Sidebar/Experimental";
+import TextSidebar from "../Sidebar/TextSidebar";
+import { SceneContext } from "../../contexts/SceneContext";
+import BackgroundSidebar from "../Sidebar/BackgroundSidebar";
+import ModelSidebar from "../Sidebar/ModelSidebar";
+import { SettingsContext } from "../../contexts/SettingsContext";
+import Experimental from "../Sidebar/Experimental";
 
 const Sidebar: React.FC = () => {
     const scene = useContext(SceneContext);

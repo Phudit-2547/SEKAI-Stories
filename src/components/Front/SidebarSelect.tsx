@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { SettingsContext } from "../contexts/SettingsContext";
+import { SettingsContext } from "../../contexts/SettingsContext";
 
 const SidebarSelect: React.FC = () => {
     const settings = useContext(SettingsContext);

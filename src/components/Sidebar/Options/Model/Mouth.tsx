@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { SceneContext } from "../../../../contexts/SceneContext";
 import IModel from "../../../../types/IModel";
-import Live2DInputSlider from "../../../Live2DInputSlider";
+import Live2DInputSlider from "../../../UI/Live2DInputSlider";
 import { Cubism4InternalModel } from "pixi-live2d-display-mulmotion";
 
 interface MouthProps {

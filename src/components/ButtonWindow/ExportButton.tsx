@@ -1,18 +1,18 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { SceneContext } from "../contexts/SceneContext";
-import { IJsonSave } from "../types/IJsonSave";
-import { ValidateJsonSave } from "../utils/ValidateJsonSave";
-import { getBackground } from "../utils/GetBackground";
+import { SceneContext } from "../../contexts/SceneContext";
+import { IJsonSave } from "../../types/IJsonSave";
+import { ValidateJsonSave } from "../../utils/ValidateJsonSave";
+import { getBackground } from "../../utils/GetBackground";
 import {
     Live2DModel,
     Cubism4InternalModel,
 } from "pixi-live2d-display-mulmotion";
-import IModel from "../types/IModel";
-import Window from "./UI/Window";
-import { SettingsContext } from "../contexts/SettingsContext";
-import { SoftErrorContext } from "../contexts/SoftErrorContext";
-import { loadModel } from "../utils/LoadModel";
+import IModel from "../../types/IModel";
+import Window from "../UI/Window";
+import { SettingsContext } from "../../contexts/SettingsContext";
+import { SoftErrorContext } from "../../contexts/SoftErrorContext";
+import { loadModel } from "../../utils/LoadModel";
 import * as PIXI from "pixi.js";
 import { AdjustmentFilter } from "pixi-filters";
 

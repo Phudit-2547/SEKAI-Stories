@@ -8,7 +8,7 @@ import React, {
 import { useTranslation } from "react-i18next";
 import { SceneContext } from "../../../../contexts/SceneContext";
 import IModel from "../../../../types/IModel";
-import Live2DInputSlider from "../../../Live2DInputSlider";
+import Live2DInputSlider from "../../../UI/Live2DInputSlider";
 import {
     Cubism4InternalModel,
     Live2DModel,

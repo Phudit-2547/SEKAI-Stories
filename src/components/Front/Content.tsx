@@ -1,16 +1,16 @@
 import React, { useContext } from "react";
 import Canvas from "./Canvas";
 import SidebarSelect from "./SidebarSelect";
-import DownloadButton from "./DownloadButton";
-import { SceneContext } from "../contexts/SceneContext";
+import DownloadButton from "../ButtonWindow/DownloadButton";
+import { SceneContext } from "../../contexts/SceneContext";
 import FlavorText from "./FlavorText";
-import SettingsButton from "./SettingsButton";
-import { SettingsContext } from "../contexts/SettingsContext";
-import Tutorial from "./Tutorial";
-import { SoftErrorContext } from "../contexts/SoftErrorContext";
-import SoftError from "./UI/SoftError";
-import ExportButton from "./ExportButton";
-import ClearButton from "./ClearButton";
+import SettingsButton from "../ButtonWindow/SettingsButton";
+import { SettingsContext } from "../../contexts/SettingsContext";
+import Tutorial from "../Window/Tutorial";
+import { SoftErrorContext } from "../../contexts/SoftErrorContext";
+import SoftError from "../UI/SoftError";
+import ExportButton from "../ButtonWindow/ExportButton";
+import ClearButton from "../ButtonWindow/ClearButton";
 import ContentBackground from "./ContentBackground";
 
 const Content: React.FC = () => {

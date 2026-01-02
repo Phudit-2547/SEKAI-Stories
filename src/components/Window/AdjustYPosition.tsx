@@ -6,9 +6,9 @@ import React, {
     useRef,
     useState,
 } from "react";
-import Window from "./UI/Window";
+import Window from "../UI/Window";
 import { useTranslation } from "react-i18next";
-import { SceneContext } from "../contexts/SceneContext";
+import { SceneContext } from "../../contexts/SceneContext";
 import * as PIXI from "pixi.js";
 
 interface AdjustYPositionProps {

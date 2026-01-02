@@ -8,12 +8,12 @@ import React, {
     // useEffect,
     // useMemo,
 } from "react";
-import data from "../background.json";
-import { getBackground } from "../utils/GetBackground";
+import data from "../../background.json";
+import { getBackground } from "../../utils/GetBackground";
 import { useTranslation } from "react-i18next";
-import IBackground from "../types/IBackground";
-import { SoftErrorContext } from "../contexts/SoftErrorContext";
-import { IBackgroundBookmark } from "../types/IBackgroundBookmark";
+import IBackground from "../../types/IBackground";
+import { SoftErrorContext } from "../../contexts/SoftErrorContext";
+import { IBackgroundBookmark } from "../../types/IBackgroundBookmark";
 // import { fuzzy } from "fast-fuzzy";
 
 const pngList = ["bg_transparent"];
