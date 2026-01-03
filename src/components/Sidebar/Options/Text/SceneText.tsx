@@ -136,7 +136,7 @@ const SceneText: React.FC = () => {
                 </div>
             </div>
             <div className="option__content">
-                <h3>{t("globaltoggles")}</h3>
+                <h3>{t("global.toggles")}</h3>
                 <Checkbox
                     id="visible"
                     label={t("global.visible")}
@@ -146,7 +146,7 @@ const SceneText: React.FC = () => {
                 {sceneText.visible && (
                     <Checkbox
                         id="hide-everything"
-                        label={t("text.hide-everything")}
+                        label={t("text.scene-text.hide-everything")}
                         checked={text.hideEverything}
                         onChange={handleHideEverything}
                     />
