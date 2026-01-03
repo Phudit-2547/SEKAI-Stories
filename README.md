@@ -2,7 +2,7 @@
 
 A Dialogue Generator for making fan-made stories from the game [Project SEKAI COLORFUL STAGE!](https://colorfulstage.com/) (also known as Hatsune Miku: COLORFUL STAGE!).
 
-![Screenshot (836)](https://github.com/user-attachments/assets/1e15c6da-d4f0-4999-acc6-8a961a7dfafb)
+![Screenshot)](./public/img/Screenshot-3.png)
 
 ## Try the Story Generator!
 [![](./public/img/cloudflare.png)](https://sekai-stories.pages.dev/) 
