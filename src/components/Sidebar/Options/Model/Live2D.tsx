@@ -249,12 +249,12 @@ const Live2D: React.FC<Live2DProps> = ({
 
     return (
         <>
-            <h3>{t("model.parameters")}</h3>
+            <h3>{t("model.live2d.parameters.header")}</h3>
             {window.matchMedia &&
                 window.matchMedia("(pointer: fine)").matches &&
                 selectedParameter.idx === -1 && (
                     <div>
-                        <p>{t("model.live2d-tooltip")}</p>
+                        <p>{t("model.live2d.parameters.tooltip")}</p>
                     </div>
                 )}
             {coreModel && (
@@ -273,7 +273,7 @@ const Live2D: React.FC<Live2DProps> = ({
                         ref={live2dSelect}
                     >
                         <option value="_,-1" disabled>
-                            {t("model.select-parameter")}
+                            {t("model.live2d.parameters.select-parameter")}
                         </option>
                         {coreModel["_parameterIds"].map(
                             (param: string, idx: number) => (
@@ -333,41 +333,41 @@ const Live2D: React.FC<Live2DProps> = ({
                 </>
             )}
             <div className="option__content">
-                <h3>{t("model.toggles")}</h3>
+                <h3>{t("global.toggles")}</h3>
                 <Checkbox
-                    label={t("model.idle")}
+                    label={t("model.live2d.idle")}
                     checked={currentModel.idle}
                     id="idle"
                     onChange={handleIdle}
                 />
             </div>
             <div className="option__content">
-                <h3>{t("model.import-export")}</h3>
-                <p>{t("model.live2d-import-export-description")}</p>
+                <h3>{t("model.live2d.import-export.header")}</h3>
+                <p>{t("model.live2d.import-export.description")}</p>
                 <div>
                     <button
                         className="btn-regular btn-100 btn-blue"
                         onClick={handleImportLive2DParams}
                     >
-                        {t("model.import")}
+                        {t("global.import")}
                     </button>
                     <button
                         className="btn-regular btn-100 btn-blue"
                         onClick={handleExportLive2DParams}
                     >
-                        {t("model.export")}
+                        {t("global.export")}
                     </button>
                 </div>
             </div>
             <div className="option__content">
-                <h3>{t("model.emotion-copy")}</h3>
-                <p>{t("model.emotion-copy-description")}</p>
+                <h3>{t("model.live2d.emotion-copy.header")}</h3>
+                <p>{t("model.live2d.emotion-copy.description")}</p>
                 <div>
                     <button
                         className="btn-regular btn-100 btn-blue"
                         onClick={copyEmotionParameters}
                     >
-                        {t("model.copy")}
+                        {t("global.copy")}
                     </button>
                 </div>
             </div>

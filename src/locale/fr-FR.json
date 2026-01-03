@@ -1,130 +1,176 @@
 {
-    "please-wait": "Veuillez patienter...",
+    "global": {
+        "toggles": "Options",
+        "close": "Fermer",
+        "clear-ok": "Effacer",
+        "copy": "Copier",
+        "continue-ok": "Continuer",
+        "cancel": "Annuler",
+        "next": "Suivant",
+        "input": "Entrée",
+        "adjust": "Ajustez",
+        "enter-value": "Entrez une valeur.",
+        "visible": "Visible",
+        "import": "Importer",
+        "export": "Exporter"
+    },
     "background": {
         "header": "Arrière-plan",
-        "select": "Selectionner",
-        "upload": "Uploader",
-        "lighting": "Éclairage",
-        "preset": "Préréglage",
-        "red": "Rouge",
-        "green": "Vert",
-        "blue": "Bleu",
-        "brightness": "Luminosité",
-        "saturation": "Saturation",
-        "select-preset": "Sélectionner un préréglage",
-        "default": "Par défaut",
-        "warm": "Chaud",
-        "night": "Nuit",
-        "off": "Lumières éteintes",
-        "bright": "Clair",
-        "silhoutte": "Silhouette",
-        "custom-preset": "Préréglage personnalisé",
-        "split-location": "Lieu partagé",
-        "upload-info": "Pour vous assurer que l'image s'affiche correctement et ne soit pas déformée ou coupée, veuillez utiliser une image au format 16:9.",
-        "filters": "Filtres",
-        "flashback": "Flashback",
-        "sick": "Malade",
-        "drooping-lines": "Lignes tombantes",
-        "pov": "POV/FOV",
-        "zoom": "Zoom",
-        "povx": "Position X",
-        "povy": "Position Y"
+        "select": {
+            "header": "Selectionner",
+            "button": "Select",
+            "split-location": "Lieu partagé",
+            "upload": "Uploader",
+            "upload-info": "Pour vous assurer que l'image s'affiche correctement et ne soit pas déformée ou coupée, veuillez utiliser une image au format 16:9."
+        },
+        "lighting": {
+            "header": "Éclairage",
+            "preset": "Préréglage",
+            "red": "Rouge",
+            "green": "Vert",
+            "blue": "Bleu",
+            "brightness": "Luminosité",
+            "saturation": "Saturation",
+            "presets": {
+                "select-preset": "Sélectionner un préréglage",
+                "default": "Par défaut",
+                "warm": "Chaud",
+                "night": "Nuit",
+                "off": "Lumières éteintes",
+                "bright": "Clair",
+                "silhoutte": "Silhouette",
+                "custom-preset": "Préréglage personnalisé"
+            }
+        },
+        "filters": {
+            "header": "Filtres",
+            "flashback": "Flashback",
+            "sick": "Malade",
+            "drooping-lines": "Lignes tombantes",
+            "pov": "POV/FOV",
+            "pov-settings": {
+                "zoom": "Zoom",
+                "povx": "Position X",
+                "povy": "Position Y"
+            }
+        }
     },
     "text": {
         "header": "Texte",
-        "name-tag": "Surnom",
-        "easy-switch": "Utiliser le changement rapide",
-        "dialogue": "Dialogue",
-        "font-size": "Taille de police",
-        "enter-font-size": "Entrez une taille de police.",
-        "add-symbol": "Ajouter un symbole",
-        "scene-text": "Texte de scène",
-        "scene-text-variant": "Variante",
-        "scene-text-middle": "Milieu",
-        "scene-text-top-left": "En haut à gauche",
-        "y-offset": "Décalage Y",
-        "y-offset-details": "Si le texte sur le canevas n’est pas correctement aligné, des ajustements peuvent être nécessaires.",
-        "hide-everything": "Masquer modèles et dialogues",
+        "name-tag": {
+            "header": "Surnom",
+            "easy-switch": "Utiliser le changement rapide"
+        },
+        "dialogue": {
+            "header": "Dialogue",
+            "font-size": "Taille de police",
+            "enter-font-size": "Entrez une taille de police.",
+            "add-symbol": "Ajouter un symbole"
+        },
+        "scene-text": {
+            "header": "Texte de scène",
+            "variant": {
+                "header": "Variante",
+                "middle": "Milieu",
+                "top-left": "En haut à gauche"
+            },
+            "hide-everything": "Masquer modèles et dialogues"
+        },
+        "y-offset": {
+            "header": "Décalage Y",
+            "details": "Si le texte sur le canevas n’est pas correctement aligné, des ajustements peuvent être nécessaires."
+        },
         "toggles": "Options"
     },
     "model": {
         "header": "Modèle",
-        "selected-layer": "Calque sélectionné",
-        "add-model-header": "Ajouter un modèle",
-        "add-model-description": "Choisissez d’où obtenir votre modèle.",
-        "add-model-sekai": "sekai.best",
-        "add-model-sekai-description": "Accédez aux modèles fournis par Sekai Viewer !",
-        "add-model-static": "SEKAI Stories",
-        "add-model-static-description": "Option de secours quand Sekai Viewer est hors ligne.",
-        "upload-image": "Uploader une image",
-        "upload-image-description": "Uploader une image de sprite personnalisée.",
-        "delete-model-warn": "C’est le seul calque et il ne peut pas être supprimé.",
-        "character": "Personnage",
-        "select-character": "Sélectionner un personnage",
-        "costume": "Costume",
-        "live2d-issue": "Ce costume peut manquer de certaines parties.",
-        "live2d-issue-github": "Voir le problème ici.",
-        "virtual": "Effet virtuel",
-        "emotion": "Émotion",
-        "rename-emotion": "Entrez un nom pour cette émotion. Laissez vide pour réinitialiser.",
-        "pose": "Pose",
-        "select-pose": "Sélectionner une pose",
-        "expression": "Expression",
-        "select-expression": "Sélectionner une expression",
-        "layer": "Calque",
-        "re-apply": "Réappliquer",
-        "transform": "Transformer",
-        "x-position": "Position X",
-        "y-position": "Position Y",
-        "scale": "Échelle",
-        "rotation": "Rotation",
-        "blur": "Flou",
-        "mouth": "Bouche",
-        "ParamMouthForm": "Forme primaire",
-        "ParamMouthOpenY": "Ouverture",
-        "ParamMouthForm2": "Forme secondaire",
-        "ParamMouthScaleX": "Échelle X",
-        "ParamMouthScaleY": "Échelle Y",
-        "ParamMouthPositionY": "Position Y",
-        "ParamMouthShadow": "Ombre",
-        "live2d": "Live2D",
-        "show-live2d-parts": "Afficher les parties Live2D",
-        "access-live2d-parts": "Vous êtes sur le point d’accéder à toutes les parties de ce modèle. Continuer ?",
-        "toggles": "Options",
-        "idle": "Animation d’attente",
-        "parameters": "Paramètres",
-        "select-parameter": "Sélectionner un paramètre",
-        "import-export": "Importer/Exporter",
-        "import": "Importer",
-        "export": "Exporter",
-        "copy": "Copier",
-        "live2d-import-export-description": "Vous pouvez sauvegarder vos ajustements et les charger sur un autre modèle.",
-        "live2d-tooltip": "Vous pouvez utiliser les flèches du clavier pour sélectionner et ajuster les paramètres.",
+        "selected-layer": {
+            "header": "Calque sélectionné",
+            "layer": "Calque",
+            "add-model": {
+                "header": "Ajouter un modèle",
+                "description": "Choisissez d’où obtenir votre modèle.",
+                "sekai": "sekai.best",
+                "sekai-description": "Accédez aux modèles fournis par Sekai Viewer !",
+                "static": "SEKAI Stories",
+                "static-description": "Option de secours quand Sekai Viewer est hors ligne.",
+                "upload-image": "Uploader une image",
+                "upload-image-description": "Uploader une image de sprite personnalisée."
+            },
+            "delete-model-warn": "C’est le seul calque et il ne peut pas être supprimé."
+        },
+        "character": {
+            "header": "Personnage",
+            "select-character": "Sélectionner un personnage"
+        },
+        "costume": {
+            "header": "Costume",
+            "live2d-issue": "Ce costume peut manquer de certaines parties.",
+            "live2d-issue-github": "Voir le problème ici.",
+            "virtual": "Effet virtuel"
+        },
+        "emotion": {
+            "header": "Émotion",
+            "rename-emotion": "Entrez un nom pour cette émotion. Laissez vide pour réinitialiser.",
+            "pose": "Pose",
+            "select-pose": "Sélectionner une pose",
+            "expression": "Expression",
+            "select-expression": "Sélectionner une expression"
+        },
+        "transform": {
+            "header": "Transformer",
+            "x-position": "Position X",
+            "y-position": "Position Y",
+            "scale": "Échelle",
+            "rotation": "Rotation",
+            "blur": "Flou",
+            "layering": "Ordre des calques"
+        },
+        "mouth": {
+            "header": "Bouche",
+            "ParamMouthForm": "Forme primaire",
+            "ParamMouthOpenY": "Ouverture",
+            "ParamMouthForm2": "Forme secondaire",
+            "ParamMouthScaleX": "Échelle X",
+            "ParamMouthScaleY": "Échelle Y",
+            "ParamMouthPositionY": "Position Y",
+            "ParamMouthShadow": "Ombre"
+        },
+        "live2d": {
+            "header": "Live2D",
+            "parameters": {
+                "header": "Paramètres",
+                "select-parameter": "Sélectionner un paramètre",
+                "tooltip": "Vous pouvez utiliser les flèches du clavier pour sélectionner et ajuster les paramètres."
+            },
+            "idle": "Animation d’attente",
+            "import-export": {
+                "header": "Importer/Exporter",
+                "description": "Vous pouvez sauvegarder vos ajustements et les charger sur un autre modèle."
+            },
+            "emotion-copy": {
+                "header": "Copie d’émotion",
+                "description": "Ceci copiera tous les paramètres de l’expression et de la pose que vous avez définies.",
+                "confirm-header": "Copié !",
+                "confirm-description": "Les paramètres d’émotion ont été copiés avec succès."
+            },
+            "show-live2d-parts": "Afficher les parties Live2D",
+            "access-live2d-parts": "Vous êtes sur le point d’accéder à toutes les parties de ce modèle. Continuer ?"
+        },
         "live2d-changed-warn": "Vous avez modifié des paramètres Live2D personnalisés. Continuer les supprimera !",
-        "emotion-copy": "Copie d’émotion",
-        "emotion-copy-description": "Ceci copiera tous les paramètres de l’expression et de la pose que vous avez définies.",
-        "emotion-copy-confirm-header": "Copié !",
-        "emotion-copy-confirm-description": "Les paramètres d’émotion ont été copiés avec succès.",
         "long-wait": "Si le chargement du modèle prend trop de temps, essayez de récupérer les modèles via SEKAI Stories.",
-        "layering": "Ordre des calques",
+        "re-apply": "Réappliquer",
         "advanced": "Avancé"
     },
-    "visible": "Visible",
     "experimental": {
         "header": "Expérimental",
         "details": "Si vous ne voyez aucun changement, essayez d’actualiser le canevas.",
         "refresh": "Rafraîchir"
     },
-    "close": "Fermer",
-    "clear": "Cela effacera tout le canevas. Toute progression sera perdue !",
-    "start-blank": "Commencer avec un canevas vide la prochaine fois.",
-    "clear-ok": "Effacer",
-    "continue-ok": "Continuer",
-    "cancel": "Annuler",
-    "next": "Suivant",
-    "input": "Entrée",
-    "adjust": "Ajustez",
-    "enter-value": "Entrez une valeur.",
+    "clear": {
+        "message": "Cela effacera tout le canevas. Toute progression sera perdue !",
+        "start-blank": "Commencer avec un canevas vide la prochaine fois."
+    },
     "support": {
         "header": "Support",
         "report-header": "Bug trouvée ?",
@@ -136,14 +182,17 @@
         "special-thanks-header": "Remerciements spéciaux",
         "special-thanks-description": "Je tiens à remercier le propriétaire de Sekai Viewer de m’avoir permis d’accéder à leurs modèles via ce site !"
     },
-    "loading-1": "Récupération du fichier modèle pour",
-    "loading-2": "Récupération du fichier de mouvements pour",
-    "loading-3": "Correction des données du modèle pour",
-    "loading-4": "Chargement des textures pour",
-    "loading-5": "Chargement du fichier moc3 pour",
-    "loading-6": "Chargement du fichier de physique pour",
-    "loading-7": "Mise en place du nouveau modèle",
-    "failed-load": "Échec du chargement du nouveau modèle !",
+    "loadings": {
+        "please-wait": "Veuillez patienter...",
+        "loading-1": "Récupération du fichier modèle pour",
+        "loading-2": "Récupération du fichier de mouvements pour",
+        "loading-3": "Correction des données du modèle pour",
+        "loading-4": "Chargement des textures pour",
+        "loading-5": "Chargement du fichier moc3 pour",
+        "loading-6": "Chargement du fichier de physique pour",
+        "loading-7": "Mise en place du nouveau modèle",
+        "failed-load": "Échec du chargement du nouveau modèle !"
+    },
     "character": {
         "none": "Aucun",
         "custom": "Personnalisé",
@@ -207,10 +256,28 @@
     },
     "import-export": {
         "header": "Importer/Exporter",
-        "description": "Les arrière-plans et sprites personnalisés ne sont pas inclus dans ce fichier JSON.",
-        "import": "Importer",
-        "export": "Exporter"
+        "description": "Les arrière-plans et sprites personnalisés ne sont pas inclus dans ce fichier JSON."
     },
+    "save": {
+        "header": "Sauvegarde",
+        "note-1-desktop": "Si le téléchargement ne démarre pas, faites un clic droit sur l’image ci-dessous et enregistrez-la.",
+        "note-1-phone": "Si le téléchargement ne démarre pas, appuyez longuement sur l’image ci-dessous et enregistrez-la.",
+        "note-2": "Vous pouvez désactiver cette fenêtre dans Paramètres.",
+        "disable-dialog": "Ne plus afficher ce dialogue la prochaine fois."
+    },
+    "error": {
+        "header": "Erreur",
+        "import-scene-fail": "Le canevas a été réinitialisé.",
+        "invalid-json": "Format JSON invalide",
+        "no-autosave": "Aucune donnée de sauvegarde automatique trouvée.",
+        "no-valid-models": "Ajoutez un nouveau modèle Live2D sur ce personnage en premier.",
+        "not-an-image": "Ceci n’est pas une image.",
+        "default-scene-fail": "Une erreur est survenue lors du chargement de la scène par défaut.\nVeuillez utiliser le bouton effacer, actualiser votre navigateur, ou vider vos cookies.\nSi le problème persiste, veuillez signaler ce bug sur GitHub.",
+        "name-tag-inputs-limit": "La limite est de 2 à 6 entrées pour un surnom.",
+        "background-bookmark": "Vous ne pouvez pas ajouter de favori pour un arrière-plan personnalisé.",
+        "hide-everything-warning": "L’option « Masquer modèles et dialogues » dans le menu Texte de scène est activée.\nVeuillez la désactiver dans le menu Texte."
+    },
+    "mental-health": {},
     "tutorial": {
         "initialSetup1": "Ajustez le curseur jusqu’à ce que vous ne voyiez plus de taches rouges.",
         "initialSetup2": "Vous pouvez toujours modifier cela dans le menu Texte.",
@@ -268,24 +335,5 @@
         "sceneImportExportParagraph": "Cela vous permet de sauvegarder et de charger toute la scène dans un format éditable.",
         "endHeader": "Et voilà !",
         "endParagraph": "Si vous souhaitez refaire ce tutoriel, vous pourrez le rouvrir dans Paramètres."
-    },
-    "save": {
-        "header": "Sauvegarde",
-        "note-1-desktop": "Si le téléchargement ne démarre pas, faites un clic droit sur l’image ci-dessous et enregistrez-la.",
-        "note-1-phone": "Si le téléchargement ne démarre pas, appuyez longuement sur l’image ci-dessous et enregistrez-la.",
-        "note-2": "Vous pouvez désactiver cette fenêtre dans Paramètres.",
-        "disable-dialog": "Ne plus afficher ce dialogue la prochaine fois."
-    },
-    "error": {
-        "header": "Erreur",
-        "import-scene-fail": "Le canevas a été réinitialisé.",
-        "invalid-json": "Format JSON invalide",
-        "no-autosave": "Aucune donnée de sauvegarde automatique trouvée.",
-        "no-valid-models": "Ajoutez un nouveau modèle Live2D sur ce personnage en premier.",
-        "not-an-image": "Ceci n’est pas une image.",
-        "default-scene-fail": "Une erreur est survenue lors du chargement de la scène par défaut.\nVeuillez utiliser le bouton effacer, actualiser votre navigateur, ou vider vos cookies.\nSi le problème persiste, veuillez signaler ce bug sur GitHub.",
-        "name-tag-inputs-limit": "La limite est de 2 à 6 entrées pour un surnom.",
-        "background-bookmark": "Vous ne pouvez pas ajouter de favori pour un arrière-plan personnalisé.",
-        "hide-everything-warning": "L’option « Masquer modèles et dialogues » dans le menu Texte de scène est activée.\nVeuillez la désactiver dans le menu Texte."
     }
 }

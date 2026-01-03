@@ -83,7 +83,8 @@ const POVFilter: React.FC<POVFilterProps> = ({ filter, setFilter }) => {
             <div className="option__content">
                 <div className="transform-icons">
                     <h3>
-                        {t("background.zoom")} ({currentZoom.toFixed(1)}x)
+                        {t("background.filters.pov-settings.zoom")} (
+                        {currentZoom.toFixed(1)}x)
                     </h3>
                 </div>
                 <input
@@ -100,7 +101,8 @@ const POVFilter: React.FC<POVFilterProps> = ({ filter, setFilter }) => {
             <div className="option__content">
                 <div className="transform-icons">
                     <h3>
-                        {t("background.povx")} ({filter?.pov?.x?.toFixed(0)})
+                        {t("background.filters.pov-settings.povx")} (
+                        {filter?.pov?.x?.toFixed(0)})
                     </h3>
                 </div>
                 <input
@@ -117,7 +119,8 @@ const POVFilter: React.FC<POVFilterProps> = ({ filter, setFilter }) => {
             <div className="option__content">
                 <div className="transform-icons">
                     <h3>
-                        {t("background.povy")} ({filter?.pov?.y?.toFixed(0)})
+                        {t("background.filters.pov-settings.povy")} (
+                        {filter?.pov?.y?.toFixed(0)})
                     </h3>
                 </div>
                 <input

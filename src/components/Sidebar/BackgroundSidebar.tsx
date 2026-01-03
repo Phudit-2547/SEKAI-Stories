@@ -22,7 +22,7 @@ const BackgroundSidebar: React.FC = () => {
         <div>
             <h1>{t("background.header")}</h1>
             <SidebarOption
-                header={t("background.select")}
+                header={t("background.select.header")}
                 option={openTab}
                 setOption={setOpenTab}
                 optionName="select"
@@ -30,7 +30,7 @@ const BackgroundSidebar: React.FC = () => {
                 <Select />
             </SidebarOption>
             <SidebarOption
-                header={t("background.lighting")}
+                header={t("background.lighting.header")}
                 option={openTab}
                 setOption={setOpenTab}
                 optionName="lighting"
@@ -38,7 +38,7 @@ const BackgroundSidebar: React.FC = () => {
                 <Lighting />
             </SidebarOption>
             <SidebarOption
-                header={t("background.filters")}
+                header={t("background.filters.header")}
                 option={openTab}
                 setOption={setOpenTab}
                 optionName="filters"

@@ -158,7 +158,7 @@ const NameTags: React.FC<NameTagsProps> = ({
 
             <Checkbox
                 id="easy-switch"
-                label={t("text.easy-switch")}
+                label={t("text.name-tag.easy-switch")}
                 checked={easySwitch}
                 onChange={() => {
                     setEasySwitch(!easySwitch);

@@ -116,14 +116,14 @@ const AdjustYPosition: React.FC<AdjustYPositionProps> = ({
     return (
         <Window
             show={show}
-            confirmLabel={inTutorial ? t("next") : t("close")}
+            confirmLabel={inTutorial ? t("global.next") : t("global.close")}
             confirmFunction={confirmFunction}
             skipCloseInConfirm={inTutorial}
             hideClose={inTutorial}
             className="window__90_width"
         >
             <div className="window__content">
-                <h1>{t("text.y-offset")}</h1>
+                <h1>{t("text.y-offset.header")}</h1>
                 <p>{t("tutorial.initialSetup1")}</p>
                 <p>{t("tutorial.initialSetup2")}</p>
                 <canvas

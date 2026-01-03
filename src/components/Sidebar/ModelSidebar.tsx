@@ -205,7 +205,7 @@ const ModelSidebar: React.FC = () => {
             <h1>{t("model.header")}</h1>
 
             <SidebarOption
-                header={t("model.selected-layer")}
+                header={t("model.selected-layer.header")}
                 option={openModelOption}
                 setOption={setOpenModelOption}
                 optionName="select-layer"
@@ -238,12 +238,12 @@ const ModelSidebar: React.FC = () => {
                         onClick={() => abortController.current?.abort()}
                         disabled={abortController.current?.signal.aborted}
                     >
-                        {t("cancel")}
+                        {t("global.cancel")}
                     </button>
                 </div>
             )}
             <SidebarOption
-                header={t("model.character")}
+                header={t("model.character.header")}
                 option={openModelOption}
                 setOption={setOpenModelOption}
                 optionName="character"
@@ -264,7 +264,7 @@ const ModelSidebar: React.FC = () => {
             {currentSelectedCharacter != "custom" && (
                 <>
                     <SidebarOption
-                        header={t("model.costume")}
+                        header={t("model.costume.header")}
                         option={openModelOption}
                         setOption={setOpenModelOption}
                         optionName="costume"
@@ -287,7 +287,7 @@ const ModelSidebar: React.FC = () => {
             )}
             {currentModel?.model instanceof Live2DModel && (
                 <SidebarOption
-                    header={t("model.emotion")}
+                    header={t("model.emotion.header")}
                     option={openModelOption}
                     setOption={setOpenModelOption}
                     optionName="emotion"
@@ -304,7 +304,7 @@ const ModelSidebar: React.FC = () => {
                 </SidebarOption>
             )}
             <SidebarOption
-                header={t("model.transform")}
+                header={t("model.transform.header")}
                 option={openModelOption}
                 setOption={setOpenModelOption}
                 optionName="transform"
@@ -315,7 +315,7 @@ const ModelSidebar: React.FC = () => {
             {currentModel?.model instanceof Live2DModel && !isLoading && (
                 <>
                     <SidebarOption
-                        header={t("model.mouth")}
+                        header={t("model.mouth.header")}
                         option={openModelOption}
                         setOption={setOpenModelOption}
                         optionName="mouth"
@@ -326,7 +326,7 @@ const ModelSidebar: React.FC = () => {
                         />
                     </SidebarOption>
                     <SidebarOption
-                        header={t("model.live2d")}
+                        header={t("model.live2d.header")}
                         option={openModelOption}
                         setOption={setOpenModelOption}
                         optionName="live2d"
@@ -347,7 +347,7 @@ const ModelSidebar: React.FC = () => {
                 <Window
                     show={setLive2DChangedWarnWindow}
                     confirmFunction={live2DChangedFunction}
-                    confirmLabel={t("continue-ok")}
+                    confirmLabel={t("global.continue-ok")}
                     danger
                 >
                     <div className="window__content">
@@ -363,8 +363,8 @@ const ModelSidebar: React.FC = () => {
             {copiedParametersWindow && (
                 <Window show={setCopiedParametersWindow} id="export-screen">
                     <div className="window__content">
-                        <h1>{t("model.emotion-copy-confirm-header")}</h1>
-                        <p>{t("model.emotion-copy-confirm-description")}</p>
+                        <h1>{t("model.live2d.emotion-copy.confirm-header")}</h1>
+                        <p>{t("model.live2d.emotion-copy.confirm-description")}</p>
                         <textarea
                             name=""
                             id=""

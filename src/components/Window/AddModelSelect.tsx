@@ -19,8 +19,8 @@ const AddModelSelect: React.FC<AddModelSelectProps> = ({
     return (
         <Window show={setShow}>
             <div className="window__content">
-                <h1>{t("model.add-model-header")}</h1>
-                <p>{t("model.add-model-description")}</p>
+                <h1>{t("model.selected-layer.add-model.header")}</h1>
+                <p>{t("model.selected-layer.add-model.description")}</p>
                 <button
                     className="btn-blue btn-regular btn-extend-width"
                     onClick={() => {
@@ -29,7 +29,9 @@ const AddModelSelect: React.FC<AddModelSelectProps> = ({
                     }}
                 >
                     sekai.best
-                    <p>{t("model.add-model-sekai-description")}</p>
+                    <p>
+                        {t("model.selected-layer.add-model.sekai-description")}
+                    </p>
                 </button>
                 <button
                     className="btn-blue btn-regular btn-extend-width"
@@ -39,15 +41,21 @@ const AddModelSelect: React.FC<AddModelSelectProps> = ({
                     }}
                 >
                     SEKAI Stories
-                    <p>{t("model.add-model-static-description")}</p>
+                    <p>
+                        {t("model.selected-layer.add-model.static-description")}
+                    </p>
                 </button>
                 <UploadImageButton
                     id="background-upload"
                     uploadFunction={uploadFunction}
                     text={
                         <>
-                            {t("model.upload-image")}
-                            <p>{t("model.upload-image-description")}</p>
+                            {t("model.selected-layer.add-model.upload-image")}
+                            <p>
+                                {t(
+                                    "model.selected-layer.add-model.upload-image-description"
+                                )}
+                            </p>
                         </>
                     }
                 />

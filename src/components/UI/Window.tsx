@@ -107,7 +107,7 @@ const Window: React.FC<WindowProps> = ({
                             className="btn-regular btn-white center close-button"
                             onClick={() => handleClose()}
                         >
-                            {t("close")}
+                            {t("global.close")}
                         </button>
                     )}
                 </div>

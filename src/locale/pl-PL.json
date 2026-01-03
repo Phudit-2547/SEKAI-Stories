@@ -1,58 +1,176 @@
 {
-    "please-wait": "Proszę czekać...",
-
+    "global": {
+        "toggles": null,
+        "close": "Zamknij",
+        "clear-ok": "Wyczyść",
+        "copy": null,
+        "continue-ok": null,
+        "cancel": null,
+        "next": null,
+        "input": null,
+        "adjust": null,
+        "enter-value": null,
+        "visible": "Widoczna",
+        "import": null,
+        "export": null
+    },
     "background": {
         "header": "Tło",
-        "select": "Wybierz",
-        "upload": "Załaduj",
-        "upload-info": "Aby się upewnić, że obraz będzie wyglądał dobrze i się nie rozciągnie lub przytnie, użyj obrazka o proporcjach 16:9."
+        "select": {
+            "header": "Wybierz",
+            "button": "Select",
+            "split-location": null,
+            "upload": "Załaduj",
+            "upload-info": "Aby się upewnić, że obraz będzie wyglądał dobrze i się nie rozciągnie lub przytnie, użyj obrazka o proporcjach 16:9."
+        },
+        "lighting": {
+            "header": null,
+            "preset": null,
+            "red": null,
+            "green": null,
+            "blue": null,
+            "brightness": null,
+            "saturation": null,
+            "presets": {
+                "select-preset": null,
+                "default": null,
+                "warm": null,
+                "night": null,
+                "off": null,
+                "bright": null,
+                "silhoutte": null,
+                "custom-preset": null
+            }
+        },
+        "filters": {
+            "header": null,
+            "flashback": null,
+            "sick": null,
+            "drooping-lines": null,
+            "pov": null,
+            "pov-settings": {
+                "zoom": null,
+                "povx": null,
+                "povy": null
+            }
+        }
     },
-
     "text": {
         "header": "Tekst",
-        "name-tag": "Pole na imię",
-        "easy-switch": "Użyj łatwego zmieniania",
-        "dialogue": "Dialog",
-        "font-size": "Rozmiar czcionki",
-        "add-symbol": "Wstaw symbol"
+        "name-tag": {
+            "header": "Pole na imię",
+            "easy-switch": "Użyj łatwego zmieniania"
+        },
+        "dialogue": {
+            "header": "Dialog",
+            "font-size": "Rozmiar czcionki",
+            "enter-font-size": null,
+            "add-symbol": "Wstaw symbol"
+        },
+        "scene-text": {
+            "header": null,
+            "variant": {
+                "header": null,
+                "middle": null,
+                "top-left": null
+            },
+            "hide-everything": null
+        },
+        "y-offset": {
+            "header": null,
+            "details": null
+        },
+        "toggles": null
     },
-
     "model": {
         "header": "Model",
-        "selected-layer": "Wybrana warstwa",
-        "add-model-sekai": "Dodaj model z sekai.best",
-        "add-model-sekai-description": "Użyj modeli dostarczonych przez Sekai Viewer!",
-        "add-model-static": "Dodaj model z SEKAI Stories",
-        "add-model-static-description": "Alternatywna opcja gdyby Sekai Viewer nie działał.",
-        "delete-model-warn": "To jest jedyna warstwa i nie może zostać usunięta.",
-        "character": "Postać",
-        "select-character": "Wybierz postać",
-        "costume": "Strój",
-        "emotion": "Emocje",
-        "pose": "Poza",
-        "select-pose": "Wybierz pozę",
-        "expression": "Wyraz twarzy",
-        "select-expression": "Wybierz wyraz twarzy",
-        "layer": "Warstwa",
+        "selected-layer": {
+            "header": "Wybrana warstwa",
+            "layer": "Warstwa",
+            "add-model": {
+                "header": null,
+                "description": null,
+                "sekai": "Dodaj model z sekai.best",
+                "sekai-description": "Użyj modeli dostarczonych przez Sekai Viewer!",
+                "static": "Dodaj model z SEKAI Stories",
+                "static-description": "Alternatywna opcja gdyby Sekai Viewer nie działał.",
+                "upload-image": null,
+                "upload-image-description": null
+            },
+            "delete-model-warn": "To jest jedyna warstwa i nie może zostać usunięta."
+        },
+        "character": {
+            "header": "Postać",
+            "select-character": "Wybierz postać"
+        },
+        "costume": {
+            "header": "Strój",
+            "live2d-issue": null,
+            "live2d-issue-github": null,
+            "virtual": null
+        },
+        "emotion": {
+            "header": "Emocje",
+            "rename-emotion": null,
+            "pose": "Poza",
+            "select-pose": "Wybierz pozę",
+            "expression": "Wyraz twarzy",
+            "select-expression": "Wybierz wyraz twarzy"
+        },
+        "transform": {
+            "header": "Transformacje",
+            "x-position": "Pozycja X",
+            "y-position": "Pozycja Y",
+            "scale": "Skala",
+            "rotation": null,
+            "blur": null,
+            "layering": null
+        },
+        "mouth": {
+            "header": null,
+            "ParamMouthForm": null,
+            "ParamMouthOpenY": null,
+            "ParamMouthForm2": null,
+            "ParamMouthScaleX": null,
+            "ParamMouthScaleY": null,
+            "ParamMouthPositionY": null,
+            "ParamMouthShadow": null
+        },
+        "live2d": {
+            "header": null,
+            "parameters": {
+                "header": null,
+                "select-parameter": null,
+                "tooltip": null
+            },
+            "idle": null,
+            "import-export": {
+                "header": null,
+                "description": null
+            },
+            "emotion-copy": {
+                "header": null,
+                "description": null,
+                "confirm-header": null,
+                "confirm-description": null
+            },
+            "show-live2d-parts": null,
+            "access-live2d-parts": null
+        },
+        "live2d-changed-warn": null,
+        "long-wait": null,
         "re-apply": "Zastosuj ponownie",
-        "transform": "Transformacje",
-        "x-position": "Pozycja X",
-        "y-position": "Pozycja Y",
-        "scale": "Skala"
+        "advanced": null
     },
-
-    "visible": "Widoczna",
-
     "experimental": {
         "header": "Eksperymentalne",
         "details": "Jeśli nie widzisz żadnych zmian, spróbuj odświeżyć płótno.",
         "refresh": "Odśwież"
     },
-
-    "close": "Zamknij",
-    "clear": "To działanie wyczyści całe płótno. Cały postęp zostanie utracony!",
-    "clear-ok": "Wyczyść",
-
+    "clear": {
+        "message": "To działanie wyczyści całe płótno. Cały postęp zostanie utracony!",
+        "start-blank": null
+    },
     "support": {
         "header": "Wsparcie",
         "details": "Jeśli podoba ci się SEKAI Stories, możesz mnie wesprzeć na poniższe sposoby:",
@@ -61,16 +179,17 @@
         "special-thanks-header": "Specjalne podziękowania",
         "special-thanks-description": "Chcę podziękować twórcy Sekai Viewera za pozwolenie na użycie ich modeli na tej stronie!"
     },
-
-    "loading-1": "Pobieranie pliku modelu dla:",
-    "loading-2": "Pobieranie pliku animacji dla:",
-    "loading-3": "Naprawanie danych modelu dla:",
-    "loading-4": "Wczytywanie tekstur dla:",
-    "loading-5": "Wczytywanie pliku moc3 dla:",
-    "loading-6": "Wczytywanie pliku fizyki dla:",
-    "loading-7": "Wstawianie nowego modelu",
-    "failed-load": "Nie udało się wczytać nowego modelu!",
-
+    "loadings": {
+        "please-wait": "Proszę czekać...",
+        "loading-1": "Pobieranie pliku modelu dla:",
+        "loading-2": "Pobieranie pliku animacji dla:",
+        "loading-3": "Naprawanie danych modelu dla:",
+        "loading-4": "Wczytywanie tekstur dla:",
+        "loading-5": "Wczytywanie pliku moc3 dla:",
+        "loading-6": "Wczytywanie pliku fizyki dla:",
+        "loading-7": "Wstawianie nowego modelu",
+        "failed-load": "Nie udało się wczytać nowego modelu!"
+    },
     "character": {
         "none": "Brak",
         "custom": "Własna",
@@ -102,9 +221,17 @@
         "kaito": "KAITO",
         "others": "Inni"
     },
-
+    "group": {},
     "settings": {
         "header": "Ustawienia",
         "language": "Język"
-    }
+    },
+    "import-export": {
+        "header": null,
+        "description": null
+    },
+    "save": {},
+    "error": {},
+    "mental-health": {},
+    "tutorial": {}
 }

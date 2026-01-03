@@ -78,7 +78,7 @@ const InputWindow: React.FC<WindowProps> = ({
                 onClick={(e) => e.stopPropagation()}
             >
                 <div className="window__content">
-                    <h1 className="text-center">{t("input")}</h1>
+                    <h1 className="text-center">{t("global.input")}</h1>
                     <p className="text-center">{description}</p>
                     <input
                         type="text"
@@ -106,7 +106,7 @@ const InputWindow: React.FC<WindowProps> = ({
                         className="btn-regular btn-white center close-button"
                         onClick={() => handleClose()}
                     >
-                        {t("close")}
+                        {t("global.close")}
                     </button>
                 </div>
             </div>

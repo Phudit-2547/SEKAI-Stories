@@ -447,14 +447,14 @@ const ExportButton: React.FC = () => {
                                 onClick={handleImport}
                                 disabled={loadingMsg !== ""}
                             >
-                                {t("import-export.import")}
+                                {t("global.import")}
                             </button>
                             <button
                                 className="btn-regular btn-blue center"
                                 onClick={handleExport}
                                 disabled={loadingMsg !== ""}
                             >
-                                {t("import-export.export")}
+                                {t("global.export")}
                             </button>
                         </>
                     }

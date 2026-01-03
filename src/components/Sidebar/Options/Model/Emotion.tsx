@@ -144,7 +144,7 @@ const Emotion: React.FC<EmotionProps> = ({
     return (
         <>
             <div className="option__content">
-                <h3>{t("model.pose")}</h3>
+                <h3>{t("model.emotion.pose")}</h3>
                 <select
                     value={currentModel?.pose}
                     onChange={(e) => {
@@ -152,7 +152,7 @@ const Emotion: React.FC<EmotionProps> = ({
                     }}
                 >
                     <option value={99999} disabled>
-                        {t("model.select-pose")}
+                        {t("model.emotion.select-pose")}
                     </option>
                     {bookmarkEmotions[
                         `${currentModel.from}.${currentModel.character}.${currentModel.modelName}`
@@ -228,7 +228,7 @@ const Emotion: React.FC<EmotionProps> = ({
                 )}
             </div>
             <div className="option__content">
-                <h3>{t("model.expression")}</h3>
+                <h3>{t("model.emotion.expression")}</h3>
                 <select
                     value={currentModel?.expression}
                     onChange={(e) => {
@@ -236,7 +236,7 @@ const Emotion: React.FC<EmotionProps> = ({
                     }}
                 >
                     <option value={99999} disabled>
-                        {t("model.select-expression")}
+                        {t("model.emotion.select-expression")}
                     </option>
                     {bookmarkEmotions[
                         `${currentModel.from}.${currentModel.character}.${currentModel.modelName}`
@@ -321,7 +321,7 @@ const Emotion: React.FC<EmotionProps> = ({
                 <InputWindow
                     show={setShowRenameEmotionInput}
                     confirmFunction={(x: string) => handleNameEmotion(x)}
-                    description={t("model.rename-emotion")}
+                    description={t("model.emotion.rename-emotion")}
                 />
             )}
         </>

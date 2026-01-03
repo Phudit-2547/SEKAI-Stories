@@ -180,7 +180,7 @@ const SelectedLayer: React.FC<SelectedLayerProps> = ({
             if (currentModel.modelName.includes("kisaragi")) {
                 setErrorInformation(" ");
             } else {
-                setErrorInformation(t("model.delete-model-warn"));
+                setErrorInformation(t("model.selected-layer.delete-model-warn"));
             }
             return;
         }
@@ -204,7 +204,7 @@ const SelectedLayer: React.FC<SelectedLayerProps> = ({
             <select value={currentKey} onChange={handleLayerChange}>
                 {Object.keys(models).map((model, idx) => (
                     <option key={model} value={model}>
-                        {t("model.layer")} {idx + 1}:{" "}
+                        {t("model.selected-layer.layer")} {idx + 1}:{" "}
                         {t(`character.${models[model].character}`)}
                     </option>
                 ))}

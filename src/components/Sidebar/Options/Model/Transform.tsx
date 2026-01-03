@@ -154,7 +154,8 @@ const Transform: React.FC<TransformProps> = ({ updateModelState }) => {
             <div className="option__content">
                 <div className="transform-icons">
                     <h3>
-                        {t("model.x-position")} ({currentModel?.modelX}px)
+                        {t("model.transform.x-position")} (
+                        {currentModel?.modelX}px)
                     </h3>
                     <div>
                         <i
@@ -179,7 +180,8 @@ const Transform: React.FC<TransformProps> = ({ updateModelState }) => {
             <div className="option__content">
                 <div className="transform-icons">
                     <h3>
-                        {t("model.y-position")} ({currentModel?.modelY}px)
+                        {t("model.transform.y-position")} (
+                        {currentModel?.modelY}px)
                     </h3>
                     <div>
                         <i
@@ -204,7 +206,8 @@ const Transform: React.FC<TransformProps> = ({ updateModelState }) => {
             <div className="option__content">
                 <div className="transform-icons">
                     <h3>
-                        {t("model.scale")} ({currentModel?.modelScale})
+                        {t("model.transform.scale")} ({currentModel?.modelScale}
+                        )
                     </h3>
                     <div>
                         <i
@@ -230,7 +233,8 @@ const Transform: React.FC<TransformProps> = ({ updateModelState }) => {
             <div className="option__content">
                 <div className="transform-icons">
                     <h3>
-                        {t("model.rotation")} ({currentModel?.modelRotation})
+                        {t("model.transform.rotation")} (
+                        {currentModel?.modelRotation})
                     </h3>
                     <div>
                         <i
@@ -256,7 +260,7 @@ const Transform: React.FC<TransformProps> = ({ updateModelState }) => {
             <div className="option__content">
                 <div className="transform-icons">
                     <h3>
-                        {t("model.blur")} ({currentModel?.modelBlur})
+                        {t("model.transform.blur")} ({currentModel?.modelBlur})
                     </h3>
                     <div>
                         <i
@@ -280,16 +284,16 @@ const Transform: React.FC<TransformProps> = ({ updateModelState }) => {
                 />
             </div>
             <div className="option__content">
-                <h3>{t("model.toggles")}</h3>
+                <h3>{t("global.toggles")}</h3>
                 <Checkbox
                     id="visible"
-                    label={t("visible")}
+                    label={t("global.visible")}
                     checked={currentModel?.visible}
                     onChange={handleVisible}
                 />
             </div>
             <div className="option__conten">
-                <h3>{t("model.layering")}</h3>
+                <h3>{t("model.transform.layering")}</h3>
                 <div className="layer-buttons">
                     <button
                         className="btn-circle btn-white"

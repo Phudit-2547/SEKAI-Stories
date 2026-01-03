@@ -1,133 +1,176 @@
 {
-    "please-wait": "Maghintay...",
-
+    "global": {
+        "toggles": "Toggles",
+        "close": "Isara",
+        "clear-ok": "Ipagpatuloy",
+        "copy": "Kopyahin",
+        "continue-ok": "Ipagpatuloy",
+        "cancel": "I-kansela",
+        "next": "Sunod",
+        "input": "Input",
+        "adjust": "I-adjust",
+        "enter-value": "Maglagay ng value",
+        "visible": "Ipakita",
+        "import": "Mag-import",
+        "export": "Mag-export"
+    },
     "background": {
         "header": "Likuran",
-        "select": "Pumili",
-        "upload": "Mag-Upload",
-        "lighting": "Pag-iilaw",
-        "preset": "Preset",
-        "red": "Pula",
-        "green": "Berde",
-        "blue": "Asul",
-        "brightness": "Liwanag",
-        "saturation": "Saturasyon",
-        "select-preset": "Pumili ng Preset",
-        "default": "Default",
-        "warm": "Mainit",
-        "night": "Gabi",
-        "off": "Patay na ilaw",
-        "bright": "Maliwanag",
-        "silhoutte": "Silweta",
-        "custom-preset": "Kustom na Preset",
-        "upload-info": "Upang masigurong tama ang hitsura ng larawan, gumamit ng larawang may 16:9 na laki.",
-        "split-location": "Split Location",
-        "filters": "Mga Filter",
-        "flashback": "Alaala",
-        "sick": "Nahihilo",
-        "drooping-lines": "Pagkabahala"
+        "select": {
+            "header": "Pumili",
+            "button": "Select",
+            "split-location": "Split Location",
+            "upload": "Mag-Upload",
+            "upload-info": "Upang masigurong tama ang hitsura ng larawan, gumamit ng larawang may 16:9 na laki."
+        },
+        "lighting": {
+            "header": "Pag-iilaw",
+            "preset": "Preset",
+            "red": "Pula",
+            "green": "Berde",
+            "blue": "Asul",
+            "brightness": "Liwanag",
+            "saturation": "Saturasyon",
+            "presets": {
+                "select-preset": "Pumili ng Preset",
+                "default": "Default",
+                "warm": "Mainit",
+                "night": "Gabi",
+                "off": "Patay na ilaw",
+                "bright": "Maliwanag",
+                "silhoutte": "Silweta",
+                "custom-preset": "Kustom na Preset"
+            }
+        },
+        "filters": {
+            "header": "Mga Filter",
+            "flashback": "Alaala",
+            "sick": "Nahihilo",
+            "drooping-lines": "Pagkabahala",
+            "pov": null,
+            "pov-settings": {
+                "zoom": null,
+                "povx": null,
+                "povy": null
+            }
+        }
     },
-
     "text": {
         "header": "Teksto",
-        "name-tag": "Pangalan",
-        "easy-switch": "Madaliang salitan",
-        "dialogue": "Dayalogo",
-        "font-size": "Laki ng teksto",
-        "enter-font-size": "Maglagay ng laki ng teksto.",
-        "add-symbol": "Magdagdag ng simbolo",
-        "scene-text": "Eksena",
-        "scene-text-variant": "Mga Variant",
-        "scene-text-middle": "Gitna",
-        "scene-text-top-left": "Itaas't sa kaliwa",
-        "y-offset": "Y-Offset",
-        "y-offset-details": "Kung ang teksto sa canvas ay hindi nakaayos ng mabuti, maaaring kailanganin ng pagsasaayos.",
-        "hide-everything": "Itago ang mga modelo at dayalogo",
+        "name-tag": {
+            "header": "Pangalan",
+            "easy-switch": "Madaliang salitan"
+        },
+        "dialogue": {
+            "header": "Dayalogo",
+            "font-size": "Laki ng teksto",
+            "enter-font-size": "Maglagay ng laki ng teksto.",
+            "add-symbol": "Magdagdag ng simbolo"
+        },
+        "scene-text": {
+            "header": "Eksena",
+            "variant": {
+                "header": "Mga Variant",
+                "middle": "Gitna",
+                "top-left": "Itaas't sa kaliwa"
+            },
+            "hide-everything": "Itago ang mga modelo at dayalogo"
+        },
+        "y-offset": {
+            "header": "Y-Offset",
+            "details": "Kung ang teksto sa canvas ay hindi nakaayos ng mabuti, maaaring kailanganin ng pagsasaayos."
+        },
         "toggles": "Toggles"
     },
-
     "model": {
         "header": "Modelo",
-        "selected-layer": "Napiling Layer",
-        "add-model-header": "Bagong modelo",
-        "add-model-description": "Pumili kung saan kukunin ang modelo.",
-        "add-model-sekai": "Magdagdag ng modelo mula sa sekai.best",
-        "add-model-sekai-description": "Kumuha ng mga modelo galing sa Sekai Viewer!",
-        "add-model-static": "Magdagdag ng modelo mula sa SEKAI Stories",
-        "add-model-static-description": "Backup na opsyon kung kasaling hindi gumagana ang Sekai Viewer.",
-        "upload-image": "Mag-upload ng imahe",
-        "upload-image-description": "Mag-upload ng kustom na sprite.",
-        "delete-model-warn": "Ito ay nag-iisang layer at hindi puwedeng tanggalin.",
-        "character": "Karakter",
-        "select-character": "Pumili ng karakter",
-        "costume": "Kasuotan",
-        "live2d-issue": "Ang kasuotan na ito ay maaaring may nawawalang parte.",
-        "live2d-issue-github": "Tignan ang issue.",
-        "virtual": "Birtuwal na epek",
-        "emotion": "Emosyon",
-        "rename-emotion": "Maglagay ng maayos na pangalan para sa emosyon na ito. Iwanang wala upang i-reset.",
-        "pose": "Posisyon",
-        "select-pose": "Pumili ng posisyon",
-        "expression": "Ekspresyon",
-        "select-expression": "Pumili ng ekspresyon",
-        "layer": "Layer",
-        "re-apply": "Ulitin",
-        "transform": "Pagbago",
-        "x-position": "X-Posisyon",
-        "y-position": "Y-Posisyon",
-        "rotation": "Rotasyon",
-        "blur": "Labo",
-        "scale": "Sukat",
-        "mouth": "Bibig",
-        "ParamMouthForm": "Pangunahing Hugis",
-        "ParamMouthOpenY": "Pagbubukas",
-        "ParamMouthForm2": "Pangalawang Hugis",
-        "ParamMouthScaleX": "X-Sukat",
-        "ParamMouthScaleY": "Y-Sukat",
-        "ParamMouthPositionY": "Y-Posisyon",
-        "ParamMouthShadow": "Anino",
-        "live2d": "Live2D",
-        "show-live2d-parts": "Ipakita ang mga bahagi ng modelo",
-        "access-live2d-parts": "Magkakaroon ka ng access sa lahat ng bahagi ng modelong ito. Ipagpatuloy?",
-        "toggles": "Mga Toggle",
-        "idle": "Idle na animasyon",
-        "parameters": "Mga Parameter",
-        "select-parameter": "Pumili ng parameter",
-        "import-export": "Import/Export",
-        "import": "Mag-import",
-        "export": "Mag-export",
-        "copy": "Kopyahin",
-        "live2d-import-export-description": "Ang mga ginawa mong pagbabago sa Live2D adjustments ay puwede mong i-save at i-load.",
-        "live2d-tooltip": "Puwede mong gamitin ang mga arrow keys upang pumili ng parameter at ayusin.",
+        "selected-layer": {
+            "header": "Napiling Layer",
+            "layer": "Layer",
+            "add-model": {
+                "header": "Bagong modelo",
+                "description": "Pumili kung saan kukunin ang modelo.",
+                "sekai": "Magdagdag ng modelo mula sa sekai.best",
+                "sekai-description": "Kumuha ng mga modelo galing sa Sekai Viewer!",
+                "static": "Magdagdag ng modelo mula sa SEKAI Stories",
+                "static-description": "Backup na opsyon kung kasaling hindi gumagana ang Sekai Viewer.",
+                "upload-image": "Mag-upload ng imahe",
+                "upload-image-description": "Mag-upload ng kustom na sprite."
+            },
+            "delete-model-warn": "Ito ay nag-iisang layer at hindi puwedeng tanggalin."
+        },
+        "character": {
+            "header": "Karakter",
+            "select-character": "Pumili ng karakter"
+        },
+        "costume": {
+            "header": "Kasuotan",
+            "live2d-issue": "Ang kasuotan na ito ay maaaring may nawawalang parte.",
+            "live2d-issue-github": "Tignan ang issue.",
+            "virtual": "Birtuwal na epek"
+        },
+        "emotion": {
+            "header": "Emosyon",
+            "rename-emotion": "Maglagay ng maayos na pangalan para sa emosyon na ito. Iwanang wala upang i-reset.",
+            "pose": "Posisyon",
+            "select-pose": "Pumili ng posisyon",
+            "expression": "Ekspresyon",
+            "select-expression": "Pumili ng ekspresyon"
+        },
+        "transform": {
+            "header": "Pagbago",
+            "x-position": "X-Posisyon",
+            "y-position": "Y-Posisyon",
+            "scale": "Sukat",
+            "rotation": "Rotasyon",
+            "blur": "Labo",
+            "layering": "Layer Order"
+        },
+        "mouth": {
+            "header": "Bibig",
+            "ParamMouthForm": "Pangunahing Hugis",
+            "ParamMouthOpenY": "Pagbubukas",
+            "ParamMouthForm2": "Pangalawang Hugis",
+            "ParamMouthScaleX": "X-Sukat",
+            "ParamMouthScaleY": "Y-Sukat",
+            "ParamMouthPositionY": "Y-Posisyon",
+            "ParamMouthShadow": "Anino"
+        },
+        "live2d": {
+            "header": "Live2D",
+            "parameters": {
+                "header": "Mga Parameter",
+                "select-parameter": "Pumili ng parameter",
+                "tooltip": "Puwede mong gamitin ang mga arrow keys upang pumili ng parameter at ayusin."
+            },
+            "idle": "Idle na animasyon",
+            "import-export": {
+                "header": "Import/Export",
+                "description": "Ang mga ginawa mong pagbabago sa Live2D adjustments ay puwede mong i-save at i-load."
+            },
+            "emotion-copy": {
+                "header": "Kopya ng Emosyon",
+                "description": "Kokopyahin nito ang lahat ng parameter mula sa ekspresyon at posisyon na nilagay mo.",
+                "confirm-header": "Nakopya!",
+                "confirm-description": "Nakopya ang mga parameter ng emosyon."
+            },
+            "show-live2d-parts": "Ipakita ang mga bahagi ng modelo",
+            "access-live2d-parts": "Magkakaroon ka ng access sa lahat ng bahagi ng modelong ito. Ipagpatuloy?"
+        },
         "live2d-changed-warn": "May binago kang mga Live2D parameter. Mawawala ang mga ito kapag ipinagpatuloy mo!",
-        "emotion-copy": "Kopya ng Emosyon",
-        "emotion-copy-description": "Kokopyahin nito ang lahat ng parameter mula sa ekspresyon at posisyon na nilagay mo.",
-        "emotion-copy-confirm-header": "Nakopya!",
-        "emotion-copy-confirm-description": "Nakopya ang mga parameter ng emosyon.",
         "long-wait": "Kung masyadong matagal ang paglo-load ng modelo, mas mabuting kumuha ng mga modelo sa SEKAI Stories muna.",
-        "layering": "Layer Order",
+        "re-apply": "Ulitin",
         "advanced": "Advanced"
     },
-
-    "visible": "Ipakita",
-
     "experimental": {
         "header": "Eksperimental",
         "details": "Kung walang nakikitang pagbabago, subukang i-refresh ang canvas.",
         "refresh": "I-refresh"
     },
-
-    "close": "Isara",
-    "cancel": "I-kansela",
-    "clear": "Mawawala LAHAT ng nilalaman sa canvas. Ang lahat ng ginawa mo ay mawawala!",
-    "start-blank": "Magsimula sa blangkong canvas sa susunod.",
-    "clear-ok": "Ipagpatuloy",
-    "continue-ok": "Ipagpatuloy",
-    "next": "Sunod",
-    "input": "Input",
-    "adjust": "I-adjust",
-    "enter-value": "Maglagay ng value",
-
+    "clear": {
+        "message": "Mawawala LAHAT ng nilalaman sa canvas. Ang lahat ng ginawa mo ay mawawala!",
+        "start-blank": "Magsimula sa blangkong canvas sa susunod."
+    },
     "support": {
         "header": "Suporta",
         "details": "Kung nasisiyahan kang gamitin ang SEKAI Stories, maaari mo akong suportahan sa mga sumusunod na paraan:",
@@ -136,16 +179,17 @@
         "special-thanks-header": "Espesyal na Pasasalamat",
         "special-thanks-description": "Lubos kong pinasasalamatan ang may-ari ng Sekai Viewer sa pagbibigay ng access sa kanilang mga modelo sa site na ito!"
     },
-
-    "loading-1": "Kinukuha ang file ng modelo para sa",
-    "loading-2": "Kinukuha ang motion file para sa",
-    "loading-3": "Inaayos ang data ng modelo para sa",
-    "loading-4": "Ikinakarga ang mga texture para sa",
-    "loading-5": "Ikinakarga ang moc3 file para sa",
-    "loading-6": "Ikinakarga ang physics file para sa",
-    "loading-7": "Inilalagay ang bagong modelo",
-    "failed-load": "Pasensya na! Hindi nailagay ng tama ang bagong modelo!",
-
+    "loadings": {
+        "please-wait": "Maghintay...",
+        "loading-1": "Kinukuha ang file ng modelo para sa",
+        "loading-2": "Kinukuha ang motion file para sa",
+        "loading-3": "Inaayos ang data ng modelo para sa",
+        "loading-4": "Ikinakarga ang mga texture para sa",
+        "loading-5": "Ikinakarga ang moc3 file para sa",
+        "loading-6": "Ikinakarga ang physics file para sa",
+        "loading-7": "Inilalagay ang bagong modelo",
+        "failed-load": "Pasensya na! Hindi nailagay ng tama ang bagong modelo!"
+    },
     "character": {
         "none": "Wala",
         "custom": "Galing sa upload",
@@ -177,7 +221,6 @@
         "kaito": "KAITO",
         "others": "Iba pa"
     },
-
     "group": {
         "all": "Lahat",
         "bookmarks": "Mga Bookmark",
@@ -191,7 +234,6 @@
         "split": "Hiwalay na Lugar",
         "temp": "Iba pa"
     },
-
     "settings": {
         "header": "Settings",
         "language": "Wika",
@@ -210,10 +252,28 @@
     },
     "import-export": {
         "header": "Import/Export",
-        "description": "Hindi kasama ang mga na-upload na likuran at mga sprites sa JSON file.",
-        "import": "Mag-import",
-        "export": "Mag-export"
+        "description": "Hindi kasama ang mga na-upload na likuran at mga sprites sa JSON file."
     },
+    "save": {
+        "header": "Save",
+        "note-1-desktop": "Kung hindi pa nagsisimula ang pag-download, i-right click ang imahe sa ibaba at i-save.",
+        "note-1-phone": "Kung hindi pa nagsisimula ang pag-download, i-tap at hawakan ang imahe sa ibaba at i-save.",
+        "note-2": "Maaari mong i-disable ang window na ito sa Settings.",
+        "disable-dialog": "Huwag ipakita ang dialog na ito sa susunod."
+    },
+    "error": {
+        "header": "Error",
+        "import-scene-fail": "The canvas has been reset.",
+        "invalid-json": "Invalid JSON format",
+        "no-autosave": "Walang auto-save data ang nakita.",
+        "no-valid-models": "Maglagay muna ng isang Live2D Model.",
+        "not-an-image": "Hindi ito image.",
+        "default-scene-fail": "Nagkaroon ng error habang inaayos ang default scene.\nPaki click ang clear button, i-refresh ang browser, o i-clear ang cookies.\nKung ang problema ay hindi naresolba, paki-report ito sa GitHub..",
+        "name-tag-inputs-limit": "Ang limit ay 2 to 6 na pangalan.",
+        "background-bookmark": "Hindi puwede i-bookmark ang custom na likuran.",
+        "hide-everything-warning": "Ang \"Itago ang mga modelo at dayalogo\" na opsyon sa Eksena ay naka-enable.\nPaki disable itong opyson sa Text Menu."
+    },
+    "mental-health": {},
     "tutorial": {
         "initialSetup1": "Ayusin ang slider hanggang wala ka nang makitang pulang kulay.",
         "initialSetup2": "Maaari mo itong ayusin uli sa Text Menu.",
@@ -271,24 +331,5 @@
         "sceneImportExportParagraph": "Puwede mong i-save at i-load ang gawa mo bilang JSON upang ma-edit mo ito uli.",
         "endHeader": "Iyon lang!",
         "endParagraph": "Kung gusto mong ulitin ito, maaari mo buksan ito muli sa Settings."
-    },
-    "save": {
-        "header": "Save",
-        "note-1-desktop": "Kung hindi pa nagsisimula ang pag-download, i-right click ang imahe sa ibaba at i-save.",
-        "note-1-phone": "Kung hindi pa nagsisimula ang pag-download, i-tap at hawakan ang imahe sa ibaba at i-save.",
-        "note-2": "Maaari mong i-disable ang window na ito sa Settings.",
-        "disable-dialog": "Huwag ipakita ang dialog na ito sa susunod."
-    },
-    "error": {
-        "header": "Error",
-        "import-scene-fail": "The canvas has been reset.",
-        "invalid-json": "Invalid JSON format",
-        "no-autosave": "Walang auto-save data ang nakita.",
-        "no-valid-models": "Maglagay muna ng isang Live2D Model.",
-        "not-an-image": "Hindi ito image.",
-        "default-scene-fail": "Nagkaroon ng error habang inaayos ang default scene.\nPaki click ang clear button, i-refresh ang browser, o i-clear ang cookies.\nKung ang problema ay hindi naresolba, paki-report ito sa GitHub..",
-        "name-tag-inputs-limit": "Ang limit ay 2 to 6 na pangalan.",
-        "background-bookmark": "Hindi puwede i-bookmark ang custom na likuran.",
-        "hide-everything-warning": "Ang \"Itago ang mga modelo at dayalogo\" na opsyon sa Eksena ay naka-enable.\nPaki disable itong opyson sa Text Menu."
     }
 }

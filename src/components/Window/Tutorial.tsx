@@ -23,7 +23,7 @@ const Tutorial: React.FC<TutorialProps> = ({ show }) => {
             {page == -2 && (
                 <Window
                     show={show}
-                    confirmLabel={t("next")}
+                    confirmLabel={t("global.next")}
                     confirmFunction={() => setPage(page + 1)}
                     skipCloseInConfirm
                     className="window__90_width"
@@ -84,7 +84,7 @@ const Tutorial: React.FC<TutorialProps> = ({ show }) => {
             {page == 1 && (
                 <Window
                     show={show}
-                    confirmLabel={t("next")}
+                    confirmLabel={t("global.next")}
                     confirmFunction={() => setPage(page + 1)}
                     skipCloseInConfirm
                     hideClose
@@ -106,7 +106,7 @@ const Tutorial: React.FC<TutorialProps> = ({ show }) => {
             {page == 2 && (
                 <Window
                     show={show}
-                    confirmLabel={t("next")}
+                    confirmLabel={t("global.next")}
                     confirmFunction={() => setPage(page + 1)}
                     skipCloseInConfirm
                     hideClose
@@ -151,7 +151,7 @@ const Tutorial: React.FC<TutorialProps> = ({ show }) => {
             {page == 3 && (
                 <Window
                     show={show}
-                    confirmLabel={t("next")}
+                    confirmLabel={t("global.next")}
                     confirmFunction={() => setPage(page + 1)}
                     skipCloseInConfirm
                     hideClose
@@ -202,7 +202,7 @@ const Tutorial: React.FC<TutorialProps> = ({ show }) => {
             {page == 4 && (
                 <Window
                     show={show}
-                    confirmLabel={t("next")}
+                    confirmLabel={t("global.next")}
                     confirmFunction={() => setPage(page + 1)}
                     skipCloseInConfirm
                     hideClose
@@ -303,7 +303,7 @@ const Tutorial: React.FC<TutorialProps> = ({ show }) => {
             {page == 5 && (
                 <Window
                     show={show}
-                    confirmLabel={t("next")}
+                    confirmLabel={t("global.next")}
                     confirmFunction={() => setPage(page + 1)}
                     skipCloseInConfirm
                     hideClose

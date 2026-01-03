@@ -182,7 +182,7 @@ const Costume: React.FC<CostumeProps> = ({
             </select>
             <Checkbox
                 id="virtual-effect"
-                label={t("model.virtual")}
+                label={t("model.costume.virtual")}
                 checked={currentModel.virtualEffect}
                 onChange={(event) => {
                     const value = event.target.checked;

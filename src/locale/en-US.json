@@ -1,120 +1,170 @@
 {
-    "please-wait": "Please wait...",
+    "global": {
+        "toggles": "Toggles",
+        "close": "Close",
+        "clear-ok": "Clear",
+        "copy": "Copy",
+        "continue-ok": "Continue",
+        "cancel": "Cancel",
+        "next": "Next",
+        "input": "Input",
+        "adjust": "Adjust",
+        "enter-value": "Enter a value.",
+        "visible": "Visible",
+        "import": "Import",
+        "export": "Export"
+    },
 
     "background": {
         "header": "Background",
-        "select": "Select",
-        "upload": "Upload",
-        "lighting": "Lighting",
-        "preset": "Preset",
-        "red": "Red",
-        "green": "Green",
-        "blue": "Blue",
-        "brightness": "Brightness",
-        "saturation": "Saturation",
-        "select-preset": "Select Preset",
-        "default": "Default",
-        "warm": "Warm",
-        "night": "Night",
-        "off": "Lights Off",
-        "bright": "Bright",
-        "silhoutte": "Silhoutte",
-        "custom-preset": "Custom Preset",
-        "split-location": "Split Location",
-        "upload-info": "To make sure the image looks right and doesn't get stretched or cut downed, please use an image with a 16:9 ratio.",
-        "filters": "Filters",
-        "flashback": "Flashback",
-        "sick": "Sick",
-        "drooping-lines": "Drooping Lines",
-        "pov": "POV/FOV",
-        "zoom": "Zoom",
-        "povx": "X-Position",
-        "povy": "Y-Position"
+        "select": {
+            "header": "Select",
+            "button": "Select",
+            "split-location": "Split Location",
+            "upload": "Upload",
+            "upload-info": "To make sure the image looks right and doesn't get stretched or cut downed, please use an image with a 16:9 ratio."
+        },
+        "lighting": {
+            "header": "Lighting",
+            "preset": "Preset",
+            "red": "Red",
+            "green": "Green",
+            "blue": "Blue",
+            "brightness": "Brightness",
+            "saturation": "Saturation",
+            "presets": {
+                "select-preset": "Select Preset",
+                "default": "Default",
+                "warm": "Warm",
+                "night": "Night",
+                "off": "Lights Off",
+                "bright": "Bright",
+                "silhoutte": "Silhoutte",
+                "custom-preset": "Custom Preset"
+            }
+        },
+        "filters": {
+            "header": "Filters",
+            "flashback": "Flashback",
+            "sick": "Sick",
+            "drooping-lines": "Drooping Lines",
+            "pov": "POV/FOV",
+            "pov-settings": {
+                "zoom": "Zoom",
+                "povx": "X-Position",
+                "povy": "Y-Position"
+            }
+        }
     },
 
     "text": {
         "header": "Text",
-        "name-tag": "Name Tag",
-        "easy-switch": "Use easy switch",
-        "dialogue": "Dialogue",
-        "font-size": "Font Size",
-        "enter-font-size": "Enter a font size.",
-        "add-symbol": "Add a symbol",
-        "scene-text": "Scene Text",
-        "scene-text-variant": "Variant",
-        "scene-text-middle": "Middle",
-        "scene-text-top-left": "Top-left",
-        "y-offset": "Y-Offset",
-        "y-offset-details": "If the text in the canvas do not line up properly, adjustments may be necessary.",
-        "hide-everything": "Hide models and dialogue",
+        "name-tag": {
+            "header": "Name Tag",
+            "easy-switch": "Use easy switch"
+        },
+        "dialogue": {
+            "header": "Dialogue",
+            "font-size": "Font Size",
+            "enter-font-size": "Enter a font size.",
+            "add-symbol": "Add a symbol"
+        },
+        "scene-text": {
+            "header": "Scene Text",
+            "variant": {
+                "header": "Variant",
+                "middle": "Middle",
+                "top-left": "Top-left"
+            },
+            "hide-everything": "Hide models and dialogue"
+        },
+        "y-offset": {
+            "header": "Y-Offset",
+            "details": "If the text in the canvas do not line up properly, adjustments may be necessary."
+        },
         "toggles": "Toggles"
     },
 
     "model": {
         "header": "Model",
-        "selected-layer": "Selected Layer",
-        "add-model-header": "Add model",
-        "add-model-description": "Choose where to get your model.",
-        "add-model-sekai": "sekai.best",
-        "add-model-sekai-description": "Get access to models provided by Sekai Viewer!",
-        "add-model-static": "SEKAI Stories",
-        "add-model-static-description": "Fallback option when Sekai Viewer is down.",
-        "upload-image": "Upload Image",
-        "upload-image-description": "Upload a custom sprite image of your own.",
-        "delete-model-warn": "This is the only layer and cannot be deleted.",
-        "character": "Character",
-        "select-character": "Select a character",
-        "costume": "Costume",
-        "live2d-issue": "This costume may be missing some parts.",
-        "live2d-issue-github": "See issue here.",
-        "virtual": "Virtual Effect",
-        "emotion": "Emotion",
-        "rename-emotion": "Enter a nice name for this emotion. Leave blank to reset.",
-        "pose": "Pose",
-        "select-pose": "Select a pose",
-        "expression": "Expression",
-        "select-expression": "Select an expression",
-        "layer": "Layer",
-        "re-apply": "Re-apply",
-        "transform": "Transform",
-        "x-position": "X-Position",
-        "y-position": "Y-Position",
-        "scale": "Scale",
-        "rotation": "Rotation",
-        "blur": "Blur",
-        "mouth": "Mouth",
-        "ParamMouthForm": "Primary Shape",
-        "ParamMouthOpenY": "Opening",
-        "ParamMouthForm2": "Secondary Shape",
-        "ParamMouthScaleX": "X-Scale",
-        "ParamMouthScaleY": "Y-Scale",
-        "ParamMouthPositionY": "Y-Position",
-        "ParamMouthShadow": "Shadow",
-        "live2d": "Live2D",
-        "show-live2d-parts": "Show Live2D Parts",
-        "access-live2d-parts": "You are about to access all parts of this model. Continue?",
-        "toggles": "Toggles",
-        "idle": "Idle Animation",
-        "parameters": "Parameters",
-        "select-parameter": "Select a parameter",
-        "import-export": "Import/Export",
-        "import": "Import",
-        "export": "Export",
-        "copy": "Copy",
-        "live2d-import-export-description": "You can save the adjustments you made and load it to another model.",
-        "live2d-tooltip": "You can use your arrow keys to select and adjust parameters.",
+        "selected-layer": {
+            "header": "Selected Layer",
+            "layer": "Layer",
+            "add-model": {
+                "header": "Add model",
+                "description": "Choose where to get your model.",
+                "sekai": "sekai.best",
+                "sekai-description": "Get access to models provided by Sekai Viewer!",
+                "static": "SEKAI Stories",
+                "static-description": "Fallback option when Sekai Viewer is down.",
+                "upload-image": "Upload Image",
+                "upload-image-description": "Upload a custom sprite image of your own."
+            },
+            "delete-model-warn": "This is the only layer and cannot be deleted."
+        },
+        "character": {
+            "header": "Character",
+            "select-character": "Select a character"
+        },
+        "costume": {
+            "header": "Costume",
+            "live2d-issue": "This costume may be missing some parts.",
+            "live2d-issue-github": "See issue here.",
+            "virtual": "Virtual Effect"
+        },
+        "emotion": {
+            "header": "Emotion",
+            "rename-emotion": "Enter a nice name for this emotion. Leave blank to reset.",
+            "pose": "Pose",
+            "select-pose": "Select a pose",
+            "expression": "Expression",
+            "select-expression": "Select an expression"
+        },
+        "transform": {
+            "header": "Transform",
+            "x-position": "X-Position",
+            "y-position": "Y-Position",
+            "scale": "Scale",
+            "rotation": "Rotation",
+            "blur": "Blur",
+            "layering": "Layer Order"
+        },
+        "mouth": {
+            "header": "Mouth",
+            "ParamMouthForm": "Primary Shape",
+            "ParamMouthOpenY": "Opening",
+            "ParamMouthForm2": "Secondary Shape",
+            "ParamMouthScaleX": "X-Scale",
+            "ParamMouthScaleY": "Y-Scale",
+            "ParamMouthPositionY": "Y-Position",
+            "ParamMouthShadow": "Shadow"
+        },
+        "live2d": {
+            "header": "Live2D",
+            "parameters": {
+                "header": "Parameters",
+                "select-parameter": "Select a parameter",
+                "tooltip": "You can use your arrow keys to select and adjust parameters."
+            },
+            "idle": "Idle Animation",
+            "import-export": {
+                "header": "Import/Export",
+                "description": "You can save the adjustments you made and load it to another model."
+            },
+            "emotion-copy": {
+                "header": "Emotion Copy",
+                "description": "This will copy all parameters from the expression and pose you set.",
+                "confirm-header": "Copied!",
+                "confirm-description": "The emotion parameters have successfully been copied."
+            },
+            "show-live2d-parts": "Show Live2D Parts",
+            "access-live2d-parts": "You are about to access all parts of this model. Continue?"
+        },
         "live2d-changed-warn": "You have custom Live2D parameter adjustments. Continuing will discard them!",
-        "emotion-copy": "Emotion Copy",
-        "emotion-copy-description": "This will copy all parameters from the expression and pose you set.",
-        "emotion-copy-confirm-header": "Copied!",
-        "emotion-copy-confirm-description": "The emotion parameters have successfully been copied.",
         "long-wait": "If the model is taking too long to load, consider getting models from SEKAI Stories instead.",
-        "layering": "Layer Order",
-
+        "re-apply": "Re-apply",
         "advanced": "Advanced"
     },
-
-    "visible": "Visible",
 
     "experimental": {
         "header": "Experimental",
@@ -122,16 +172,10 @@
         "refresh": "Refresh"
     },
 
-    "close": "Close",
-    "clear": "This will clear the whole canvas. Any progress will be lost!",
-    "start-blank": "Start with a blank canvas next time.",
-    "clear-ok": "Clear",
-    "continue-ok": "Continue",
-    "cancel": "Cancel",
-    "next": "Next",
-    "input": "Input",
-    "adjust": "Adjust",
-    "enter-value": "Enter a value.",
+    "clear": {
+        "message": "This will clear the whole canvas. Any progress will be lost!",
+        "start-blank": "Start with a blank canvas next time."
+    },
 
     "support": {
         "header": "Support",
@@ -145,14 +189,17 @@
         "special-thanks-description": "I would like to thank the owner of Sekai Viewer for allowing me to access their models through this site!"
     },
 
-    "loading-1": "Fetching model file for",
-    "loading-2": "Fetching motion file for",
-    "loading-3": "Fixing model data for",
-    "loading-4": "Loading textures for",
-    "loading-5": "Loading moc3 file for",
-    "loading-6": "Loading physics file for",
-    "loading-7": "Putting new model",
-    "failed-load": "Failed to load new model!",
+    "loadings": {
+        "please-wait": "Please wait...",
+        "loading-1": "Fetching model file for",
+        "loading-2": "Fetching motion file for",
+        "loading-3": "Fixing model data for",
+        "loading-4": "Loading textures for",
+        "loading-5": "Loading moc3 file for",
+        "loading-6": "Loading physics file for",
+        "loading-7": "Putting new model",
+        "failed-load": "Failed to load new model!"
+    },
 
     "character": {
         "none": "None",
@@ -221,9 +268,7 @@
     },
     "import-export": {
         "header": "Import/Export",
-        "description": "Custom backgrounds and sprites are not included in this SEKAISCENE file.",
-        "import": "Import",
-        "export": "Export"
+        "description": "Custom backgrounds and sprites are not included in this SEKAISCENE file."
     },
     "tutorial": {
         "initialSetup1": "Adjust the slider until you don't see any red spots.",

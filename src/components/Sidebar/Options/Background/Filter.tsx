@@ -131,25 +131,25 @@ const Filter: React.FC = () => {
         <div>
             <Checkbox
                 id="flashback"
-                label={t("background.flashback")}
+                label={t("background.filters.flashback")}
                 checked={filter?.flashback}
                 onChange={handleFlashback}
             />
             <Checkbox
                 id="sick"
-                label={t("background.sick")}
+                label={t("background.filters.sick")}
                 checked={filter?.sick?.show}
                 onChange={handleSick}
             />
             <Checkbox
                 id="drooping-lines"
-                label={t("background.drooping-lines")}
+                label={t("background.filters.drooping-lines")}
                 checked={filter?.droop?.show}
                 onChange={handleDroop}
             />
             <Checkbox
                 id="pov"
-                label={t("background.pov")}
+                label={t("background.filters.pov")}
                 checked={filter?.pov?.show}
                 onChange={handlePOV}
             />

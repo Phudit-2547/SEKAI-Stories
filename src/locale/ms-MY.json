@@ -1,105 +1,176 @@
 {
-    "please-wait": "Sila tunggu...",
-
+    "global": {
+        "toggles": null,
+        "close": "Tutup",
+        "clear-ok": "Padam",
+        "copy": "Salin",
+        "continue-ok": "Sambung",
+        "cancel": null,
+        "next": "Seterusnya",
+        "input": null,
+        "adjust": null,
+        "enter-value": null,
+        "visible": "Nampakkan",
+        "import": "Import",
+        "export": "Eksport"
+    },
     "background": {
         "header": "Latar Belakang",
-        "select": "Pilih",
-        "upload": "Muat Naik",
-        "split-location": "Pisahkan Tempat",
-        "upload-info": "Untuk memastikan gambar kelihatan betul, sila gunakan gambar dengan nisbah 16:9.",
-        "filters": "Penyaring",
-        "flashback": "Imbasan Kembali",
-        "sick": "Sakit"
+        "select": {
+            "header": "Pilih",
+            "button": "Select",
+            "split-location": "Pisahkan Tempat",
+            "upload": "Muat Naik",
+            "upload-info": "Untuk memastikan gambar kelihatan betul, sila gunakan gambar dengan nisbah 16:9."
+        },
+        "lighting": {
+            "header": null,
+            "preset": null,
+            "red": null,
+            "green": null,
+            "blue": null,
+            "brightness": null,
+            "saturation": null,
+            "presets": {
+                "select-preset": null,
+                "default": null,
+                "warm": null,
+                "night": null,
+                "off": null,
+                "bright": null,
+                "silhoutte": null,
+                "custom-preset": null
+            }
+        },
+        "filters": {
+            "header": "Penyaring",
+            "flashback": "Imbasan Kembali",
+            "sick": "Sakit",
+            "drooping-lines": null,
+            "pov": null,
+            "pov-settings": {
+                "zoom": null,
+                "povx": null,
+                "povy": null
+            }
+        }
     },
-
     "text": {
         "header": "Teks",
-        "name-tag": "Teg Nama",
-        "easy-switch": "Gunakan penukaran pantas",
-        "dialogue": "Dialog",
-        "font-size": "Saiz Fon",
-        "add-symbol": "Tambah simbol",
-        "scene-text": "Teks Adengan",
-        "scene-text-variant": "Variasi",
-        "scene-text-middle": "Tengah",
-        "scene-text-top-left": "Atas-kiri",
-        "y-offset": "Y-Offset",
-        "y-offset-details": "Jika teks dalam kanvas tidak teratur, sedikit pengubahsuaian mungkin diperlukan.",
-        "hide-everything": "Sorokkan model dan dialog"
+        "name-tag": {
+            "header": "Teg Nama",
+            "easy-switch": "Gunakan penukaran pantas"
+        },
+        "dialogue": {
+            "header": "Dialog",
+            "font-size": "Saiz Fon",
+            "enter-font-size": null,
+            "add-symbol": "Tambah simbol"
+        },
+        "scene-text": {
+            "header": "Teks Adengan",
+            "variant": {
+                "header": "Variasi",
+                "middle": "Tengah",
+                "top-left": "Atas-kiri"
+            },
+            "hide-everything": "Sorokkan model dan dialog"
+        },
+        "y-offset": {
+            "header": "Y-Offset",
+            "details": "Jika teks dalam kanvas tidak teratur, sedikit pengubahsuaian mungkin diperlukan."
+        },
+        "toggles": null
     },
-
     "model": {
         "header": "Model",
-        "selected-layer": "Lapisan Dipilih",
-        "add-model-header": "Tambah model",
-        "add-model-description": "Pilih dimana anda mahu mendapatkan model.",
-        "add-model-sekai": "sekai.best",
-        "add-model-sekai-description": "Dapatkan akses kepada model-model yang disediakan oleh Sekai Viewer!",
-        "add-model-static": "SEKAI Stories",
-        "add-model-static-description": "Pilihan kedua sekiranya Sekai Viewer tidak berfungsi.",
-        "delete-model-warn": "Ini merupakan lapisan tunggal dan tidak boleh dipadam.",
-        "character": "Watak",
-        "select-character": "Pilih satu watak",
-        "costume": "Kostum",
-        "virtual": "Kesan Visual",
-        "emotion": "Perasaan",
-        "pose": "Gaya",
-        "select-pose": "Pilih gaya",
-        "expression": "Mimik Muka",
-        "select-expression": "Pilih mimik muka",
-        "layer": "Lapisan",
-        "re-apply": "Kenakan semula",
-        "transform": "Ubah",
-        "x-position": "Kedudukan-X",
-        "y-position": "Kedudukan-Y",
-        "scale": "Skala",
-        "rotation": "Pusing",
-        "mouth": "Mulut",
-        "ParamMouthForm": "Bentuk Utama",
-        "ParamMouthOpenY": "Pembukaan",
-        "ParamMouthForm2": "Bentuk Kedua",
-        "ParamMouthScaleX": "Skala-X",
-        "ParamMouthScaleY": "Skala-Y",
-        "ParamMouthPositionY": "Kedudukan-Y",
-        "ParamMouthShadow": "Bayang-Bayang",
-        "live2d": "Live2D",
-        "show-live2d-parts": "Tunjukkan bahagian Live2D",
-        "access-live2d-parts": "Anda akan dapat akses untuk semua bahagian bagi model ini. Teruskan?",
-        "toggles": "Togol",
-        "idle": "Endahkan animasi",
-        "parameters": "Parameter",
-        "select-parameter": "Pilih parameter",
-        "import-export": "Import/Eksport",
-        "import": "Import",
-        "export": "Eksport",
-        "copy": "Salin",
-        "live2d-import-export-description": "Anda boleh simpan pengubahsuaian yang dibuat dan muatkan ke model yang lain.",
-        "live2d-tooltip": "Anda boleh gunakan kekunci anak panah untuk pilih dan ubahsuai parameter-parameter.",
+        "selected-layer": {
+            "header": "Lapisan Dipilih",
+            "layer": "Lapisan",
+            "add-model": {
+                "header": "Tambah model",
+                "description": "Pilih dimana anda mahu mendapatkan model.",
+                "sekai": "sekai.best",
+                "sekai-description": "Dapatkan akses kepada model-model yang disediakan oleh Sekai Viewer!",
+                "static": "SEKAI Stories",
+                "static-description": "Pilihan kedua sekiranya Sekai Viewer tidak berfungsi.",
+                "upload-image": null,
+                "upload-image-description": null
+            },
+            "delete-model-warn": "Ini merupakan lapisan tunggal dan tidak boleh dipadam."
+        },
+        "character": {
+            "header": "Watak",
+            "select-character": "Pilih satu watak"
+        },
+        "costume": {
+            "header": "Kostum",
+            "live2d-issue": null,
+            "live2d-issue-github": null,
+            "virtual": "Kesan Visual"
+        },
+        "emotion": {
+            "header": "Perasaan",
+            "rename-emotion": null,
+            "pose": "Gaya",
+            "select-pose": "Pilih gaya",
+            "expression": "Mimik Muka",
+            "select-expression": "Pilih mimik muka"
+        },
+        "transform": {
+            "header": "Ubah",
+            "x-position": "Kedudukan-X",
+            "y-position": "Kedudukan-Y",
+            "scale": "Skala",
+            "rotation": "Pusing",
+            "blur": null,
+            "layering": null
+        },
+        "mouth": {
+            "header": "Mulut",
+            "ParamMouthForm": "Bentuk Utama",
+            "ParamMouthOpenY": "Pembukaan",
+            "ParamMouthForm2": "Bentuk Kedua",
+            "ParamMouthScaleX": "Skala-X",
+            "ParamMouthScaleY": "Skala-Y",
+            "ParamMouthPositionY": "Kedudukan-Y",
+            "ParamMouthShadow": "Bayang-Bayang"
+        },
+        "live2d": {
+            "header": "Live2D",
+            "parameters": {
+                "header": "Parameter",
+                "select-parameter": "Pilih parameter",
+                "tooltip": "Anda boleh gunakan kekunci anak panah untuk pilih dan ubahsuai parameter-parameter."
+            },
+            "idle": "Endahkan animasi",
+            "import-export": {
+                "header": "Import/Eksport",
+                "description": "Anda boleh simpan pengubahsuaian yang dibuat dan muatkan ke model yang lain."
+            },
+            "emotion-copy": {
+                "header": "Salin Perasaan",
+                "description": "Ini akan menyalin semua parameter dari mimik muka dan gaya yang ditetapkan anda.",
+                "confirm-header": "Dah Salin!",
+                "confirm-description": "Parameter perasaan telah selesai disalin."
+            },
+            "show-live2d-parts": "Tunjukkan bahagian Live2D",
+            "access-live2d-parts": "Anda akan dapat akses untuk semua bahagian bagi model ini. Teruskan?"
+        },
         "live2d-changed-warn": "Anda mempunyai parameter Live2D yang diubahsuai. Meneruskan akan membuangnya!",
-        "emotion-copy": "Salin Perasaan",
-        "emotion-copy-description": "Ini akan menyalin semua parameter dari mimik muka dan gaya yang ditetapkan anda.",
-        "emotion-copy-confirm-header": "Dah Salin!",
-        "emotion-copy-confirm-description": "Parameter perasaan telah selesai disalin.",
         "long-wait": "Jika model mengambil masa yang lama untuk dimuatkan, sila dapatkan model dari SEKAI Stories pula.",
-
+        "re-apply": "Kenakan semula",
         "advanced": "Lanjutan"
     },
-
-    "visible": "Nampakkan",
-
     "experimental": {
         "header": "Percubaan",
         "details": "Jika tiada perubahan dilihat, anda boleh segar semula kanvas.",
         "refresh": "Segar Semula"
     },
-
-    "close": "Tutup",
-    "clear": "Ini akan padamkan seluruh kanvas. Sebarang kemajuan akan hilang!",
-    "start-blank": "Mulakan dengan kanvas kosong pada masa akan datang.",
-    "clear-ok": "Padam",
-    "continue-ok": "Sambung",
-    "next": "Seterusnya",
-
+    "clear": {
+        "message": "Ini akan padamkan seluruh kanvas. Sebarang kemajuan akan hilang!",
+        "start-blank": "Mulakan dengan kanvas kosong pada masa akan datang."
+    },
     "support": {
         "header": "Sokong",
         "details": "Sekiranya anda gemar menggunakan SEKAI Stories, anda boleh menyokong saya dengan salah satu cara ini:",
@@ -108,16 +179,17 @@
         "special-thanks-header": "Setinggi Penghargaan",
         "special-thanks-description": "Saya ingin mengucapkan terima kasih kepada pemilik Sekai Viewer kerana membenarkan saya mengakseskan model-model melalui laman sesawang ini!"
     },
-
-    "loading-1": "Mengambil fail model untuk",
-    "loading-2": "Mengambil fail gerakan untuk",
-    "loading-3": "Membaiki data model untuk",
-    "loading-4": "Memuatkan tekstur untuk",
-    "loading-5": "Memuatkan fail moc3 file untuk",
-    "loading-6": "Memuatkan fail fizik untuk",
-    "loading-7": "Meletakkan model baharu",
-    "failed-load": "Gagal memuatkan model baharu!",
-
+    "loadings": {
+        "please-wait": "Sila tunggu...",
+        "loading-1": "Mengambil fail model untuk",
+        "loading-2": "Mengambil fail gerakan untuk",
+        "loading-3": "Membaiki data model untuk",
+        "loading-4": "Memuatkan tekstur untuk",
+        "loading-5": "Memuatkan fail moc3 file untuk",
+        "loading-6": "Memuatkan fail fizik untuk",
+        "loading-7": "Meletakkan model baharu",
+        "failed-load": "Gagal memuatkan model baharu!"
+    },
     "character": {
         "none": "Tiada",
         "custom": "Kustom",
@@ -149,7 +221,6 @@
         "kaito": "KAITO",
         "others": "Lain-Lain"
     },
-
     "group": {
         "all": "Semua",
         "bookmarks": "Tanda Buku",
@@ -163,7 +234,6 @@
         "split": "Tempat Dipisahkan",
         "temp": "Lain-Lain"
     },
-
     "settings": {
         "header": "Tetapan",
         "language": "Bahasa",
@@ -182,10 +252,27 @@
     },
     "import-export": {
         "header": "Import/Eksport",
-        "description": "Latar belakang kustom dan sprites tidak termasuk dalam fail JSON file ini.",
-        "import": "Import",
-        "export": "Eksport"
+        "description": "Latar belakang kustom dan sprites tidak termasuk dalam fail JSON file ini."
     },
+    "save": {
+        "header": "Simpan",
+        "note-1-desktop": "Jika muat turun belum bermula, tekan kanan gambar dibawah dan simpan.",
+        "note-1-phone": "Jika muat turun belum bermula, tekan dan pegang gambar dibawah dan simpan.",
+        "note-2": "Anda boleh lumpuhkan tetingkap ini di Tetapan.",
+        "disable-dialog": "Jangan tunjukkan dialog ini lain kali."
+    },
+    "error": {
+        "header": "Ralat",
+        "import-scene-fail": "Kanvas telah diset semula.",
+        "invalid-json": "Format JSON tidak sah",
+        "no-autosave": "Tiada data simpanan automatik dijumpa.",
+        "not-an-image": "Ini bukan gambar.",
+        "default-scene-fail": "Satu ralat telah berlaku ketika memuatkan adengan lalai.\n Sila gunakan butang padam, segar semula pelayar atau bersihkan kuki anda.\n Jika masalah berlanjutan, sila laporkan pepijat ini di Github.",
+        "name-tag-inputs-limit": "Had input 2 ke 6 setiap teg nama.",
+        "background-bookmark": "Anda tidak boleh menetapkan tanda buku untuk latar belakang kustom.",
+        "hide-everything-warning": "Tetapan \"Sorokan model dan dialog\" dibawah Teks Adengan didayakan.\n Sila lumpuhkan tetapan ini di Menu Teks."
+    },
+    "mental-health": {},
     "tutorial": {
         "initialSetup1": "Laraskan penyelak sehingga anda tidak melihat tompok merah.",
         "initialSetup2": "Anda boleh mengubah semula di Text Menu.",
@@ -241,23 +328,5 @@
         "sceneImportExportParagraph": "Ini akan membenarkan anda simpan dan muat seluruh adengan anda sebagai format yang boleh disunting.",
         "endHeader": "Dan itu sahaja!",
         "endParagraph": "Jika anda mahu mengulanginya, anda boleh mengaksesnya semula di Tetapan."
-    },
-    "save": {
-        "header": "Simpan",
-        "note-1-desktop": "Jika muat turun belum bermula, tekan kanan gambar dibawah dan simpan.",
-        "note-1-phone": "Jika muat turun belum bermula, tekan dan pegang gambar dibawah dan simpan.",
-        "note-2": "Anda boleh lumpuhkan tetingkap ini di Tetapan.",
-        "disable-dialog": "Jangan tunjukkan dialog ini lain kali."
-    },
-    "error": {
-        "header": "Ralat",
-        "import-scene-fail": "Kanvas telah diset semula.",
-        "invalid-json": "Format JSON tidak sah",
-        "no-autosave": "Tiada data simpanan automatik dijumpa.",
-        "not-an-image": "Ini bukan gambar.",
-        "default-scene-fail": "Satu ralat telah berlaku ketika memuatkan adengan lalai.\n Sila gunakan butang padam, segar semula pelayar atau bersihkan kuki anda.\n Jika masalah berlanjutan, sila laporkan pepijat ini di Github.",
-        "name-tag-inputs-limit": "Had input 2 ke 6 setiap teg nama.",
-        "background-bookmark": "Anda tidak boleh menetapkan tanda buku untuk latar belakang kustom.",
-        "hide-everything-warning": "Tetapan \"Sorokan model dan dialog\" dibawah Teks Adengan didayakan.\n Sila lumpuhkan tetapan ini di Menu Teks."
     }
 }

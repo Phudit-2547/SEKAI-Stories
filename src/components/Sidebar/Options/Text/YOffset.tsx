@@ -14,10 +14,10 @@ const YOffset: React.FC = () => {
                     setShowAdjust(true);
                 }}
             >
-                {t("adjust")}
+                {t("global.adjust")}
             </button>
             {showAdjust && <AdjustYPosition show={setShowAdjust} />}
-            <p>{t("text.y-offset-details")}</p>
+            <p>{t("text.y-offset.details")}</p>
         </>
     );
 };

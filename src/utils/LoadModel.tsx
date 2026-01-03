@@ -18,7 +18,7 @@ export const loadModel = async (
     abort?: AbortSignal
 ): Promise<[Live2DModel, ILive2DModelData]> => {
     setLoading(formula(0));
-    setLoadingMsg(`${t("loading-1")} ${model}...`);
+    setLoadingMsg(`${t("loadings.loading-1")} ${model}...`);
     let modelData: ILive2DModelData | undefined = undefined;
     if (from === "static") {
         const [characterFolder] = await GetCharacterFolder(model);
@@ -39,23 +39,23 @@ export const loadModel = async (
     }
 
     setLoading(formula(1));
-    setLoadingMsg(`${t("loading-4")} ${model}...`);
+    setLoadingMsg(`${t("loadings.loading-4")} ${model}...`);
     await axios.get(modelData.url + modelData.FileReferences.Textures[0], {
         signal: abort,
     });
     setLoading(formula(2));
-    setLoadingMsg(`${t("loading-5")} ${model}...`);
+    setLoadingMsg(`${t("loadings.loading-5")} ${model}...`);
     await axios.get(modelData.url + modelData.FileReferences.Moc, {
         signal: abort,
     });
     setLoading(formula(3));
-    setLoadingMsg(`${t("loading-6")} ${model}...`);
+    setLoadingMsg(`${t("loadings.loading-6")} ${model}...`);
     await axios.get(modelData.url + modelData.FileReferences.Physics, {
         signal: abort,
     });
 
     setLoading(formula(4));
-    setLoadingMsg(`${t("loading-7")}...`);
+    setLoadingMsg(`${t("loadings.loading-7")}...`);
     const live2DModel = await Live2DModel.from(modelData, {
         autoInteract: false,
     });

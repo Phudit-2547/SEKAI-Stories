@@ -1,132 +1,176 @@
 {
-    "please-wait": "Porfavor espera...",
-
+    "global": {
+        "toggles": "Alternables",
+        "close": "Cerrar",
+        "clear-ok": "Eliminar",
+        "copy": "Copiar",
+        "continue-ok": "Continue",
+        "cancel": "Cancelar",
+        "next": "Siguiente",
+        "input": "Insertar",
+        "adjust": null,
+        "enter-value": "Agrega un valor.",
+        "visible": "Visible",
+        "import": "Importar",
+        "export": "Exportar"
+    },
     "background": {
         "header": "Fondos",
-        "select": "Seleccionar",
-        "upload": "Agregar",
-        "lighting": "Iluminación",
-        "preset": "Predefinido",
-        "red": "Rojo",
-        "green": "Verde",
-        "blue": "Azul",
-        "brightness": "Iluminacion",
-        "saturation": "Saturacion",
-        "select-preset": "Seleccionar predefinido",
-        "default": "Normal",
-        "warm": "Calido",
-        "night": "Nocturno",
-        "off": "Luces Apagadas",
-        "bright": "Iluminado",
-        "silhoutte": "Silueta",
-        "custom-preset": "Predefinido Customizable",
-        "split-location": "Dividir Lugar",
-        "upload-info": "Para asegurarte de que la imagen se vea correctamente y no se recorte o estire, usa una imagen con un radio de 16:9.",
-        "filters": "Filtros",
-        "flashback": "Flashback",
-        "sick": "Enfermo",
-        "drooping-lines": "Lineas"
+        "select": {
+            "header": "Seleccionar",
+            "button": "Select",
+            "split-location": "Dividir Lugar",
+            "upload": "Agregar",
+            "upload-info": "Para asegurarte de que la imagen se vea correctamente y no se recorte o estire, usa una imagen con un radio de 16:9."
+        },
+        "lighting": {
+            "header": "Iluminación",
+            "preset": "Predefinido",
+            "red": "Rojo",
+            "green": "Verde",
+            "blue": "Azul",
+            "brightness": "Iluminacion",
+            "saturation": "Saturacion",
+            "presets": {
+                "select-preset": "Seleccionar predefinido",
+                "default": "Normal",
+                "warm": "Calido",
+                "night": "Nocturno",
+                "off": "Luces Apagadas",
+                "bright": "Iluminado",
+                "silhoutte": "Silueta",
+                "custom-preset": "Predefinido Customizable"
+            }
+        },
+        "filters": {
+            "header": "Filtros",
+            "flashback": "Flashback",
+            "sick": "Enfermo",
+            "drooping-lines": "Lineas",
+            "pov": null,
+            "pov-settings": {
+                "zoom": null,
+                "povx": null,
+                "povy": null
+            }
+        }
     },
-
     "text": {
         "header": "Texto",
-        "name-tag": "Nombre",
-        "easy-switch": "seleccionar cambio rapido",
-        "dialogue": "Dialogo",
-        "font-size": "Tamaño de Fuerte",
-        "enter-font-size": "Pon un tamaño para la fuente.",
-        "add-symbol": "Añadir simbolo",
-        "scene-text": "Texto de Escena",
-        "scene-text-variant": "Variante",
-        "scene-text-middle": "En Medio",
-        "scene-text-top-left": "Izquierda Superior",
-        "y-offset": "Ajuste-Y",
-        "y-offset-details": "Si el texto del lienzo no está alineado correctamente, podría ser necesario ajustarlo.",
-        "hide-everything": "Ocultar modelos y dialogos",
+        "name-tag": {
+            "header": "Nombre",
+            "easy-switch": "seleccionar cambio rapido"
+        },
+        "dialogue": {
+            "header": "Dialogo",
+            "font-size": "Tamaño de Fuerte",
+            "enter-font-size": "Pon un tamaño para la fuente.",
+            "add-symbol": "Añadir simbolo"
+        },
+        "scene-text": {
+            "header": "Texto de Escena",
+            "variant": {
+                "header": "Variante",
+                "middle": "En Medio",
+                "top-left": "Izquierda Superior"
+            },
+            "hide-everything": "Ocultar modelos y dialogos"
+        },
+        "y-offset": {
+            "header": "Ajuste-Y",
+            "details": "Si el texto del lienzo no está alineado correctamente, podría ser necesario ajustarlo."
+        },
         "toggles": "Alternables"
     },
-
     "model": {
         "header": "Modelo",
-        "selected-layer": "Capa seleccionada",
-        "add-model-header": "Añadir modelo",
-        "add-model-description": "Slecciona de donde conseguiras el modelo.",
-        "add-model-sekai": "sekai.best",
-        "add-model-sekai-description": "¡Obtén modelos proveídos por Sekai Viewer!",
-        "add-model-static": "SEKAI Stories",
-        "add-model-static-description": "Opción de respaldo en caso de que Sekai Viewer este caído.",
-        "upload-image": "Añadir Imagen",
-        "upload-image-description": "Agrega una imagen desde tu archivos.",
-        "delete-model-warn": "Esta es la única capa y no puede ser eliminada.",
-        "character": "Personaje",
-        "select-character": "Selecciona un personaje",
-        "costume": "Traje",
-        "live2d-issue": "Este traje podria no tener algunas partes.",
-        "live2d-issue-github": "Mira problemas aqui.",
-        "virtual": "Filtro Virtual",
-        "emotion": "Emoción",
-        "rename-emotion": "Escribe un buen nombre para esta emocion. Dejalo vacio para reset.",
-        "pose": "Pose",
-        "select-pose": "Selecciona una pose",
-        "expression": "Expresion",
-        "select-expression": "Select an expresion",
-        "layer": "Layer",
-        "re-apply": "Volver a aplicar",
-        "transform": "Transformar",
-        "x-position": "Posición-X",
-        "y-position": "Posición-Y",
-        "scale": "Tamaño",
-        "rotation": "Rotación",
-        "mouth": "Boca",
-        "ParamMouthForm": "Forma Principal",
-        "ParamMouthOpenY": "Apdrtura",
-        "ParamMouthForm2": "Forma Secundaria",
-        "ParamMouthScaleX": "Tamaño-X",
-        "ParamMouthScaleY": "Tamaño-Y",
-        "ParamMouthPositionY": "Posición-Y",
-        "ParamMouthShadow": "Sombra",
-        "live2d": "Live2D",
-        "show-live2d-parts": "Mostrar partes Live2D",
-        "access-live2d-parts": "Estas apunto de acceder a todas las partes de este modelo. ¿Quieres continuar?",
-        "toggles": "Alternables",
-        "idle": "Animacion Inactiva",
-        "parameters": "Parametros",
-        "select-parameter": "Selecciona un parametro",
-        "import-export": "Importar/Exportar",
-        "import": "Importar",
-        "export": "Exportar",
-        "copy": "Copiar",
-        "live2d-import-export-description": "Puedes guardar los ajustes que allas hecho y aplicarlos en otros modelos.",
-        "live2d-tooltip": "Puedes usar las teclas direccionales para ajustar los parametros.",
+        "selected-layer": {
+            "header": "Capa seleccionada",
+            "layer": "Layer",
+            "add-model": {
+                "header": "Añadir modelo",
+                "description": "Slecciona de donde conseguiras el modelo.",
+                "sekai": "sekai.best",
+                "sekai-description": "¡Obtén modelos proveídos por Sekai Viewer!",
+                "static": "SEKAI Stories",
+                "static-description": "Opción de respaldo en caso de que Sekai Viewer este caído.",
+                "upload-image": "Añadir Imagen",
+                "upload-image-description": "Agrega una imagen desde tu archivos."
+            },
+            "delete-model-warn": "Esta es la única capa y no puede ser eliminada."
+        },
+        "character": {
+            "header": "Personaje",
+            "select-character": "Selecciona un personaje"
+        },
+        "costume": {
+            "header": "Traje",
+            "live2d-issue": "Este traje podria no tener algunas partes.",
+            "live2d-issue-github": "Mira problemas aqui.",
+            "virtual": "Filtro Virtual"
+        },
+        "emotion": {
+            "header": "Emoción",
+            "rename-emotion": "Escribe un buen nombre para esta emocion. Dejalo vacio para reset.",
+            "pose": "Pose",
+            "select-pose": "Selecciona una pose",
+            "expression": "Expresion",
+            "select-expression": "Select an expresion"
+        },
+        "transform": {
+            "header": "Transformar",
+            "x-position": "Posición-X",
+            "y-position": "Posición-Y",
+            "scale": "Tamaño",
+            "rotation": "Rotación",
+            "blur": null,
+            "layering": "Orden de las capas"
+        },
+        "mouth": {
+            "header": "Boca",
+            "ParamMouthForm": "Forma Principal",
+            "ParamMouthOpenY": "Apdrtura",
+            "ParamMouthForm2": "Forma Secundaria",
+            "ParamMouthScaleX": "Tamaño-X",
+            "ParamMouthScaleY": "Tamaño-Y",
+            "ParamMouthPositionY": "Posición-Y",
+            "ParamMouthShadow": "Sombra"
+        },
+        "live2d": {
+            "header": "Live2D",
+            "parameters": {
+                "header": "Parametros",
+                "select-parameter": "Selecciona un parametro",
+                "tooltip": "Puedes usar las teclas direccionales para ajustar los parametros."
+            },
+            "idle": "Animacion Inactiva",
+            "import-export": {
+                "header": "Importar/Exportar",
+                "description": "Puedes guardar los ajustes que allas hecho y aplicarlos en otros modelos."
+            },
+            "emotion-copy": {
+                "header": "Copiar Emoción",
+                "description": "Esto copiara todos los parametros de las expreciones y las poses que has hecho.",
+                "confirm-header": "¡Copiado!",
+                "confirm-description": "Los parametros de la emoción han sido copiado exitosamente."
+            },
+            "show-live2d-parts": "Mostrar partes Live2D",
+            "access-live2d-parts": "Estas apunto de acceder a todas las partes de este modelo. ¿Quieres continuar?"
+        },
         "live2d-changed-warn": "Tienes parametros Live2D modificados. ¡Continuar los eliminara!",
-        "emotion-copy": "Copiar Emoción",
-        "emotion-copy-description": "Esto copiara todos los parametros de las expreciones y las poses que has hecho.",
-        "emotion-copy-confirm-header": "¡Copiado!",
-        "emotion-copy-confirm-description": "Los parametros de la emoción han sido copiado exitosamente.",
         "long-wait": "Si el modelo tarda mucho en cargar considera seleccionar los modelos de SEKAI Stories.",
-        "layering": "Orden de las capas",
-
+        "re-apply": "Volver a aplicar",
         "advanced": "Advanzado"
     },
-
-    "visible": "Visible",
-
     "experimental": {
         "header": "Experimental",
         "details": "Si no vez cambios en el lienzo deberías probar recargar el lienzo.",
         "refresh": "Recargar"
     },
-
-    "close": "Cerrar",
-    "clear": "Esto eliminara todo el lienzo. ¡Cualquier progreso sera perdido!",
-    "start-blank": "Empezar con un lienzo en blanco la proxima vez.",
-    "clear-ok": "Eliminar",
-    "continue-ok": "Continue",
-    "cancel": "Cancelar",
-    "next": "Siguiente",
-    "input": "Insertar",
-    "enter-value": "Agrega un valor.",
-
+    "clear": {
+        "message": "Esto eliminara todo el lienzo. ¡Cualquier progreso sera perdido!",
+        "start-blank": "Empezar con un lienzo en blanco la proxima vez."
+    },
     "support": {
         "header": "Apoyar",
         "details": "Si disfrutas de usar SEKAI Stories, puedes apoyarme mediante una de las siguientes formas:",
@@ -135,16 +179,17 @@
         "special-thanks-header": "Agradecimientos especiales",
         "special-thanks-description": "Me gustaría agradecer al dueño de Sekai Viewer por permitirme usar sus modelos mediante este sitio"
     },
-
-    "loading-1": "Obteniendo archivos del modelo para",
-    "loading-2": "Obteniendo archivos de movimiento para",
-    "loading-3": "Arreglando modelo para",
-    "loading-4": "Cargando texturas para",
-    "loading-5": "Cargando archivo moc3 para",
-    "loading-6": "Cargando físicas para",
-    "loading-7": "Agregando nuevo modelo",
-    "failed-load": "¡Error al cargar el nuevo modelo!",
-
+    "loadings": {
+        "please-wait": "Porfavor espera...",
+        "loading-1": "Obteniendo archivos del modelo para",
+        "loading-2": "Obteniendo archivos de movimiento para",
+        "loading-3": "Arreglando modelo para",
+        "loading-4": "Cargando texturas para",
+        "loading-5": "Cargando archivo moc3 para",
+        "loading-6": "Cargando físicas para",
+        "loading-7": "Agregando nuevo modelo",
+        "failed-load": "¡Error al cargar el nuevo modelo!"
+    },
     "character": {
         "none": "Ninguno",
         "custom": "Agregado",
@@ -176,7 +221,6 @@
         "kaito": "KAITO",
         "others": "Otros"
     },
-
     "group": {
         "all": "Todos",
         "bookmarks": "Favoritos",
@@ -190,7 +234,6 @@
         "split": "Lugares divididos",
         "temp": "Otros"
     },
-
     "settings": {
         "header": "Opciones",
         "language": "Idioma",
@@ -209,10 +252,27 @@
     },
     "import-export": {
         "header": "Importar/Exportar",
-        "description": "Los fondos y Sprite agregados no serán incluidos en este JSON.",
-        "import": "Importar",
-        "export": "Exportar"
+        "description": "Los fondos y Sprite agregados no serán incluidos en este JSON."
     },
+    "save": {
+        "header": "Guardar",
+        "note-1-desktop": "Si la descarga aun no ha empezado, dale click izquierdo a la imagen debsjo y luego a guardar.",
+        "note-1-phone": "Si la descarga aun no ha empezado, toca la imagen un par de segundos y luego dale a guadar.",
+        "note-2": "Puedes desactivar esta ventana en el menu de Ajustes.",
+        "disable-dialog": "No mostrar este dialogo la proxima vez."
+    },
+    "error": {
+        "header": "Error",
+        "import-scene-fail": "El lienzo a sido restaurado.",
+        "invalid-json": "Formato JSON invalido",
+        "no-autosave": "Información del Auto-guardado no encontrada.",
+        "not-an-image": "Esto no es una imagen.",
+        "default-scene-fail": "Un error a ocurrido mientras cargaba la escena predefinida.\nPor favor usa el boton de reset, recarga tu navegador, o limpia tus cookies.\nSi el problema persiste, reporta el bug en GitHub.",
+        "name-tag-inputs-limit": "The limit is 2 to 6 inputs for name tag.",
+        "background-bookmark": "No puedes poner un fondo agregado en la seccion de favoritos.",
+        "hide-everything-warning": "La opcion \"Ocultar modelos y dialogos\" debajo de \"texto de escena\" esta activada.\nDesactiva esta opción en el menu de texto."
+    },
+    "mental-health": {},
     "tutorial": {
         "initialSetup1": "Ajusta el dezlizante hasta que no veas ninguna zona roja.",
         "initialSetup2": "Siempre podras cambiarlo en el menu de texto.",
@@ -268,23 +328,5 @@
         "sceneImportExportParagraph": "Esto te permitira guardar y cargar toda la escena en un archivo editable.",
         "endHeader": "¡Y eso es!",
         "endParagraph": "Si deseas repetir el tutorial, puedes aceeder a el mediante los ajustes."
-    },
-    "save": {
-        "header": "Guardar",
-        "note-1-desktop": "Si la descarga aun no ha empezado, dale click izquierdo a la imagen debsjo y luego a guardar.",
-        "note-1-phone": "Si la descarga aun no ha empezado, toca la imagen un par de segundos y luego dale a guadar.",
-        "note-2": "Puedes desactivar esta ventana en el menu de Ajustes.",
-        "disable-dialog": "No mostrar este dialogo la proxima vez."
-    },
-    "error": {
-        "header": "Error",
-        "import-scene-fail": "El lienzo a sido restaurado.",
-        "invalid-json": "Formato JSON invalido",
-        "no-autosave": "Información del Auto-guardado no encontrada.",
-        "not-an-image": "Esto no es una imagen.",
-        "default-scene-fail": "Un error a ocurrido mientras cargaba la escena predefinida.\nPor favor usa el boton de reset, recarga tu navegador, o limpia tus cookies.\nSi el problema persiste, reporta el bug en GitHub.",
-        "name-tag-inputs-limit": "The limit is 2 to 6 inputs for name tag.",
-        "background-bookmark": "No puedes poner un fondo agregado en la seccion de favoritos.",
-        "hide-everything-warning": "La opcion \"Ocultar modelos y dialogos\" debajo de \"texto de escena\" esta activada.\nDesactiva esta opción en el menu de texto."
     }
 }

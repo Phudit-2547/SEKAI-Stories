@@ -106,7 +106,7 @@ const SceneText: React.FC = () => {
                 />
             </div>
             <div className="option__content">
-                <h3>{t("text.scene-text-variant")}</h3>
+                <h3>{t("text.scene-text.variant.header")}</h3>
                 <div className="flex-horizontal center padding-top-bottom-10">
                     <RadioButton
                         name="scene-text-variant"
@@ -116,7 +116,7 @@ const SceneText: React.FC = () => {
                         data={sceneText.variant}
                     />
                     <label className="width-100 radio__label" htmlFor="middle">
-                        {t("text.scene-text-middle")}
+                        {t("text.scene-text.variant.middle")}
                     </label>
                 </div>
                 <div className="flex-horizontal center padding-top-bottom-10">
@@ -131,15 +131,15 @@ const SceneText: React.FC = () => {
                         className="width-100 radio__label"
                         htmlFor="top-left"
                     >
-                        {t("text.scene-text-top-left")}
+                        {t("text.scene-text.variant.top-left")}
                     </label>
                 </div>
             </div>
             <div className="option__content">
-                <h3>{t("text.toggles")}</h3>
+                <h3>{t("globaltoggles")}</h3>
                 <Checkbox
                     id="visible"
-                    label={t("visible")}
+                    label={t("global.visible")}
                     checked={sceneText.visible}
                     onChange={handleSceneTextVisible}
                 />

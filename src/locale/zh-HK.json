@@ -1,137 +1,176 @@
 {
-    "please-wait": "請稍候...",
-
+    "global": {
+        "toggles": "切換",
+        "close": "關閉",
+        "clear-ok": "清除",
+        "copy": "複製",
+        "continue-ok": "繼續",
+        "cancel": "取消",
+        "next": "下一個",
+        "input": "輸入",
+        "adjust": null,
+        "enter-value": "輸入數值",
+        "visible": "顯示",
+        "import": "匯入",
+        "export": "匯出"
+    },
     "background": {
         "header": "背景",
-        "select": "揀",
-        "upload": "上傳",
-        "split-location": "拆分位置",
-        "upload-info": "為咗確保影像完整性，唔會被拉伸或裁剪，唔該用16:9嘅相",
-        "filters": "濾鏡",
-        "flashback": "「過去」濾鏡",
-        "sick": "「頭暈眼花」濾鏡",
-        "drooping-lines": "「尷尬」濾鏡",
-
-        "lighting": "燈光",
-        "preset": "預設參數",
-        "red": "紅色",
-        "green": "綠色",
-        "blue": "藍色",
-        "brightness": "亮度",
-        "saturation": "飽和度",
-        "select-preset": "揀一個預設參數",
-        "default": "預設",
-        "warm": "暖",
-        "night": "冷",
-        "off": "熄燈",
-        "bright": "照射燈",
-        "silhoutte": "剪影",
-        "custom-preset": "自訂"
-
-
-
-
+        "select": {
+            "header": "揀",
+            "button": "Select",
+            "split-location": "拆分位置",
+            "upload": "上傳",
+            "upload-info": "為咗確保影像完整性，唔會被拉伸或裁剪，唔該用16:9嘅相"
+        },
+        "lighting": {
+            "header": "燈光",
+            "preset": "預設參數",
+            "red": "紅色",
+            "green": "綠色",
+            "blue": "藍色",
+            "brightness": "亮度",
+            "saturation": "飽和度",
+            "presets": {
+                "select-preset": "揀一個預設參數",
+                "default": "預設",
+                "warm": "暖",
+                "night": "冷",
+                "off": "熄燈",
+                "bright": "照射燈",
+                "silhoutte": "剪影",
+                "custom-preset": "自訂"
+            }
+        },
+        "filters": {
+            "header": "濾鏡",
+            "flashback": "「過去」濾鏡",
+            "sick": "「頭暈眼花」濾鏡",
+            "drooping-lines": "「尷尬」濾鏡",
+            "pov": null,
+            "pov-settings": {
+                "zoom": null,
+                "povx": null,
+                "povy": null
+            }
+        }
     },
-
     "text": {
         "header": "文字",
-        "name-tag": "名稱標籤",
-        "easy-switch": "使用快捷切換",
-        "dialogue": "對話",
-        "font-size": "文字大細",
-        "enter-font-size": "輸入文字大細",
-        "add-symbol": "新增",
-        "scene-text": "場景名稱",
-        "scene-text-variant": "顯示位置",
-        "scene-text-middle": "中間",
-        "scene-text-top-left": "頂部左邊",
-        "y-offset": "Y軸偏移",
-        "y-offset-details": "如果畫布入面文字嘅位置唔啱，你可能要調整呢個選項",
-        "hide-everything": "隱藏所有文字同人物model",
+        "name-tag": {
+            "header": "名稱標籤",
+            "easy-switch": "使用快捷切換"
+        },
+        "dialogue": {
+            "header": "對話",
+            "font-size": "文字大細",
+            "enter-font-size": "輸入文字大細",
+            "add-symbol": "新增"
+        },
+        "scene-text": {
+            "header": "場景名稱",
+            "variant": {
+                "header": "顯示位置",
+                "middle": "中間",
+                "top-left": "頂部左邊"
+            },
+            "hide-everything": "隱藏所有文字同人物model"
+        },
+        "y-offset": {
+            "header": "Y軸偏移",
+            "details": "如果畫布入面文字嘅位置唔啱，你可能要調整呢個選項"
+        },
         "toggles": "切換"
     },
-
     "model": {
         "header": "人物模型",
-        "selected-layer": "所揀嘅圖層",
-        "add-model-header": "新增模型",
-        "add-model-description": "揀模型嘅路徑",
-        "add-model-sekai": "sekai.best",
-        "add-model-sekai-description": "揀Sekai Viewer上提供嘅模",
-        "add-model-static": "《世界計劃》故事生成器",
-        "add-model-static-description": "當Sekai Viewer無法訪問時嘅備用選項",
-        "delete-model-warn": "冇得Del最後嘅圖層",
-        "character": "角色",
-        "upload-image": "上傳圖片",
-        "upload-image-description": "上傳你自己嘅PNG人物圖片。",
-        "select-character": "揀一個角色",
-        "costume": "服裝",
-        "live2d-issue": "呢件服裝可能缺少某啲部件。",
-        "live2d-issue-github": "問題係呢度睇。",
-        "virtual": "虛擬",
-        "emotion": "表情",
-        "rename-emotion": "幫呢個表情起個朵，重置請留空",
-        "pose": "動作",
-        "select-pose": "揀一個動作",
-        "expression": "神情",
-        "select-expression": "揀一個神情",
-        "layer": "圖層",
-        "re-apply": "確定",
-        "transform": "變換",
-        "x-position": "X軸位置",
-        "y-position": "Y軸位置",
-        "scale": "大小",
-        "rotation": "旋轉角度",
-        "mouth": "嘴",
-        "ParamMouthForm": "嘴型",
-        "ParamMouthOpenY": "張開",
-        "ParamMouthForm2": "把口大細",
-        "ParamMouthScaleX": "X軸大細",
-        "ParamMouthScaleY": "Y軸大細",
-        "ParamMouthPositionY": "Y軸位置",
-        "ParamMouthShadow": "陰影",
-        "live2d": "Live2D",
-        "show-live2d-parts": "顯示Live 2D部件",
-        "access-live2d-parts": "你會睇到呢個模嘅所有Live2D參數。你確定要繼續？",
-        "toggles": "切換",
-        "idle": "閒置動畫",
-        "parameters": "參數",
-        "select-parameter": "揀一個參數",
-        "import-export": "匯入/匯出",
-        "import": "匯入",
-        "export": "匯出", 
-        "copy": "複製",
-        "live2d-import-export-description": "你可以儲存對呢個模所做嘅調整，並將呢啲調整load入其他模",
-        "live2d-tooltip": "你可以用方向鍵嚟揀或者調整參數",
+        "selected-layer": {
+            "header": "所揀嘅圖層",
+            "layer": "圖層",
+            "add-model": {
+                "header": "新增模型",
+                "description": "揀模型嘅路徑",
+                "sekai": "sekai.best",
+                "sekai-description": "揀Sekai Viewer上提供嘅模",
+                "static": "《世界計劃》故事生成器",
+                "static-description": "當Sekai Viewer無法訪問時嘅備用選項",
+                "upload-image": "上傳圖片",
+                "upload-image-description": "上傳你自己嘅PNG人物圖片。"
+            },
+            "delete-model-warn": "冇得Del最後嘅圖層"
+        },
+        "character": {
+            "header": "角色",
+            "select-character": "揀一個角色"
+        },
+        "costume": {
+            "header": "服裝",
+            "live2d-issue": "呢件服裝可能缺少某啲部件。",
+            "live2d-issue-github": "問題係呢度睇。",
+            "virtual": "虛擬"
+        },
+        "emotion": {
+            "header": "表情",
+            "rename-emotion": "幫呢個表情起個朵，重置請留空",
+            "pose": "動作",
+            "select-pose": "揀一個動作",
+            "expression": "神情",
+            "select-expression": "揀一個神情"
+        },
+        "transform": {
+            "header": "變換",
+            "x-position": "X軸位置",
+            "y-position": "Y軸位置",
+            "scale": "大小",
+            "rotation": "旋轉角度",
+            "blur": null,
+            "layering": "圖層順序"
+        },
+        "mouth": {
+            "header": "嘴",
+            "ParamMouthForm": "嘴型",
+            "ParamMouthOpenY": "張開",
+            "ParamMouthForm2": "把口大細",
+            "ParamMouthScaleX": "X軸大細",
+            "ParamMouthScaleY": "Y軸大細",
+            "ParamMouthPositionY": "Y軸位置",
+            "ParamMouthShadow": "陰影"
+        },
+        "live2d": {
+            "header": "Live2D",
+            "parameters": {
+                "header": "參數",
+                "select-parameter": "揀一個參數",
+                "tooltip": "你可以用方向鍵嚟揀或者調整參數"
+            },
+            "idle": "閒置動畫",
+            "import-export": {
+                "header": "匯入/匯出",
+                "description": "你可以儲存對呢個模所做嘅調整，並將呢啲調整load入其他模"
+            },
+            "emotion-copy": {
+                "header": "複製表情",
+                "description": "你可以儲存對呢個模嘅表情所做嘅調整，並將呢啲調整load入其他模",
+                "confirm-header": "複製成功",
+                "confirm-description": "已經複製咗表情資訊"
+            },
+            "show-live2d-parts": "顯示Live 2D部件",
+            "access-live2d-parts": "你會睇到呢個模嘅所有Live2D參數。你確定要繼續？"
+        },
         "live2d-changed-warn": "已經自定義咗Live2D嘅參數。如果繼續會重置參數。你確定要繼續？",
-        "emotion-copy": "複製表情",
-        "emotion-copy-description": "你可以儲存對呢個模嘅表情所做嘅調整，並將呢啲調整load入其他模",
-        "emotion-copy-confirm-header": "複製成功",
-        "emotion-copy-confirm-description": "已經複製咗表情資訊",
         "long-wait": "如果個模嘅載入時間太耐，你可以考慮用《世界計劃》故事生成器嚟攞模型",
-        "layering": "圖層順序",
-
+        "re-apply": "確定",
         "advanced": "進階選項"
     },
-
-    "visible": "顯示",
-
     "experimental": {
         "header": "實驗性",
         "details": "如果你睇唔到有任何更新，你可以重新整理一下個APP。",
         "refresh": "重新整理"
     },
-
-    "close": "關閉",
-    "clear": "咁做會清除成個專案，所有進度將會重置。你確定要繼續？",
-    "start-blank": "下次由空白開始",
-    "clear-ok": "清除",
-    "continue-ok": "繼續",
-    "cancel": "取消",
-    "next": "下一個",
-    "input": "輸入",
-    "enter-value": "輸入數值",
-
+    "clear": {
+        "message": "咁做會清除成個專案，所有進度將會重置。你確定要繼續？",
+        "start-blank": "下次由空白開始"
+    },
     "support": {
         "header": "支援作者",
         "details": "如果你好鍾意《世界計劃》故事生成器，你可以用以下方式支援作者：",
@@ -140,16 +179,17 @@
         "special-thanks-header": "特別鳴謝",
         "special-thanks-description": "我要喺度感謝Sekai Viewer嘅創作者允許我訪問佢哋嘅model!"
     },
-
-    "loading-1": "正在獲取model檔案",
-    "loading-2": "正在獲取動作檔案",
-    "loading-3": "正在修復model",
-    "loading-4": "正在載入紋理",
-    "loading-5": "正在載入moc3檔案",
-    "loading-6": "正在載入物理檔案",
-    "loading-7": "正在載入新model",
-    "failed-load": "載入新model失敗",
-
+    "loadings": {
+        "please-wait": "請稍候...",
+        "loading-1": "正在獲取model檔案",
+        "loading-2": "正在獲取動作檔案",
+        "loading-3": "正在修復model",
+        "loading-4": "正在載入紋理",
+        "loading-5": "正在載入moc3檔案",
+        "loading-6": "正在載入物理檔案",
+        "loading-7": "正在載入新model",
+        "failed-load": "載入新model失敗"
+    },
     "character": {
         "none": "無",
         "custom": "自定義圖片",
@@ -181,7 +221,6 @@
         "kaito": "KAITO",
         "others": "其他"
     },
-
     "group": {
         "all": "全部",
         "bookmarks": "收藏",
@@ -195,7 +234,6 @@
         "split": "拆分位置",
         "temp": "其他"
     },
-
     "settings": {
         "header": "設定",
         "language": "語言",
@@ -214,10 +252,28 @@
     },
     "import-export": {
         "header": "匯入/匯出",
-        "description": "自訂嘅背景同圖片唔會包含喺個JSON檔案入面",
-        "import": "匯入",
-        "export": "匯出"
+        "description": "自訂嘅背景同圖片唔會包含喺個JSON檔案入面"
     },
+    "save": {
+        "header": "儲存",
+        "note-1-desktop": "如果下載未開始，你可以right click下面嘅圖片然後儲存",
+        "note-1-phone": "如果下載未開始，你可以撳住下面嘅圖片然後撳儲存。",
+        "note-2": "你之後可以喺設定入面永遠閂咗呢個提示",
+        "disable-dialog": "唔好再顯示呢個提示"
+    },
+    "error": {
+        "header": "錯誤",
+        "import-scene-fail": "專案已經重置",
+        "invalid-json": "JSON檔案無效，請檢查再上載啦",
+        "no-autosave": "搵唔到自動儲存資料，下次記得自己儲存一次先閂咗佢",
+        "no-valid-models": "請先新增一個Live2D角色模型",
+        "not-an-image": "喂，唔係相嚟架喎",
+        "default-scene-fail": "如果載入預設場景嗰陣出錯。\n請㩒「清除」按鈕、重新整理瀏覽器或者清除網站Cookies資訊。\n如果問題仍然存在，請喺我嘅GitHub度報告呢個問題，唔該晒！",
+        "name-tag-inputs-limit": "名稱字數超咗限制",
+        "background-bookmark": "你唔可以收藏你自己上傳嘅背景",
+        "hide-everything-warning": "「場景名稱」選單下面嘅「隱藏晒所有文字同人物model」選項已開啓\n請將呢個選項關閉先再進行操作"
+    },
+    "mental-health": {},
     "tutorial": {
         "initialSetup1": "調整位置，直到你睇唔到任何紅色嘅地方",
         "initialSetup2": "你之後可以喺文字選單度將文字改返原本嘅位置",
@@ -275,24 +331,5 @@
         "sceneImportExportParagraph": "呢個功能可以令你將成個專案成為可以編輯嘅格式，然後喺下次再開嘅時候重新載入",
         "endHeader": "就係咁！",
         "endParagraph": "如果你想繼續編輯呢個專案，你可以喺設定入面重新載入"
-    },
-    "save": {
-        "header": "儲存",
-        "note-1-desktop": "如果下載未開始，你可以right click下面嘅圖片然後儲存",
-        "note-1-phone": "如果下載未開始，你可以撳住下面嘅圖片然後撳儲存。",
-        "note-2": "你之後可以喺設定入面永遠閂咗呢個提示",
-        "disable-dialog": "唔好再顯示呢個提示"
-    },
-    "error": {
-        "header": "錯誤",
-        "import-scene-fail": "專案已經重置",
-        "invalid-json": "JSON檔案無效，請檢查再上載啦",
-        "no-autosave": "搵唔到自動儲存資料，下次記得自己儲存一次先閂咗佢",
-        "no-valid-models": "請先新增一個Live2D角色模型",
-        "not-an-image": "喂，唔係相嚟架喎",
-        "default-scene-fail": "如果載入預設場景嗰陣出錯。\n請㩒「清除」按鈕、重新整理瀏覽器或者清除網站Cookies資訊。\n如果問題仍然存在，請喺我嘅GitHub度報告呢個問題，唔該晒！",
-        "name-tag-inputs-limit": "名稱字數超咗限制",
-        "background-bookmark": "你唔可以收藏你自己上傳嘅背景",
-        "hide-everything-warning": "「場景名稱」選單下面嘅「隱藏晒所有文字同人物model」選項已開啓\n請將呢個選項關閉先再進行操作"
     }
 }

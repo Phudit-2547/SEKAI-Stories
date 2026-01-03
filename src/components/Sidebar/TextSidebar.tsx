@@ -36,7 +36,7 @@ const TextSidebar: React.FC = () => {
         <div>
             <h1>{t("text.header")}</h1>
             <SidebarOption
-                header={t("text.name-tag")}
+                header={t("text.name-tag.header")}
                 option={openTextOption}
                 setOption={setOpenTextOption}
                 optionName="name-tag"
@@ -47,7 +47,7 @@ const TextSidebar: React.FC = () => {
                 />
             </SidebarOption>
             <SidebarOption
-                header={t("text.dialogue")}
+                header={t("text.dialogue.header")}
                 option={openTextOption}
                 setOption={setOpenTextOption}
                 optionName="dialogue"
@@ -62,7 +62,7 @@ const TextSidebar: React.FC = () => {
                 />
             </SidebarOption>
             <SidebarOption
-                header={t("text.scene-text")}
+                header={t("text.scene-text.header")}
                 option={openTextOption}
                 setOption={setOpenTextOption}
                 optionName="scene-text"
@@ -70,7 +70,7 @@ const TextSidebar: React.FC = () => {
                 <SceneText />
             </SidebarOption>
             <SidebarOption
-                header={t("text.y-offset")}
+                header={t("text.y-offset.header")}
                 option={openTextOption}
                 setOption={setOpenTextOption}
                 optionName="y-offset"

@@ -35,18 +35,18 @@ const ClearButton: React.FC = () => {
                 <Window
                     show={setResetShow}
                     confirmFunction={() => setReset(reset + 1)}
-                    confirmLabel={t("clear-ok")}
+                    confirmLabel={t("global.clear-ok")}
                     danger={true}
                 >
                     <div className="window__content">
                         <div className="window__divider center">
-                            <h3 className="text-center">{t("clear")}</h3>
+                            <h3 className="text-center">{t("clear.message")}</h3>
                         </div>
                         <div className="windown__divider center">
                             {
                                 <Checkbox
                                     id="stop-show"
-                                    label={t("start-blank")}
+                                    label={t("clear.start-blank")}
                                     checked={blankCanvas}
                                     onChange={handleBlankCanvas}
                                 />

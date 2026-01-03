@@ -121,28 +121,28 @@ const Lighting: React.FC = () => {
             <div className="option__content">
                 <select onChange={handlePreset} value="preset">
                     <option value="preset" disabled>
-                        {t("background.select-preset")}
+                        {t("background.lighting.presets.select-preset")}
                     </option>
                     {Object.keys(defaultPresets).map((preset) => (
                         <option value={preset} key={preset}>
-                            {t(`background.${preset}`)}
+                            {t(`background.lighting.presets.${preset}`)}
                         </option>
                     ))}
                     <option value="preset-1">
-                        {t("background.custom-preset")} 1
+                        {t("background.lighting.presets.custom-preset")} 1
                     </option>
                     <option value="preset-2">
-                        {t("background.custom-preset")} 2
+                        {t("background.lighting.presets.custom-preset")} 2
                     </option>
                     <option value="preset-3">
-                        {t("background.custom-preset")} 3
+                        {t("background.lighting.presets.custom-preset")} 3
                     </option>
                 </select>
             </div>
             <div className="option__content">
                 <div className="transform-icons">
                     <h3>
-                        {t("background.red")} ({lighting.red})
+                        {t("background.lighting.red")} ({lighting.red})
                     </h3>
                     <div>
                         <i
@@ -172,7 +172,7 @@ const Lighting: React.FC = () => {
             <div className="option__content">
                 <div className="transform-icons">
                     <h3>
-                        {t("background.green")} ({lighting.green})
+                        {t("background.lighting.green")} ({lighting.green})
                     </h3>
                     <div>
                         <i
@@ -201,7 +201,7 @@ const Lighting: React.FC = () => {
             <div className="option__content">
                 <div className="transform-icons">
                     <h3>
-                        {t("background.blue")} ({lighting.blue})
+                        {t("background.lighting.blue")} ({lighting.blue})
                     </h3>
                     <div>
                         <i
@@ -230,7 +230,7 @@ const Lighting: React.FC = () => {
             <div className="option__content">
                 <div className="transform-icons">
                     <h3>
-                        {t("background.brightness")} ({lighting.brightness})
+                        {t("background.lighting.brightness")} ({lighting.brightness})
                     </h3>
                     <div>
                         <i
@@ -259,7 +259,7 @@ const Lighting: React.FC = () => {
             <div className="option__content">
                 <div className="transform-icons">
                     <h3>
-                        {t("background.saturation")} ({lighting.saturation})
+                        {t("background.lighting.saturation")} ({lighting.saturation})
                     </h3>
                     <div>
                         <i

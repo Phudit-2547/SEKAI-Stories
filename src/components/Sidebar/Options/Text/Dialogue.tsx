@@ -159,7 +159,7 @@ const Dialogue: React.FC<DialogueProps> = ({
                 onChange={handleAddSymbol}
             >
                 <option value="none" disabled>
-                    {t("text.add-symbol")}
+                    {t("text.dialogue.add-symbol")}
                 </option>
                 {Object.entries(symbols).map(([key, value]) => (
                     <option key={key} value={value}>
@@ -169,7 +169,7 @@ const Dialogue: React.FC<DialogueProps> = ({
             </select>
             <div className="transform-icons">
                 <h3>
-                    {t("text.font-size")} ({text.fontSize} px)
+                    {t("text.dialogue.font-size")} ({text.fontSize} px)
                 </h3>
                 <div>
                     <i
@@ -204,7 +204,7 @@ const Dialogue: React.FC<DialogueProps> = ({
             />
             <Checkbox
                 id="visible"
-                label={t("visible")}
+                label={t("global.visible")}
                 checked={text.visible}
                 onChange={handleDialogueBoxVisible}
             />
@@ -214,7 +214,7 @@ const Dialogue: React.FC<DialogueProps> = ({
                     confirmFunction={(x: string) =>
                         handleInputFontSizeChange(x)
                     }
-                    description={t("text.enter-font-size")}
+                    description={t("text.dialogue.enter-font-size")}
                 />
             )}
             {mentalWindow && (

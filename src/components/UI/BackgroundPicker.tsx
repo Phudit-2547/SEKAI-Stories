@@ -263,7 +263,7 @@ const BackgroundPicker: React.FC<BackgroundPickerProps> = ({
                         setShow(!show);
                     }}
                 >
-                    {t("background.select")}
+                    {t("background.select.button")}
                 </button>
             </div>
         </>

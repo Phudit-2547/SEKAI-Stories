@@ -1,133 +1,176 @@
 {
-    "please-wait": "稍安勿躁，正在加载...",
-
+    "global": {
+        "toggles": "切换",
+        "close": "关闭",
+        "clear-ok": "清除",
+        "copy": "复制",
+        "continue-ok": "继续",
+        "cancel": "取消",
+        "next": "下一个",
+        "input": "输入",
+        "adjust": "调整",
+        "enter-value": "输入数值",
+        "visible": "显示",
+        "import": "导入",
+        "export": "导出"
+    },
     "background": {
         "header": "背景",
-        "select": "选择",
-        "upload": "上传",
-        "lighting": "光照",
-        "preset": "预设",
-        "red": "红(R)",
-        "green": "绿(G)",
-        "blue": "蓝(B)",
-        "brightness": "亮度",
-        "saturation": "饱和度",
-        "select-preset": "选择预设",
-        "default": "默认",
-        "warm": "温暖",
-        "night": "夜晚",
-        "off": "无光照",
-        "bright": "明亮",
-        "silhoutte": "剪影",
-        "custom-preset": "自定义预设",
-        "split-location": "拆分位置",
-        "upload-info": "为确保图像看起来是正确的，并且不会被拉伸或裁剪，请使用16:9的图片",
-        "filters": "滤镜",
-        "flashback": "“过去”滤镜",
-        "sick": "“头晕眼花”滤镜",
-        "drooping-lines": "“尴尬”滤镜"
+        "select": {
+            "header": "选择",
+            "button": "Select",
+            "split-location": "拆分位置",
+            "upload": "上传",
+            "upload-info": "为确保图像看起来是正确的，并且不会被拉伸或裁剪，请使用16:9的图片"
+        },
+        "lighting": {
+            "header": "光照",
+            "preset": "预设",
+            "red": "红(R)",
+            "green": "绿(G)",
+            "blue": "蓝(B)",
+            "brightness": "亮度",
+            "saturation": "饱和度",
+            "presets": {
+                "select-preset": "选择预设",
+                "default": "默认",
+                "warm": "温暖",
+                "night": "夜晚",
+                "off": "无光照",
+                "bright": "明亮",
+                "silhoutte": "剪影",
+                "custom-preset": "自定义预设"
+            }
+        },
+        "filters": {
+            "header": "滤镜",
+            "flashback": "“过去”滤镜",
+            "sick": "“头晕眼花”滤镜",
+            "drooping-lines": "“尴尬”滤镜",
+            "pov": null,
+            "pov-settings": {
+                "zoom": null,
+                "povx": null,
+                "povy": null
+            }
+        }
     },
-
     "text": {
         "header": "文字",
-        "name-tag": "名称标签",
-        "easy-switch": "使用快捷切换",
-        "dialogue": "对话",
-        "font-size": "文字大小",
-        "enter-font-size": "输入文字大小",
-        "add-symbol": "添加",
-        "scene-text": "场景名称",
-        "scene-text-variant": "显示位置",
-        "scene-text-middle": "中间",
-        "scene-text-top-left": "顶部左侧",
-        "y-offset": "Y轴偏移",
-        "y-offset-details": "如果画布中文字的位置不正确，那么你可能需要调整这个选项",
-        "hide-everything": "隐藏所有文字与人物模型",
+        "name-tag": {
+            "header": "名称标签",
+            "easy-switch": "使用快捷切换"
+        },
+        "dialogue": {
+            "header": "对话",
+            "font-size": "文字大小",
+            "enter-font-size": "输入文字大小",
+            "add-symbol": "添加"
+        },
+        "scene-text": {
+            "header": "场景名称",
+            "variant": {
+                "header": "显示位置",
+                "middle": "中间",
+                "top-left": "顶部左侧"
+            },
+            "hide-everything": "隐藏所有文字与人物模型"
+        },
+        "y-offset": {
+            "header": "Y轴偏移",
+            "details": "如果画布中文字的位置不正确，那么你可能需要调整这个选项"
+        },
         "toggles": "切换"
     },
-
     "model": {
         "header": "人物模型",
-        "selected-layer": "所选择的图层",
-        "add-model-header": "添加模型",
-        "add-model-description": "选择模型的路径",
-        "add-model-sekai": "sekai.best",
-        "add-model-sekai-description": "选择Sekai Viewer上提供的模型",
-        "add-model-static": "SEKAI Stories",
-        "add-model-static-description": "当Sekai Viewer无法访问时的备用选项，如果Sekai Viewer可以使用，那么我建议你使用Sekai Viewer",
-        "upload-image": "上传图片",
-        "upload-image-description": "上传你自己的自定义精灵图。",
-        "delete-model-warn": "这是最后一个图层了，无法再删除了",
-        "character": "角色",
-        "select-character": "选择一个角色",
-        "costume": "服装",
-        "live2d-issue": "这件服装可能丢失了某些部分。",
-        "live2d-issue-github": "在此处查看问题。",
-        "virtual": "虚拟",
-        "emotion": "神态",
-        "rename-emotion": "给这种神态取个好听的名字，留空可以重置",
-        "pose": "动作",
-        "select-pose": "选择一个动作",
-        "expression": "表情",
-        "select-expression": "选择一个表情",
-        "layer": "图层",
-        "re-apply": "确定",
-        "transform": "变换",
-        "x-position": "X轴位置",
-        "y-position": "Y轴位置",
-        "scale": "大小",
-        "rotation": "旋转角度",
-        "mouth": "嘴部",
-        "ParamMouthForm": "嘴型",
-        "ParamMouthOpenY": "张开",
-        "ParamMouthForm2": "嘴部大小",
-        "ParamMouthScaleX": "X轴大小",
-        "ParamMouthScaleY": "Y轴大小",
-        "ParamMouthPositionY": "Y轴位置",
-        "ParamMouthShadow": "阴影",
-        "live2d": "Live2D",
-        "show-live2d-parts": "显示Live 2D部件",
-        "access-live2d-parts": "你将会查看这个模型的所有部分。确定要继续吗？",
-        "toggles": "切换",
-        "idle": "闲置动画",
-        "parameters": "参数",
-        "select-parameter": "选择参数",
-        "import-export": "导入/导出",
-        "import": "导入",
-        "export": "导出",
-        "copy": "复制",
-        "live2d-import-export-description": "你可以保存对这个模型所做的调整，并把这些调整加载到其他的模型上，很方便，不是吗",
-        "live2d-tooltip": "你可以使用方向键来选择或调整参数",
+        "selected-layer": {
+            "header": "所选择的图层",
+            "layer": "图层",
+            "add-model": {
+                "header": "添加模型",
+                "description": "选择模型的路径",
+                "sekai": "sekai.best",
+                "sekai-description": "选择Sekai Viewer上提供的模型",
+                "static": "SEKAI Stories",
+                "static-description": "当Sekai Viewer无法访问时的备用选项，如果Sekai Viewer可以使用，那么我建议你使用Sekai Viewer",
+                "upload-image": "上传图片",
+                "upload-image-description": "上传你自己的自定义精灵图。"
+            },
+            "delete-model-warn": "这是最后一个图层了，无法再删除了"
+        },
+        "character": {
+            "header": "角色",
+            "select-character": "选择一个角色"
+        },
+        "costume": {
+            "header": "服装",
+            "live2d-issue": "这件服装可能丢失了某些部分。",
+            "live2d-issue-github": "在此处查看问题。",
+            "virtual": "虚拟"
+        },
+        "emotion": {
+            "header": "神态",
+            "rename-emotion": "给这种神态取个好听的名字，留空可以重置",
+            "pose": "动作",
+            "select-pose": "选择一个动作",
+            "expression": "表情",
+            "select-expression": "选择一个表情"
+        },
+        "transform": {
+            "header": "变换",
+            "x-position": "X轴位置",
+            "y-position": "Y轴位置",
+            "scale": "大小",
+            "rotation": "旋转角度",
+            "blur": null,
+            "layering": "图层顺序"
+        },
+        "mouth": {
+            "header": "嘴部",
+            "ParamMouthForm": "嘴型",
+            "ParamMouthOpenY": "张开",
+            "ParamMouthForm2": "嘴部大小",
+            "ParamMouthScaleX": "X轴大小",
+            "ParamMouthScaleY": "Y轴大小",
+            "ParamMouthPositionY": "Y轴位置",
+            "ParamMouthShadow": "阴影"
+        },
+        "live2d": {
+            "header": "Live2D",
+            "parameters": {
+                "header": "参数",
+                "select-parameter": "选择参数",
+                "tooltip": "你可以使用方向键来选择或调整参数"
+            },
+            "idle": "闲置动画",
+            "import-export": {
+                "header": "导入/导出",
+                "description": "你可以保存对这个模型所做的调整，并把这些调整加载到其他的模型上，很方便，不是吗"
+            },
+            "emotion-copy": {
+                "header": "复制神态",
+                "description": "你可以保存对这个模型的神态所做的调整，并把这些调整加载到其他的模型上，很方便，不是吗",
+                "confirm-header": "复制成功",
+                "confirm-description": "已复制神态信息"
+            },
+            "show-live2d-parts": "显示Live 2D部件",
+            "access-live2d-parts": "你将会查看这个模型的所有部分。确定要继续吗？"
+        },
         "live2d-changed-warn": "你可以自定义Live2D的参数。如果继续会丢弃它们",
-        "emotion-copy": "复制神态",
-        "emotion-copy-description": "你可以保存对这个模型的神态所做的调整，并把这些调整加载到其他的模型上，很方便，不是吗",
-        "emotion-copy-confirm-header": "复制成功",
-        "emotion-copy-confirm-description": "已复制神态信息",
         "long-wait": "如果模型的加载时间过长，那么你可以考虑使用SEKAI Stories获取模型",
-        "layering": "图层顺序",
-
+        "re-apply": "确定",
         "advanced": "高级"
     },
-
-    "visible": "显示",
-
     "experimental": {
         "header": "实验性",
         "details": "如果你还没有看到任何更改，你可以刷新一下画布。",
         "refresh": "刷新"
     },
-
-    "close": "关闭",
-    "clear": "这么做会清除整个画布，所有的进度都会丢失，我提醒过你了哦！",
-    "start-blank": "下次从空白画布开始",
-    "clear-ok": "清除",
-    "continue-ok": "继续",
-    "cancel": "取消",
-    "next": "下一个",
-    "input": "输入",
-    "adjust": "调整",
-    "enter-value": "输入数值",
-
+    "clear": {
+        "message": "这么做会清除整个画布，所有的进度都会丢失，我提醒过你了哦！",
+        "start-blank": "下次从空白画布开始"
+    },
     "support": {
         "header": "支持作者",
         "details": "如果你非常非常喜欢SEKAI Stories，你可以通过以下方式之一支持作者：",
@@ -136,16 +179,17 @@
         "special-thanks-header": "特别感谢",
         "special-thanks-description": "我要在这里感谢Sekai Viewer的所有者允许我访问他们的模型!"
     },
-
-    "loading-1": "正在获取模型文件",
-    "loading-2": "正在获取动作文件",
-    "loading-3": "正在修复模型",
-    "loading-4": "正在加载纹理",
-    "loading-5": "正在加载moc3文件",
-    "loading-6": "正在加载物理文件",
-    "loading-7": "正在加载新模型",
-    "failed-load": "加载新模型失败",
-
+    "loadings": {
+        "please-wait": "稍安勿躁，正在加载...",
+        "loading-1": "正在获取模型文件",
+        "loading-2": "正在获取动作文件",
+        "loading-3": "正在修复模型",
+        "loading-4": "正在加载纹理",
+        "loading-5": "正在加载moc3文件",
+        "loading-6": "正在加载物理文件",
+        "loading-7": "正在加载新模型",
+        "failed-load": "加载新模型失败"
+    },
     "character": {
         "none": "无",
         "custom": "自定义图片",
@@ -177,7 +221,6 @@
         "kaito": "KAITO",
         "others": "其他"
     },
-
     "group": {
         "all": "全部",
         "bookmarks": "收藏",
@@ -192,7 +235,6 @@
         "temp": "其他",
         "cards": "卡片"
     },
-
     "settings": {
         "header": "设置",
         "language": "语言",
@@ -211,10 +253,28 @@
     },
     "import-export": {
         "header": "导入/导出",
-        "description": "自定义的背景和图片不会包含在此JSON文件中",
-        "import": "导入",
-        "export": "导出"
+        "description": "自定义的背景和图片不会包含在此JSON文件中"
     },
+    "save": {
+        "header": "保存",
+        "note-1-desktop": "如果下载还没有开始，你可以右键点击下面的图片并保存",
+        "note-1-phone": "如果下载尚未开始，你可以按住下面的图片并保存。",
+        "note-2": "你之后可以在设置里永远关掉这个提示",
+        "disable-dialog": "不要再显示这个提示"
+    },
+    "error": {
+        "header": "错误",
+        "import-scene-fail": "画布已重置，这不就尴尬了嘛",
+        "invalid-json": "JSON文件无效，检查后再上传吧",
+        "no-autosave": "未找到自动保存数据，下次记得自己保存一遍再关掉",
+        "no-valid-models": "请先添加一个Live2D角色模型",
+        "not-an-image": "这也不是图片啊",
+        "default-scene-fail": "如果在加载默认场景时出错。\n请点击“清除”按钮、刷新浏览器或清除网站Cookies信息。\n如果问题仍然存在，请在我的GitHub仓库里报告这个问题，谢谢！",
+        "name-tag-inputs-limit": "名称输入的字数超过了限制",
+        "background-bookmark": "你不能收藏你自己上传的背景",
+        "hide-everything-warning": "在“场景名称”菜单下的“隐藏所有文字与人物模型”选项已经被打开了\n请先把这个选项关闭掉再进行操作"
+    },
+    "mental-health": {},
     "tutorial": {
         "initialSetup1": "调整位置，直到你看不到任何红色的地方",
         "initialSetup2": "你之后可以在文本菜单上把文字改回原来的位置",
@@ -272,24 +332,5 @@
         "sceneImportExportParagraph": "这个功能可以让你把整个画布保存为可编辑的格式，然后在下一次打开时重新加载",
         "endHeader": "就是这样！",
         "endParagraph": "如果你想继续编辑这个画布，你可以在设置里重新加载它们"
-    },
-    "save": {
-        "header": "保存",
-        "note-1-desktop": "如果下载还没有开始，你可以右键点击下面的图片并保存",
-        "note-1-phone": "如果下载尚未开始，你可以按住下面的图片并保存。",
-        "note-2": "你之后可以在设置里永远关掉这个提示",
-        "disable-dialog": "不要再显示这个提示"
-    },
-    "error": {
-        "header": "错误",
-        "import-scene-fail": "画布已重置，这不就尴尬了嘛",
-        "invalid-json": "JSON文件无效，检查后再上传吧",
-        "no-autosave": "未找到自动保存数据，下次记得自己保存一遍再关掉",
-        "no-valid-models": "请先添加一个Live2D角色模型",
-        "not-an-image": "这也不是图片啊",
-        "default-scene-fail": "如果在加载默认场景时出错。\n请点击“清除”按钮、刷新浏览器或清除网站Cookies信息。\n如果问题仍然存在，请在我的GitHub仓库里报告这个问题，谢谢！",
-        "name-tag-inputs-limit": "名称输入的字数超过了限制",
-        "background-bookmark": "你不能收藏你自己上传的背景",
-        "hide-everything-warning": "在“场景名称”菜单下的“隐藏所有文字与人物模型”选项已经被打开了\n请先把这个选项关闭掉再进行操作"
     }
 }

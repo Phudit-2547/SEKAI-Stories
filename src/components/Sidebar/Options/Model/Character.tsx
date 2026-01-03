@@ -127,7 +127,7 @@ const Character: React.FC<CharacterProps> = ({
                 disabled={isLoading}
             >
                 <option value="none" disabled>
-                    {t("model.select-character")}
+                    {t("model.character.select-character")}
                 </option>
                 {currentSelectedCharacter === "custom" && (
                     <option value="custom" disabled>

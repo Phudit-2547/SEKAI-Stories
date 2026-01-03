@@ -28,13 +28,13 @@ const Live2DIssue: React.FC<Live2DIssueProps> = ({ costume }) => {
                 <div>
                     <p>
                         <i className="bi bi-exclamation-circle-fill blue" />{" "}
-                        {t("model.live2d-issue")}
+                        {t("model.costume.live2d-issue")}
                     </p>
                     <a
                         href="https://github.com/lezzthanthree/SEKAI-Stories/issues/20"
                         target="_blank"
                     >
-                        <p>{t("model.live2d-issue-github")}</p>
+                        <p>{t("model.costume.live2d-issue-github")}</p>
                     </a>
                 </div>
             )}

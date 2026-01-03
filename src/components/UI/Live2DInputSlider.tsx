@@ -32,7 +32,7 @@ const Live2DInputSlider: React.FC<Live2DInputSliderProps> = ({
 
     return (
         <div className="option__content" key={param}>
-            {filter && <h3>{t(`model.${param}`)}</h3>}
+            {filter && <h3>{t(`model.mouth.${param}`)}</h3>}
             <input
                 type="range"
                 name={param}

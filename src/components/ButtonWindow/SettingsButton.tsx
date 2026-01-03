@@ -177,7 +177,7 @@ const SettingsButton: React.FC = () => {
                             </button>
                         </div>
                         <div className="window__divider">
-                            <h2>{t("settings.toggles")}</h2>
+                            <h2>{t("global.toggles")}</h2>
                             <Checkbox
                                 id="audio"
                                 label={t("settings.audio")}

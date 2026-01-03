@@ -86,14 +86,14 @@ const Select: React.FC = () => {
                     <UploadImageButton
                         id="background-upload"
                         uploadFunction={handleUploadImage}
-                        text={t("background.upload")}
-                        alertMsg={t("background.upload-info")}
+                        text={t("background.select.upload")}
+                        alertMsg={t("background.select.upload-info")}
                     />
                 </>
             )}
             <Checkbox
                 id="split"
-                label={t("background.split-location")}
+                label={t("background.select.split-location")}
                 checked={splitBackground?.visible}
                 onChange={handleSplitImage}
             />
