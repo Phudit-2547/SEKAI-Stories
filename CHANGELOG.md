@@ -1,3 +1,9 @@
+# 5.9.2
+Release date: January 3, 2026
+- Arranged components folder
+- Refactored localization keys
+- Refactored default scene
+
 # 5.9.1
 Release date: December 25, 2025
 - Updated French and Thai locales
