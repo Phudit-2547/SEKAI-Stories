@@ -1,7 +1,7 @@
 export const mentalCheck = (text: string): boolean => {
     const mentalHealthRelatedWords = [
         "kill myself",
-        "kill my self",
+        "kill yourself",
         "suicide",
         "end my life",
         "take my life",
@@ -16,7 +16,9 @@ export const mentalCheck = (text: string): boolean => {
         "self-harm",
         "hurt myself",
         "cut myself",
+        "cut yourself",
         "cutting myself",
+        "cutting yourself",
         "i deserve pain",
     ];
 
