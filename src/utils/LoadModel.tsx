@@ -4,7 +4,9 @@ import { GetCharacterFolder } from "./GetCharacterFolder";
 import { GetModelDataFromSekai, GetModelDataFromStatic } from "./GetModelData";
 import { t } from "i18next";
 import axios from "axios";
-import { Live2DModel } from "pixi-live2d-display-mulmotion";
+import {
+    Live2DModel,
+} from "@sekai-world/pixi-live2d-display-mulmotion";
 import { GetCharacterDataFromSekai } from "./GetCharacterDataFromSekai";
 
 export const loadModel = async (
