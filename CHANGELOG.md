@@ -3,6 +3,7 @@ Release date: January 10, 2026
 - Fixed issue regarding on missing parts on certain characters
 - Updated Chinese (Simplified) and French locales
 - Fixed "Select" button on Background
+- Updated model and background list 
 
 # 5.9.2
 Release date: January 3, 2026
