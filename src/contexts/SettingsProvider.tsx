@@ -28,7 +28,6 @@ export const SettingsProvider: React.FC<SidebarProviderProps> = ({
     const [allowRefresh, setAllowRefresh] = useState<boolean>(false);
     const [audio, setAudio] = useState<boolean>(false);
     const [loading, setLoading] = useState<number>(0);
-    const [mizuBells, setMizuBells] = useState<boolean>(false);
     const [settingsLoaded, setSettingsLoaded] = useState<boolean>(false);
 
     useEffect(() => {
@@ -79,19 +78,14 @@ export const SettingsProvider: React.FC<SidebarProviderProps> = ({
         if (storedNameTagInputs) {
             setNameTagInputs(Number(storedNameTagInputs));
         }
-        const mizuBellsWindow = localStorage.getItem("mizu5");
-        if (!mizuBellsWindow || mizuBellsWindow == "true") {
-            setMizuBells(true);
-        }
+        
         setSettingsLoaded(true);
     }, []);
 
     useEffect(() => {
         localStorage.setItem("showTutorialAndSetup-v2", String(showTutorial));
     }, [showTutorial]);
-    useEffect(() => {
-        localStorage.setItem("mizu5", String(mizuBells));
-    }, [mizuBells]);
+    
 
     return (
         <SettingsContext.Provider
@@ -130,8 +124,6 @@ export const SettingsProvider: React.FC<SidebarProviderProps> = ({
                 setAudio,
                 loading,
                 setLoading,
-                mizuBells,
-                setMizuBells,
                 settingsLoaded,
             }}
         >

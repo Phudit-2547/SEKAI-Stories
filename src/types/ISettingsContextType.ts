@@ -37,6 +37,4 @@ export default interface ISettingsContextType {
     loading: number;
     setLoading: Dispatch<SetStateAction<number>>;
     settingsLoaded: boolean;
-    mizuBells: boolean;
-    setMizuBells: Dispatch<SetStateAction<boolean>>;
 }
