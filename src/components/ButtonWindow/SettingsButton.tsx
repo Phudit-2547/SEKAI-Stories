@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import SupportButton from "./SupportButton";
 import { Checkbox } from "../UI/Checkbox";
@@ -18,6 +18,19 @@ const SettingsButton: React.FC = () => {
     const scene = useContext(SceneContext);
     const settings = useContext(SettingsContext);
     const softError = useContext(SoftErrorContext);
+    const [stillAlive, setStillAlive] = useState<number>(0);
+
+    useEffect(() => {
+        if (stillAlive < 39) return;
+        setErrorInformation(
+            "The cake is a lie.\n(miku radio edit by: digiral)"
+        );
+        if (stillAlive == 39) {
+            const radio = new Audio("/sound/85.2-miku.wav");
+            radio.loop = true;
+            radio.play();
+        }
+    }, [stillAlive]);
 
     if (!scene || !settings || !softError) {
         throw new Error("Context not provided.");
@@ -223,8 +236,16 @@ const SettingsButton: React.FC = () => {
                                 onChange={handleExperimental}
                             />
                         </div>
-                        <div className="window__divider center">
+                        <div
+                            className="window__divider center flex flex-vertical"
+                            onClick={() => {
+                                setStillAlive(stillAlive + 1);
+                            }}
+                        >
                             <p>{"v" + packageJson.version}</p>
+                            {stillAlive > 5 && stillAlive < 39 && (
+                                <p>{39 - stillAlive} more...</p>
+                            )}
                         </div>
                     </div>
                 </Window>
