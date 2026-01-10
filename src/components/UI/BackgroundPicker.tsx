@@ -48,6 +48,21 @@ const BackgroundPicker: React.FC<BackgroundPickerProps> = ({
     if (!softError) throw new Error("Context not found");
     const { setErrorInformation } = softError;
 
+    const scrollToSelectedBackground = () => {
+        if (show && background?.filename) {
+            const selectedBackground = document.querySelector(
+                `img[src="${background.filename.replace(
+                    "/background_compressed/",
+                    "/background_low_jpg/"
+                )}"]`
+            );
+            selectedBackground?.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+            });
+        }
+    };
+
     useEffect(() => {
         const handleEsc = (e: KeyboardEvent) => {
             if (e.key === "Escape") {
@@ -67,18 +82,7 @@ const BackgroundPicker: React.FC<BackgroundPickerProps> = ({
     }, []);
 
     useEffect(() => {
-        if (show && background?.filename) {
-            const selectedBackground = document.querySelector(
-                `img[src="${background.filename.replace(
-                    "/background_compressed/",
-                    "/background_low_jpg/"
-                )}"]`
-            );
-            selectedBackground?.scrollIntoView({
-                behavior: "smooth",
-                block: "center",
-            });
-        }
+        scrollToSelectedBackground();
     }, [show, background?.filename]);
     const handleChangeBackground = async (bg: string) => {
         try {
@@ -189,15 +193,28 @@ const BackgroundPicker: React.FC<BackgroundPickerProps> = ({
         <>
             {show && (
                 <div id="picker">
-                    <button
-                        id="picker-close"
-                        className="btn-circle btn-pink"
-                        onClick={() => {
-                            setShow(false);
-                        }}
-                    >
-                        <i className="bi bi-x-lg"></i>
-                    </button>
+                    <div id="picker-close" className="flex-vertical">
+                        {background.filename.startsWith(
+                            "/background_compressed/"
+                        ) && (
+                            <button
+                                className="btn-circle btn-white"
+                                onClick={() => {
+                                    scrollToSelectedBackground();
+                                }}
+                            >
+                                <i className="bi bi-fast-forward-fill sidebar__select" />
+                            </button>
+                        )}
+                        <button
+                            className="btn-circle btn-pink"
+                            onClick={() => {
+                                setShow(false);
+                            }}
+                        >
+                            <i className="bi bi-x-circle-fill sidebar__select" />
+                        </button>
+                    </div>
                     <select
                         name="picker-filter"
                         id="picker-filter"
