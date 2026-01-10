@@ -18,7 +18,7 @@
         "header": "Arrière-plan",
         "select": {
             "header": "Selectionner",
-            "button": "Select",
+            "button": "Selectionner",
             "split-location": "Lieu partagé",
             "upload": "Uploader",
             "upload-info": "Pour vous assurer que l'image s'affiche correctement et ne soit pas déformée ou coupée, veuillez utiliser une image au format 16:9."

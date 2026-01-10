@@ -18,7 +18,7 @@
         "header": "Fondos",
         "select": {
             "header": "Seleccionar",
-            "button": "Select",
+            "button": "Seleccionar",
             "split-location": "Dividir Lugar",
             "upload": "Agregar",
             "upload-info": "Para asegurarte de que la imagen se vea correctamente y no se recorte o estire, usa una imagen con un radio de 16:9."

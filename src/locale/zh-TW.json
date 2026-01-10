@@ -18,7 +18,7 @@
         "header": "背景",
         "select": {
             "header": "選擇",
-            "button": "Select",
+            "button": "選擇",
             "split-location": "拆分位置",
             "upload": "上傳",
             "upload-info": "為確保影像完整性，不會被拉伸或裁剪，請使用16:9的圖片"

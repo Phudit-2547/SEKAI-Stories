@@ -18,7 +18,7 @@
         "header": "Tło",
         "select": {
             "header": "Wybierz",
-            "button": "Select",
+            "button": "Wybierz",
             "split-location": null,
             "upload": "Załaduj",
             "upload-info": "Aby się upewnić, że obraz będzie wyglądał dobrze i się nie rozciągnie lub przytnie, użyj obrazka o proporcjach 16:9."

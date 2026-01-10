@@ -18,7 +18,7 @@
         "header": "背景",
         "select": {
             "header": "揀",
-            "button": "Select",
+            "button": "揀",
             "split-location": "拆分位置",
             "upload": "上傳",
             "upload-info": "為咗確保影像完整性，唔會被拉伸或裁剪，唔該用16:9嘅相"
