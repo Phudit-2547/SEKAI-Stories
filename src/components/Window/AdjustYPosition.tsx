@@ -10,7 +10,7 @@ import Window from "../UI/Window";
 import { useTranslation } from "react-i18next";
 import { SceneContext } from "../../contexts/SceneContext";
 import * as PIXI from "pixi.js";
-import { textTypeYPositions } from "../../utils/Constants";
+import { textTypeYPositions } from "../../data/Constants";
 
 interface AdjustYPositionProps {
     show: Dispatch<SetStateAction<boolean>>;
@@ -27,7 +27,7 @@ const randomMessage = [
     "missingno.",
     "mizukey",
     "SIFAS died for this.",
-    "C'mere, Mafuyu-chan"
+    "C'mere, Mafuyu-chan",
 ];
 
 const AdjustYPosition: React.FC<AdjustYPositionProps> = ({

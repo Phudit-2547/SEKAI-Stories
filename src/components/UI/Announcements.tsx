@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { SettingsContext } from "../../contexts/SettingsContext";
-import { announcementKey } from "../../utils/Constants";
+import { announcementKey } from "../../data/Constants";
 
 const Announcements: React.FC = () => {
     const context = useContext(SettingsContext);

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { SettingsContext } from "./SettingsContext";
 import { IEasyNameTag } from "../types/IEasyNameTag";
-import { announcementKey } from "../utils/Constants";
+import { announcementKey } from "../data/Constants";
 
 interface SidebarProviderProps {
     children: React.ReactNode;

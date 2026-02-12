@@ -1,18 +1,18 @@
 import axios from "axios";
 import { ILive2DModelData } from "../types/ILive2DModelData";
 import { ILive2DModelList } from "../types/ILive2DModelList";
-import { sekaiUrl, staticUrl } from "./Constants";
+import { sekaiUrl, staticUrl } from "../data/Constants";
 import { GetMotionData } from "./GetMotionUrl";
 
 export const GetModelDataFromStatic = async (
     characterFolder: string,
-    modelName: string
+    modelName: string,
 ): Promise<ILive2DModelData> => {
     const model = await axios.get(
-        `${staticUrl}/model/${characterFolder}/${modelName}/${modelName}.model3.json`
+        `${staticUrl}/model/${characterFolder}/${modelName}/${modelName}.model3.json`,
     );
     const motion = await axios.get(
-        `${staticUrl}/motion/${characterFolder}/BuildMotionData.json`
+        `${staticUrl}/motion/${characterFolder}/BuildMotionData.json`,
     );
     const modelData = model.data;
     const motionData = motion.data;
@@ -46,10 +46,10 @@ export const GetModelDataFromStatic = async (
 };
 
 export const GetModelDataFromSekai = async (
-    modelList: ILive2DModelList
+    modelList: ILive2DModelList,
 ): Promise<ILive2DModelData> => {
     const model = await axios.get(
-        `${sekaiUrl}/model/${modelList.modelPath}/${modelList.modelFile}`
+        `${sekaiUrl}/model/${modelList.modelPath}/${modelList.modelFile}`,
     );
     const [motionBaseName, motionData] = await GetMotionData(modelList);
     const modelData = model.data;

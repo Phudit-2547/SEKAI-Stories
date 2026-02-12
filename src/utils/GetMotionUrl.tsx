@@ -1,6 +1,6 @@
 import axios from "axios";
 import { ILive2DModelList } from "../types/ILive2DModelList";
-import { sekaiUrl } from "./Constants";
+import { sekaiUrl } from "../data/Constants";
 import { IMotionsExpressions } from "../types/IMotionExpression";
 
 // This code is mostly copied from SEKAI Viewer's Live2dLoader.
@@ -17,7 +17,7 @@ const modelNameToMotionBaseName: Record<string, ModelNameTransformer> = {
 };
 
 export const GetMotionData = async (
-    modelItem: ILive2DModelList
+    modelItem: ILive2DModelList,
 ): Promise<[string, IMotionsExpressions]> => {
     const [motionUrl, motionBaseName] = await GetMotionUrl(modelItem);
     const response = await fetch(motionUrl);
@@ -34,7 +34,7 @@ const getUrl = async (url: string): Promise<[number, string]> => {
         validateStatus: (status) => {
             if (status >= 500) {
                 console.warn(
-                    `SEKAI Stories received a ${status} code from sekai.best! Skipping ahead.`
+                    `SEKAI Stories received a ${status} code from sekai.best! Skipping ahead.`,
                 );
             }
             return true;
@@ -49,7 +49,7 @@ const getUrl = async (url: string): Promise<[number, string]> => {
 };
 
 async function GetMotionUrl(
-    modelItem: ILive2DModelList
+    modelItem: ILive2DModelList,
 ): Promise<[string, string]> {
     // try to find the correct motion data url
     let modelBaseName = modelItem.modelBase;
@@ -61,7 +61,7 @@ async function GetMotionUrl(
 
     // case 1: get directly from model path + motion_base
     let [code, modelUrl] = await getUrl(
-        `${sekaiUrl}/motion/${modelDir}/${modelBaseName}_motion_base/BuildMotionData.json`
+        `${sekaiUrl}/motion/${modelDir}/${modelBaseName}_motion_base/BuildMotionData.json`,
     );
 
     statusCodeCounts[code] = (statusCodeCounts[code] || 0) + 1;
@@ -69,7 +69,7 @@ async function GetMotionUrl(
     // case 2: check if the motion name is in the map
     if (!modelUrl) {
         for (const [pattern, processor] of Object.entries(
-            modelNameToMotionBaseName
+            modelNameToMotionBaseName,
         )) {
             const regExp = new RegExp(pattern);
             if (regExp.test(modelItem.modelBase)) {
@@ -77,7 +77,7 @@ async function GetMotionUrl(
 
                 // try to get url
                 [code, modelUrl] = await getUrl(
-                    `${sekaiUrl}/motion/${modelDir}/${modelBaseName}_motion_base/BuildMotionData.json`
+                    `${sekaiUrl}/motion/${modelDir}/${modelBaseName}_motion_base/BuildMotionData.json`,
                 );
                 statusCodeCounts[code] = (statusCodeCounts[code] || 0) + 1;
                 break;
@@ -89,7 +89,7 @@ async function GetMotionUrl(
     while (!modelUrl && modelBaseName.split("_").length > 1) {
         modelBaseName = modelBaseName.split("_").slice(0, -1).join("_");
         [code, modelUrl] = await getUrl(
-            `${sekaiUrl}/motion/${modelDir}/${modelBaseName}_motion_base/BuildMotionData.json`
+            `${sekaiUrl}/motion/${modelDir}/${modelBaseName}_motion_base/BuildMotionData.json`,
         );
         statusCodeCounts[code] = (statusCodeCounts[code] || 0) + 1;
     }
@@ -99,7 +99,7 @@ async function GetMotionUrl(
         throw new Error(
             `Motion data not found for ${modelItem.modelBase}/${
                 modelItem.modelName
-            }\nStatus codes encountered: ${JSON.stringify(statusCodeCounts)}`
+            }\nStatus codes encountered: ${JSON.stringify(statusCodeCounts)}`,
         );
     }
 
