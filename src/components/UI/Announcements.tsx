@@ -21,33 +21,23 @@ const Announcements: React.FC = () => {
 
     return (
         <div id="announcements" onClick={handleAnnouncements}>
-            <h2>Notice</h2>
-            <p>Few updates have been made!</p>
-            <ul>
-                <li>
-                    Introducing Dialogue Box Types! Choose from Default Dialogue
-                    Box, Old Dialogue Box, or MYSEKAI's Dialogue Box!
-                </li>
-                <li>
-                    Scene Text Box Types are also added to match the look of the
-                    scene text and the dialogue box!
-                </li>
-                <li>Updated Chinese (Simplified) and Filipino Translation</li>
-            </ul>
+            <h2>Comment your ships!</h2>
             <p>
-                You can also view the announcement on Ko-fi. (It's been long
-                since I touched it xD)
+                The top three most upvoted ships will have a special default
+                scene of them holding hands this Valentine's!
             </p>
+
+            <p>Participate on the discussion on this Reddit thread!</p>
             <button
-                className="btn-regular btn-blue"
+                className="btn-regular btn-orange"
                 onClick={() => {
                     window.open(
-                        "https://ko-fi.com/post/SEKAI-Stories-New-Updates-D1D01TE4P7",
+                        "https://www.reddit.com/r/PJSKStories/comments/1r1ygfj/comment_your_ship/",
                         "_blank",
                     );
                 }}
             >
-                Ko-fi Announcement
+                Reddit Thread
             </button>
             <p>Tap this section to close.</p>
         </div>
