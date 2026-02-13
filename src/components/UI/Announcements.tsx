@@ -21,24 +21,27 @@ const Announcements: React.FC = () => {
 
     return (
         <div id="announcements" onClick={handleAnnouncements}>
-            <h2>Comment your ships!</h2>
+            <h2>Notice</h2>
             <p>
-                The top three most upvoted ships will have a special default
-                scene of them holding hands this Valentine's!
+                With 35 mentioned character ships, for today's Valentine ships
+                are...
             </p>
-
-            <p>Participate on the discussion on this Reddit thread!</p>
-            <button
-                className="btn-regular btn-orange"
-                onClick={() => {
-                    window.open(
-                        "https://www.reddit.com/r/PJSKStories/comments/1r1ygfj/comment_your_ship/",
-                        "_blank",
-                    );
-                }}
-            >
-                Reddit Thread
-            </button>
+            <p>
+                AkiToya, MizuKana, RuiKasa, and (as a bonus) MizuMafu and
+                HonaKana!
+            </p>
+            <p>
+                (someone also commented "mafuyu x therapy" so have that as a
+                bonus as well xD)
+            </p>
+            <br></br>
+            <p>There is one update I have done too.</p>
+            <ul>
+                <li>
+                    <p>Added "Re-apply All" button for Live2D Parameters.</p>
+                </li>
+            </ul>
+            <p>Happy Valentine's Day, everyone! ♡</p>
             <p>Tap this section to close.</p>
         </div>
     );
