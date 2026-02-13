@@ -17,6 +17,7 @@ import { ILive2DParameterJsonSave } from "../../../../types/ILive2DParameterJson
 import { ValidateLive2DParameterJsonSave } from "../../../../utils/ValidateJsonSave";
 import { Checkbox } from "../../../UI/Checkbox";
 import { SoftErrorContext } from "../../../../contexts/SoftErrorContext";
+import { Sprite } from "pixi.js";
 
 interface Live2DProps {
     coreModel?: Cubism4InternalModel["coreModel"];
@@ -128,11 +129,12 @@ const Live2D: React.FC<Live2DProps> = ({
         };
     }, [selectedParameter]);
 
-    if (!currentModel || !coreModel) return;
+    if (!currentModel || !coreModel || currentModel.model instanceof Sprite)
+        return;
 
     const handleLive2DParamsChange = (
         e: React.ChangeEvent<HTMLInputElement>,
-        params: string
+        params: string,
     ) => {
         const newValue = Number(e.target.value);
         coreModel?.setParameterValueById(params, newValue);
@@ -247,18 +249,32 @@ const Live2D: React.FC<Live2DProps> = ({
         a.remove();
     };
 
+    const reapplyAllParameters = () => {
+        if (currentModel?.parametersChanged) {
+            Object.entries(currentModel.parametersChanged).forEach(
+                ([name, value]) => {
+                    try {
+                        coreModel?.setParameterValueById(name, value);
+                    } catch {
+                        return;
+                    }
+                },
+            );
+        }
+    };
+
     return (
         <>
-            <h3>{t("model.live2d.parameters.header")}</h3>
-            {window.matchMedia &&
-                window.matchMedia("(pointer: fine)").matches &&
-                selectedParameter.idx === -1 && (
-                    <div>
-                        <p>{t("model.live2d.parameters.tooltip")}</p>
-                    </div>
-                )}
             {coreModel && (
-                <>
+                <div className="option__content">
+                    <h3>{t("model.live2d.parameters.header")}</h3>
+                    {window.matchMedia &&
+                        window.matchMedia("(pointer: fine)").matches &&
+                        selectedParameter.idx === -1 && (
+                            <div>
+                                <p>{t("model.live2d.parameters.tooltip")}</p>
+                            </div>
+                        )}
                     <select
                         name="parameters"
                         id="parameters"
@@ -280,7 +296,7 @@ const Live2D: React.FC<Live2DProps> = ({
                                 <option value={`${param},${idx}`} key={idx}>
                                     {param}
                                 </option>
-                            )
+                            ),
                         )}
                     </select>
                     {selectedParameter && selectedParameter.idx != -1 && (
@@ -299,7 +315,7 @@ const Live2D: React.FC<Live2DProps> = ({
                                     onClick={() => {
                                         handleLive2DParamsStep(
                                             "-",
-                                            selectedParameter?.param
+                                            selectedParameter?.param,
                                         );
                                     }}
                                 >
@@ -310,7 +326,7 @@ const Live2D: React.FC<Live2DProps> = ({
                                     onClick={() => {
                                         handleLive2DParamsStep(
                                             "0",
-                                            selectedParameter?.param
+                                            selectedParameter?.param,
                                         );
                                     }}
                                 >
@@ -321,7 +337,7 @@ const Live2D: React.FC<Live2DProps> = ({
                                     onClick={() => {
                                         handleLive2DParamsStep(
                                             "+",
-                                            selectedParameter?.param
+                                            selectedParameter?.param,
                                         );
                                     }}
                                 >
@@ -330,10 +346,16 @@ const Live2D: React.FC<Live2DProps> = ({
                             </div>
                         </>
                     )}
-                </>
+                </div>
             )}
             <div className="option__content">
                 <h3>{t("global.toggles")}</h3>
+                <button
+                    className="btn-blue btn-100 btn-regular"
+                    onClick={reapplyAllParameters}
+                >
+                    {t("model.live2d.reapply-all")}
+                </button>
                 <Checkbox
                     label={t("model.live2d.idle")}
                     checked={currentModel.idle}
@@ -343,7 +365,7 @@ const Live2D: React.FC<Live2DProps> = ({
             </div>
             <div className="option__content">
                 <h3>{t("model.live2d.import-export.header")}</h3>
-                <p>{t("model.live2d.import-export.description")}</p>
+                {/* <p>{t("model.live2d.import-export.description")}</p> */}
                 <div>
                     <button
                         className="btn-regular btn-100 btn-blue"

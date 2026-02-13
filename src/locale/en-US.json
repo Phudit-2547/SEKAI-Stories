@@ -155,6 +155,7 @@
                 "select-parameter": "Select a parameter",
                 "tooltip": "You can use your arrow keys to select and adjust parameters."
             },
+            "reapply-all": "Re-apply All",
             "idle": "Idle Animation",
             "import-export": {
                 "header": "Import/Export",

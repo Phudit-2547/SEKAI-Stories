@@ -1,3 +1,7 @@
+# 2026.02.14
+- Added button that re-applies Live2D Parameters after an emotion is applied.
+- Added Valentine Default Scenes
+
 # 2026.02.01 (Version 6.0.0)
 Release date: February 1, 2026 (will not release date line anymore)
 - Changed changelog format to use release date instead of version date
