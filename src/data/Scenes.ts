@@ -87,6 +87,15 @@ export const randomInitialScene: Record<string, InitialScene[]> = {
             sceneText: "❤︎",
         },
         {
+            background: "/background_special/Background_Stars.jpg",
+            text: "♡",
+            nameTag: "",
+            modelX: 960,
+            modelY: 540,
+            pngName: "honakana",
+            sceneText: "❤︎",
+        },
+        {
             background: "/background_special/Background_Therapy_Cat.png",
             text: "...and then, Mizuki just taught Kanade how to do these weird two numbers with that juggling gesture...",
             nameTag: "Mafuyu",
