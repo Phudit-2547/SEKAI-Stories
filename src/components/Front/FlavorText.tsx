@@ -36,19 +36,21 @@ const randomText = {
         "Please take only the recommended shipping dosage.",
         "Just Monika.",
         "What if Movie Miku appeared on my screen all of the sudden?",
-        "私は雨。(turns into ame-chan)",
         "MinoHaru is canon.",
         "AnHane is canon.",
         "MizuEna is canon.",
         "Won won!?",
         "WONDERHOY!",
         "Lovely, Fairy, Momoi Airi!",
-        "恋をして",
         "Meet SEKAI Stories's cousin, SIFAS Dialogue Sandbox!",
-        "It's pronounced 'DEKO-NINA'.",
+        "私は雨。(turns into ame-chan)",
+        "恋をして",
+        "██ ██ ██ ██ /  ██ ██ ██",
+        "Fractals. Fractals. Fractals. ",
         "saa anyo anyo kocchi oide",
         "Burn Your Dread.",
         "Bonds of people is the true power.",
+        "It's pronounced 'DEKO-NINA'.",
         "Untitled.",
     ],
     fil: [
@@ -187,7 +189,7 @@ const FlavorText: React.FC = () => {
 export default FlavorText;
 
 /* 
-    LAST UPDATE: 01/21/2026
+    LAST UPDATE: 02/14/2026
     Will not list the obvious PJSK references.
     Placed here for people who needs explaination when translating.
 
@@ -206,7 +208,7 @@ export default FlavorText;
         -> A reoccuring joke of someone having a dream of Honami running over Tsukasa with a car.
     "Setsuna has been mistakenly called Kanade for the 1888th time."
         -> Setsuna is a character from O.N.G.E.K.I., a SEGA Arcade Game.
-        -> She's is the character on the Don't Fight The Music's jacket.
+        -> She is the character on the Don't Fight The Music's jacket.
         -> People mistakenly thought it was Kanade on the said jacket.
         -> 1888 is the maximum Master combo on the said chart.
     "Come here, Mafuyu-chan."
@@ -220,17 +222,22 @@ export default FlavorText;
         -> Doki Doki Literature Club reference
     "私は雨。(turns into ame-chan)"
         -> (watashi wa ame)
+        -> Song Reference: "I am the rain"
         -> Needy Streamer Overload reference.
     "恋をして"
         -> (koi o shite)
-        -> "Song of a Eared Robot"
-        -> "Machine Love"
+        -> Song Reference: "Song of a Eared Robot" and "Machine Love"
+    "██ ██ ██ ██ / ██ ██ ██",
+        -> Song Reference: "Letter to the Black World"
+        -> Yes, it spells that morse code from the song
+    "Fractals. Fractals. Fractals."
+        -> Song Reference: "Looping the Rooms"
+    "Burn Your Dread.",
+        -> Persona 3 Song Reference: "Burn My Dread" and "Full Moon Full Life"
+    "Bonds of people is the true power.",
+        -> Persona 4 Song Reference: "Beauty of Destiny"
     "Meet SEKAI Stories's cousin SIFAS Dialogue Sandbox!"
         -> lezzthanthree's Love Live! SIFAS Story Generator
     "It's pronounced 'DEKO-NINA'."
         -> DECO*27
-    "Burn Your Dread.",
-        -> A Reference to Persona 3 Songs: "Burn My Dread" and "Full Moon Full Life"
-    "Bonds of people is the true power.",
-        -> A Reference to Persona 4 Animation ED 1: "Beauty of Destiny"
 */
