@@ -49,6 +49,53 @@ export const randomInitialScene: Record<string, InitialScene[]> = {
             sceneText: "???",
         },
     ],
+    valentine: [
+        {
+            background: "/background_special/Background_Christmas_Lights.jpg",
+            text: "♡",
+            nameTag: "",
+            modelX: 960,
+            modelY: 540,
+            pngName: "mizukana",
+            sceneText: "❤︎",
+        },
+        {
+            background: "/background_special/Background_Night_Store.jpg",
+            text: "♡",
+            nameTag: "",
+            modelX: 960,
+            modelY: 540,
+            pngName: "touaki",
+            sceneText: "❤︎",
+        },
+        {
+            background: "/background_special/Background_Train_Sunset.jpg",
+            text: "♡",
+            nameTag: "",
+            modelX: 960,
+            modelY: 540,
+            pngName: "ruikasa",
+            sceneText: "❤︎",
+        },
+        {
+            background: "/background_special/Background_Aquarium.jpg",
+            text: "♡",
+            nameTag: "",
+            modelX: 960,
+            modelY: 540,
+            pngName: "mizumafu",
+            sceneText: "❤︎",
+        },
+        {
+            background: "/background_special/Background_Therapy_Cat.png",
+            text: "...and then, Mizuki just taught Kanade how to do these weird two numbers with that juggling gesture...",
+            nameTag: "Mafuyu",
+            modelX: 640,
+            modelY: 600,
+            pngName: "mafuyu_therapy",
+            sceneText: "❤︎",
+        },
+    ],
     halloween: [
         {
             background: "/background_special/Background_Cheat_to_Happiness.jpg",
@@ -215,6 +262,7 @@ export const CheckSceneCategory = (blank: boolean): string => {
     if (exact[`${month}-${day}`]) return exact[`${month}-${day}`];
 
     const range: Array<[number, number, number, string]> = [
+        [2, 13, 19, "valentine"],
         [4, 10, 30, "anniversary"],
     ];
 
