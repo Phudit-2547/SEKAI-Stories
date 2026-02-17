@@ -46,7 +46,7 @@ const randomText = {
         "私は雨。(turns into ame-chan)",
         "恋をして",
         "██ ██ ██ ██ /  ██ ██ ██",
-        "Fractals. Fractals. Fractals. ",
+        "kurukurukurukurukurikaesu",
         "saa anyo anyo kocchi oide",
         "Burn Your Dread.",
         "Bonds of people is the true power.",
@@ -230,7 +230,7 @@ export default FlavorText;
     "██ ██ ██ ██ / ██ ██ ██",
         -> Song Reference: "Letter to the Black World"
         -> Yes, it spells that morse code from the song
-    "Fractals. Fractals. Fractals."
+    "kurukurukurukurukurikaesu"
         -> Song Reference: "Looping the Rooms"
     "Burn Your Dread.",
         -> Persona 3 Song Reference: "Burn My Dread" and "Full Moon Full Life"
