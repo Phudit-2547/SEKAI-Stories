@@ -88,6 +88,15 @@
             },
             "hide-everything": "Hide models and dialogue"
         },
+        "choices-text": {
+            "header": "Choices Text",
+            "box-type": {
+                "header": "Box Type",
+                "default": "Default",
+                "classic": "Classic"
+            },
+            "dialogue-box-visible": "Dialogue Box Visible"
+        },
         "y-offset": {
             "header": "Y-Offset",
             "details": "If the text in the canvas do not line up properly, adjustments may be necessary."

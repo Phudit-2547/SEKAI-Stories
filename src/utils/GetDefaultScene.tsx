@@ -14,6 +14,7 @@ import { AdjustmentFilter } from "pixi-filters";
 import { ILighting } from "../types/ILighting";
 import { InitialScene } from "../types/IInitialScene";
 import { CheckSceneCategory, randomInitialScene } from "../data/Scenes";
+import IChoicesText from "../types/IChoicesText";
 
 interface GetDefaultSceneProps {
     app: PIXI.Application | undefined;
@@ -323,6 +324,91 @@ const LoadText = async (
     };
 };
 
+const LoadChoicesText = async (
+    app: PIXI.Application,
+    childAt: number,
+): Promise<IChoicesText> => {
+    const choicesTextContainer = new PIXI.Container();
+
+    // Default Choices Texture
+    const defaultChoicesTextTexture = await Assets.load(
+        "/img/Choices_Background.png",
+    );
+    const defaultChoicesTextSprite = new PIXI.Sprite(defaultChoicesTextTexture);
+    const defaultChoicesFirstText = new PIXI.Text("Choice 1", {
+        fontFamily: "FOT-RodinNTLGPro-EB",
+        fontSize: 32,
+        fill: 0x444466,
+        align: "center",
+    });
+    defaultChoicesFirstText.anchor.set(0.5, 0.5);
+    defaultChoicesFirstText.position.set(500, 537);
+
+    const defaultChoicesSecondText = new PIXI.Text("Choice 2", {
+        fontFamily: "FOT-RodinNTLGPro-EB",
+        fontSize: 32,
+        fill: 0x444466,
+        align: "center",
+    });
+    defaultChoicesSecondText.anchor.set(0.5, 0.5);
+    defaultChoicesSecondText.position.set(1420, 537);
+
+    const defaultChoicesTextContainer = new PIXI.Container();
+    defaultChoicesTextContainer.addChildAt(defaultChoicesTextSprite, 0);
+    defaultChoicesTextContainer.addChildAt(defaultChoicesFirstText, 1);
+    defaultChoicesTextContainer.addChildAt(defaultChoicesSecondText, 2);
+
+    // Classic Choices Texture
+    const classicChoicesTextTexture = await Assets.load(
+        "/img/Choices_Background_Classic.png",
+    );
+    const classicChoicesTextSprite = new PIXI.Sprite(classicChoicesTextTexture);
+    const classicChoicesFirstText = new PIXI.Text("Choice 1", {
+        fontFamily: "FOT-RodinNTLGPro-DB",
+        fontSize: 40,
+        fill: 0x444466,
+        align: "center",
+    });
+    classicChoicesFirstText.anchor.set(0.5, 0.5);
+    classicChoicesFirstText.position.set(437, 539);
+
+    const classicChoicesSecondText = new PIXI.Text("Choice 2", {
+        fontFamily: "FOT-RodinNTLGPro-DB",
+        fontSize: 40,
+        fill: 0x444466,
+        align: "center",
+    });
+    classicChoicesSecondText.anchor.set(0.5, 0.5);
+    classicChoicesSecondText.position.set(1485, 539);
+
+    const classicChoicesTextContainer = new PIXI.Container();
+    classicChoicesTextContainer.addChildAt(classicChoicesTextSprite, 0);
+    classicChoicesTextContainer.addChildAt(classicChoicesFirstText, 1);
+    classicChoicesTextContainer.addChildAt(classicChoicesSecondText, 2);
+
+    classicChoicesTextContainer.visible = false;
+
+    choicesTextContainer.addChildAt(defaultChoicesTextContainer, 0);
+    choicesTextContainer.addChildAt(classicChoicesTextContainer, 1);
+
+    app.stage.addChildAt(choicesTextContainer, childAt);
+    choicesTextContainer.visible = false;
+
+    return {
+        choicesTextContainer,
+        type: {
+            default: defaultChoicesTextContainer,
+            classic: classicChoicesTextContainer,
+        },
+        firstChoiceText: [defaultChoicesFirstText, classicChoicesFirstText],
+        secondChoiceText: [defaultChoicesSecondText, classicChoicesSecondText],
+        firstChoiceTextString: "Choice 1",
+        secondChoiceTextString: "Choice 2",
+        typeSelected: "default",
+        visible: false,
+    };
+};
+
 /**
  * TODO: Refactor this massive block of shit.
  */
@@ -513,21 +599,12 @@ export const LoadScene = async ({
     Live2DModel.registerTicker(PIXI.Ticker);
 
     setLoading(20);
-    // Load Transparent (for development. idk why it causes issues before production)
-    const transparentContainer = new PIXI.Container();
-    const transparentSprite = await getBackground(
-        "/background_special/Background_Transparent.png",
-    );
-    transparentContainer.addChildAt(transparentSprite, 0);
-    initApplication.stage.addChildAt(transparentContainer, 0);
-
-    setLoading(30);
     // Load Filter Container
     const filterContainer = new PIXI.Container();
     filterContainer.pivot.set(1920 / 2, 1080 / 2);
     filterContainer.position.set(1920 / 2, 1080 / 2);
     filterContainer.scale.set(1, 1);
-    initApplication.stage.addChildAt(filterContainer, 1);
+    initApplication.stage.addChildAt(filterContainer, 0);
     const filter: IFilter = { container: filterContainer };
 
     setLoading(40);
@@ -559,13 +636,17 @@ export const LoadScene = async ({
     setStartingMessage("Adding text...");
     const text = await LoadText(
         initApplication,
-        2,
+        1,
         initialScene.nameTag,
         initialScene.text,
     );
 
-    setLoading(80);
+    // Load Choices Text
+    setLoading(75);
+    const choicesText = await LoadChoicesText(initApplication, 2);
+
     // Load Scene Setting Text
+    setLoading(80);
     const sceneText = await LoadSceneText(
         initApplication,
         3,
@@ -587,6 +668,7 @@ export const LoadScene = async ({
         background: background,
         splitBackground: splitBackground,
         text: text,
+        choicesText: choicesText,
         sceneText: sceneText,
         filter: filter,
         guideline: guideline,

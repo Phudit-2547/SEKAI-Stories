@@ -1,4 +1,10 @@
-import React, { Dispatch, SetStateAction, useContext, useState } from "react";
+import React, {
+    Dispatch,
+    SetStateAction,
+    useContext,
+    useEffect,
+    useState,
+} from "react";
 import { SceneContext } from "../../../../contexts/SceneContext";
 import { useTranslation } from "react-i18next";
 import { Checkbox } from "../../../UI/Checkbox";
@@ -53,6 +59,12 @@ const Dialogue: React.FC<DialogueProps> = ({
     const { showMentalHealthWindow } = settings;
     const [showFontSizeInput, setShowFontSizeInput] = useState<boolean>(false);
     const [mentalWindow, setMentalWindow] = useState<boolean>(false);
+
+    useEffect(() => {
+        if (text?.hideEverything) {
+            setErrorInformation(t("error.hide-everything-warning"));
+        }
+    }, []);
 
     if (!text) return <p>{t("please-wait")}</p>;
 

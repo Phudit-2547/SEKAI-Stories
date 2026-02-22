@@ -9,6 +9,7 @@ import { IJsonSave } from "./IJsonSave";
 import { ISplitBackground } from "./ISplitBackground";
 import { IFilter } from "./IFilter";
 import { ILighting } from "./ILighting";
+import IChoicesText from "./IChoicesText";
 export default interface ISceneContextType {
     app: PIXI.Application | undefined;
     setApp: Dispatch<SetStateAction<PIXI.Application | undefined>>;
@@ -34,6 +35,8 @@ export default interface ISceneContextType {
     setText: Dispatch<SetStateAction<IText | undefined>>;
     sceneText: ISceneText | undefined;
     setSceneText: Dispatch<SetStateAction<ISceneText | undefined>>;
+    choicesText: IChoicesText | undefined;
+    setChoicesText: Dispatch<SetStateAction<IChoicesText | undefined>>;
     filter: IFilter | undefined;
     setFilter: Dispatch<SetStateAction<IFilter | undefined>>;
     sceneJson: IJsonSave | undefined;

@@ -1,3 +1,7 @@
+# 2026.03.05
+- March 5th trauma (My eyes feels heavy... )
+- Added custom choices text box
+
 # 2026.02.14
 - Added button that re-applies Live2D Parameters after an emotion is applied.
 - Added Valentine Default Scenes

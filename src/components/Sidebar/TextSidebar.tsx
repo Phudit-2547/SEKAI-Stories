@@ -8,6 +8,7 @@ import Dialogue from "./Options/Text/Dialogue";
 import NameTags from "./Options/Text/NameTags";
 import SceneText from "./Options/Text/SceneText";
 import YOffset from "./Options/Text/YOffset";
+import ChoicesText from "./Options/Text/ChoicesText";
 
 const TextSidebar: React.FC = () => {
     const { t } = useTranslation();
@@ -20,7 +21,7 @@ const TextSidebar: React.FC = () => {
 
     const lockFontSize = localStorage.getItem("lockFontSize");
     const [lockFontSizeState, setLockFontSizeState] = useState<boolean>(
-        lockFontSize === "true" ? true : false
+        lockFontSize === "true" ? true : false,
     );
 
     if (!scene || !settings || !error) {
@@ -68,6 +69,14 @@ const TextSidebar: React.FC = () => {
                 optionName="scene-text"
             >
                 <SceneText />
+            </SidebarOption>
+            <SidebarOption
+                header={t("text.choices-text.header")}
+                option={openTextOption}
+                setOption={setOpenTextOption}
+                optionName="choices-text"
+            >
+                <ChoicesText />
             </SidebarOption>
             <SidebarOption
                 header={t("text.y-offset.header")}

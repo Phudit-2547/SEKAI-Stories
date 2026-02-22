@@ -15,6 +15,7 @@ import { useTranslation } from "react-i18next";
 import { SettingsContext } from "./SettingsContext";
 import { IFilter } from "../types/IFilter";
 import { ILighting } from "../types/ILighting";
+import IChoicesText from "../types/IChoicesText";
 
 interface SceneProviderProps {
     children: React.ReactNode;
@@ -31,7 +32,7 @@ export const SceneProvider: React.FC<SceneProviderProps> = ({ children }) => {
     const { blankCanvas, setLoading, settingsLoaded } = settings;
     const [app, setApp] = useState<PIXI.Application | undefined>(undefined);
     const [models, setModels] = useState<Record<string, IModel> | undefined>(
-        undefined
+        undefined,
     );
     const [layers, setLayers] = useState<number>(1);
     const [nextLayer, setNextLayer] = useState<number>(1);
@@ -39,27 +40,30 @@ export const SceneProvider: React.FC<SceneProviderProps> = ({ children }) => {
         PIXI.Container | undefined
     >(undefined);
     const [currentModel, setCurrentModel] = useState<IModel | undefined>(
-        undefined
+        undefined,
     );
     const [currentKey, setCurrentKey] = useState<string>("");
     const [background, setBackground] = useState<IBackground | undefined>(
-        undefined
+        undefined,
     );
     const [splitBackground, setSplitBackground] = useState<
         ISplitBackground | undefined
     >(undefined);
     const [text, setText] = useState<IText | undefined>(undefined);
+    const [choicesText, setChoicesText] = useState<IChoicesText | undefined>(
+        undefined,
+    );
     const [sceneText, setSceneText] = useState<ISceneText | undefined>(
-        undefined
+        undefined,
     );
     const [filter, setFilter] = useState<IFilter | undefined>(undefined);
     const [guideline, setGuideline] = useState<IGuideline | undefined>(
-        undefined
+        undefined,
     );
     const [reset, setReset] = useState<number>(0);
     const [startingMessage, setStartingMessage] = useState<string>("");
     const [sceneJson, setSceneJson] = useState<IJsonSave | undefined>(
-        undefined
+        undefined,
     );
     const [initialState, setInitialState] = useState<boolean>(true);
     const [lighting, setLighting] = useState<ILighting | undefined>(undefined);
@@ -75,6 +79,7 @@ export const SceneProvider: React.FC<SceneProviderProps> = ({ children }) => {
             background,
             splitBackground,
             text,
+            choicesText,
             sceneText,
             filter,
             guideline,
@@ -93,6 +98,7 @@ export const SceneProvider: React.FC<SceneProviderProps> = ({ children }) => {
         setBackground(background);
         setSplitBackground(splitBackground);
         setText(text);
+        setChoicesText(choicesText);
         setSceneText(sceneText);
         setFilter(filter);
         setGuideline(guideline);
@@ -109,6 +115,7 @@ export const SceneProvider: React.FC<SceneProviderProps> = ({ children }) => {
         }
         runCanvas().catch((error) => {
             setErrorInformation(t("error.default-scene-fail"));
+            setLoading(100);
             console.error(error);
         });
     }, [reset, settingsLoaded]);
@@ -138,6 +145,8 @@ export const SceneProvider: React.FC<SceneProviderProps> = ({ children }) => {
                 setSplitBackground,
                 text,
                 setText,
+                choicesText,
+                setChoicesText,
                 sceneText,
                 setSceneText,
                 filter,
