@@ -15,6 +15,17 @@ import { ILighting } from "../types/ILighting";
 import { InitialScene } from "../types/IInitialScene";
 import { CheckSceneCategory, randomInitialScene } from "../data/Scenes";
 import IChoicesText from "../types/IChoicesText";
+import {
+    SetupChoicesText,
+    SetupDialogueText,
+    SetupSceneText,
+} from "./TextSceneSetupHelper";
+import {
+    choicesTextsSetupData,
+    dialogueBoxesSetupData,
+    sceneCenterTextsSetupData,
+    sceneTopLeftTexts,
+} from "../data/TextSetups";
 
 interface GetDefaultSceneProps {
     app: PIXI.Application | undefined;
@@ -174,9 +185,6 @@ const LoadModel = async (
     };
 };
 
-/**
- * TODO: Refactor this massive block of shit.
- */
 const LoadText = async (
     app: PIXI.Application,
     childAt: number,
@@ -189,124 +197,46 @@ const LoadText = async (
 
     const textContainer = new PIXI.Container();
 
-    // Default Texture
-    const defaultTextBackgroundTexture = await Assets.load(
-        "/img/Dialogue_Background.png",
+    const {
+        textContainer: defaultTextContainer,
+        textDialogue: defaultTextDialogue,
+        textNameTag: defaultTextNameTag,
+    } = await SetupDialogueText(
+        dialogueBoxesSetupData.default,
+        nameTag,
+        dialogue,
     );
-    const defaultTextBackgroundSprite = new PIXI.Sprite(
-        defaultTextBackgroundTexture,
+    const {
+        textContainer: classicTextContainer,
+        textDialogue: classicTextDialogue,
+        textNameTag: classicTextNameTag,
+    } = await SetupDialogueText(
+        dialogueBoxesSetupData.classic,
+        nameTag,
+        dialogue,
     );
-    defaultTextBackgroundSprite.width = 1920;
-    defaultTextBackgroundSprite.height = 1080;
-
-    const defaultTextNameTag = new PIXI.Text(nameTag, {
-        fontFamily: "FOT-RodinNTLGPro-EB",
-        fontSize: 44,
-        fill: 0xebebef,
-        stroke: 0x5d5d79,
-        strokeThickness: 8,
-    });
-    defaultTextNameTag.position.set(225, 775 + textAlignmentCookie);
-
-    const defaultTextDialogue = new PIXI.Text(dialogue, {
-        fontFamily: "FOT-RodinNTLGPro-DB",
-        fontSize: 44,
-        fill: 0xffffff,
-        stroke: 0x5d5d79,
-        strokeThickness: 8,
-        wordWrap: true,
-        wordWrapWidth: 1300,
-        breakWords: true,
-        lineHeight: 55,
-    });
-    defaultTextDialogue.position.set(245, 845 + textAlignmentCookie);
-
-    const defaultTextBox = new PIXI.Container();
-    defaultTextBox.addChildAt(defaultTextBackgroundSprite, 0);
-    defaultTextBox.addChildAt(defaultTextNameTag, 1);
-    defaultTextBox.addChildAt(defaultTextDialogue, 2);
-
-    // Classic Texture
-    const classicTextBackgroundTexture = await Assets.load(
-        "/img/Dialogue_Background_Classic.png",
+    const {
+        textContainer: mySekaiTextContainer,
+        textDialogue: mySekaiTextDialogue,
+        textNameTag: mySekaiTextNameTag,
+    } = await SetupDialogueText(
+        dialogueBoxesSetupData.mySekai,
+        nameTag,
+        dialogue,
     );
-    const classicTextBackgroundSprite = new PIXI.Sprite(
-        classicTextBackgroundTexture,
-    );
-    classicTextBackgroundSprite.width = 1920;
-    classicTextBackgroundSprite.height = 1080;
 
-    const classicTextNameTag = new PIXI.Text(nameTag, {
-        fontFamily: "FOT-RodinNTLGPro-DB",
-        fontSize: 44,
-        fill: 0xffffff,
-    });
-    classicTextNameTag.position.set(295, 730 + textAlignmentCookie);
-
-    const classicTextDialogue = new PIXI.Text(dialogue, {
-        fontFamily: "FOT-RodinNTLGPro-DB",
-        fontSize: 44,
-        fill: 0x444466,
-        wordWrap: true,
-        wordWrapWidth: 1300,
-        breakWords: true,
-        lineHeight: 55,
-    });
-    classicTextDialogue.position.set(245, 805 + textAlignmentCookie);
-
-    const classicTextBox = new PIXI.Container();
-    classicTextBox.addChildAt(classicTextBackgroundSprite, 0);
-    classicTextBox.addChildAt(classicTextNameTag, 1);
-    classicTextBox.addChildAt(classicTextDialogue, 2);
-
-    classicTextBox.visible = false;
-
-    // MYSEKAI Texture
-    const mySekaiTextBackgroundTexture = await Assets.load(
-        "/img/Dialogue_Background_MYSEKAI.png",
-    );
-    const mySekaiTextBackgroundSprite = new PIXI.Sprite(
-        mySekaiTextBackgroundTexture,
-    );
-    mySekaiTextBackgroundSprite.width = 1920;
-    mySekaiTextBackgroundSprite.height = 1080;
-
-    const mySekaiTextNameTag = new PIXI.Text(nameTag, {
-        fontFamily: "FOT-RodinNTLGPro-EB",
-        fontSize: 44,
-        fill: 0x444466,
-    });
-    mySekaiTextNameTag.position.set(265, 745 + textAlignmentCookie);
-
-    const mySekaiTextDialogue = new PIXI.Text(dialogue, {
-        fontFamily: "FOT-RodinNTLGPro-DB",
-        fontSize: 44,
-        fill: 0x444466,
-        wordWrap: true,
-        wordWrapWidth: 1300,
-        breakWords: true,
-        lineHeight: 55,
-    });
-    mySekaiTextDialogue.position.set(265, 810 + textAlignmentCookie);
-
-    const mySekaiTextBox = new PIXI.Container();
-    mySekaiTextBox.addChildAt(mySekaiTextBackgroundSprite, 0);
-    mySekaiTextBox.addChildAt(mySekaiTextNameTag, 1);
-    mySekaiTextBox.addChildAt(mySekaiTextDialogue, 2);
-    mySekaiTextBox.visible = false;
-
-    textContainer.addChildAt(defaultTextBox, 0);
-    textContainer.addChildAt(classicTextBox, 1);
-    textContainer.addChildAt(mySekaiTextBox, 2);
+    textContainer.addChildAt(defaultTextContainer, 0);
+    textContainer.addChildAt(classicTextContainer, 1);
+    textContainer.addChildAt(mySekaiTextContainer, 2);
 
     app.stage.addChildAt(textContainer, childAt);
 
     return {
         textContainer: textContainer,
         type: {
-            default: defaultTextBox,
-            classic: classicTextBox,
-            mySekai: mySekaiTextBox,
+            default: defaultTextContainer,
+            classic: classicTextContainer,
+            mySekai: mySekaiTextContainer,
         },
         nameTag: [defaultTextNameTag, classicTextNameTag, mySekaiTextNameTag],
         dialogue: [
@@ -330,63 +260,16 @@ const LoadChoicesText = async (
 ): Promise<IChoicesText> => {
     const choicesTextContainer = new PIXI.Container();
 
-    // Default Choices Texture
-    const defaultChoicesTextTexture = await Assets.load(
-        "/img/Choices_Background.png",
-    );
-    const defaultChoicesTextSprite = new PIXI.Sprite(defaultChoicesTextTexture);
-    const defaultChoicesFirstText = new PIXI.Text("Choice 1", {
-        fontFamily: "FOT-RodinNTLGPro-EB",
-        fontSize: 32,
-        fill: 0x444466,
-        align: "center",
-    });
-    defaultChoicesFirstText.anchor.set(0.5, 0.5);
-    defaultChoicesFirstText.position.set(500, 537);
-
-    const defaultChoicesSecondText = new PIXI.Text("Choice 2", {
-        fontFamily: "FOT-RodinNTLGPro-EB",
-        fontSize: 32,
-        fill: 0x444466,
-        align: "center",
-    });
-    defaultChoicesSecondText.anchor.set(0.5, 0.5);
-    defaultChoicesSecondText.position.set(1420, 537);
-
-    const defaultChoicesTextContainer = new PIXI.Container();
-    defaultChoicesTextContainer.addChildAt(defaultChoicesTextSprite, 0);
-    defaultChoicesTextContainer.addChildAt(defaultChoicesFirstText, 1);
-    defaultChoicesTextContainer.addChildAt(defaultChoicesSecondText, 2);
-
-    // Classic Choices Texture
-    const classicChoicesTextTexture = await Assets.load(
-        "/img/Choices_Background_Classic.png",
-    );
-    const classicChoicesTextSprite = new PIXI.Sprite(classicChoicesTextTexture);
-    const classicChoicesFirstText = new PIXI.Text("Choice 1", {
-        fontFamily: "FOT-RodinNTLGPro-DB",
-        fontSize: 40,
-        fill: 0x444466,
-        align: "center",
-    });
-    classicChoicesFirstText.anchor.set(0.5, 0.5);
-    classicChoicesFirstText.position.set(437, 539);
-
-    const classicChoicesSecondText = new PIXI.Text("Choice 2", {
-        fontFamily: "FOT-RodinNTLGPro-DB",
-        fontSize: 40,
-        fill: 0x444466,
-        align: "center",
-    });
-    classicChoicesSecondText.anchor.set(0.5, 0.5);
-    classicChoicesSecondText.position.set(1485, 539);
-
-    const classicChoicesTextContainer = new PIXI.Container();
-    classicChoicesTextContainer.addChildAt(classicChoicesTextSprite, 0);
-    classicChoicesTextContainer.addChildAt(classicChoicesFirstText, 1);
-    classicChoicesTextContainer.addChildAt(classicChoicesSecondText, 2);
-
-    classicChoicesTextContainer.visible = false;
+    const {
+        choicesTextContainer: defaultChoicesTextContainer,
+        choicesFirstText: defaultChoicesFirstText,
+        choicesSecondText: defaultChoicesSecondText,
+    } = await SetupChoicesText(choicesTextsSetupData.default);
+    const {
+        choicesTextContainer: classicChoicesTextContainer,
+        choicesFirstText: classicChoicesFirstText,
+        choicesSecondText: classicChoicesSecondText,
+    } = await SetupChoicesText(choicesTextsSetupData.classic);
 
     choicesTextContainer.addChildAt(defaultChoicesTextContainer, 0);
     choicesTextContainer.addChildAt(classicChoicesTextContainer, 1);
@@ -409,9 +292,6 @@ const LoadChoicesText = async (
     };
 };
 
-/**
- * TODO: Refactor this massive block of shit.
- */
 const LoadSceneText = async (
     app: PIXI.Application,
     childAt: number,
@@ -419,97 +299,26 @@ const LoadSceneText = async (
 ): Promise<ISceneText> => {
     const sceneTextContainer = new PIXI.Container();
 
-    // Default Middle Texture
-    const defaultSceneTextMiddleTexture = await Assets.load(
-        "/img/SceneText_Background.png",
-    );
-    const defaultSceneTextMiddleSprite = new PIXI.Sprite(
-        defaultSceneTextMiddleTexture,
-    );
-    const defaultSceneTextMiddle = new PIXI.Text(scene, {
-        fontFamily: "FOT-RodinNTLGPro-DB",
-        fontSize: 44,
-        fill: 0xffffff,
-        align: "center",
-    });
-    defaultSceneTextMiddle.anchor.set(0.5, 0.5);
-    defaultSceneTextMiddle.position.set(960, 540);
-
-    const defaultSceneTextMiddleContainer = new PIXI.Container();
-    defaultSceneTextMiddleContainer.addChildAt(defaultSceneTextMiddleSprite, 0);
-    defaultSceneTextMiddleContainer.addChildAt(defaultSceneTextMiddle, 1);
-
-    // Default Top-left Texture
-    const defaultSceneTextTopLeftTexture = await Assets.load(
-        "/img/SceneText_TopLeft.png",
-    );
-    const defaultSceneTextTopLeftSprite = new PIXI.Sprite(
-        defaultSceneTextTopLeftTexture,
-    );
-    const defaultSceneTextTopLeft = new PIXI.Text(scene, {
-        fontFamily: "FOT-RodinNTLGPro-DB",
-        fontSize: 39,
-        fill: 0xffffff,
-        align: "center",
-    });
-    defaultSceneTextTopLeft.anchor.set(0, 0.5);
-    defaultSceneTextTopLeft.position.set(120, 62);
-
-    const defaultSceneTextTopLeftContainer = new PIXI.Container();
-    defaultSceneTextTopLeftContainer.addChildAt(
-        defaultSceneTextTopLeftSprite,
-        0,
-    );
-    defaultSceneTextTopLeftContainer.addChildAt(defaultSceneTextTopLeft, 1);
-    defaultSceneTextTopLeftContainer.visible = false;
+    const {
+        sceneText: defaultSceneTextMiddle,
+        sceneTextContainer: defaultSceneTextMiddleContainer,
+    } = await SetupSceneText(sceneCenterTextsSetupData.default, scene);
+    const {
+        sceneText: classicSceneTextMiddle,
+        sceneTextContainer: classicSceneTextMiddleContainer,
+    } = await SetupSceneText(sceneCenterTextsSetupData.classic, scene);
+    const {
+        sceneText: defaultSceneTextTopLeft,
+        sceneTextContainer: defaultSceneTextTopLeftContainer,
+    } = await SetupSceneText(sceneTopLeftTexts.default, scene);
+    const {
+        sceneText: classicSceneTextTopLeft,
+        sceneTextContainer: classicSceneTextTopLeftContainer,
+    } = await SetupSceneText(sceneTopLeftTexts.classic, scene);
 
     const defaultSceneTextBox = new PIXI.Container();
     defaultSceneTextBox.addChildAt(defaultSceneTextMiddleContainer, 0);
     defaultSceneTextBox.addChildAt(defaultSceneTextTopLeftContainer, 1);
-
-    // Classic Center Texture
-    const classicSceneTextMiddleTexture = await Assets.load(
-        "/img/SceneText_Background_Classic.png",
-    );
-    const classicSceneTextMiddleSprite = new PIXI.Sprite(
-        classicSceneTextMiddleTexture,
-    );
-    const classicSceneTextMiddle = new PIXI.Text(scene, {
-        fontFamily: "FOT-RodinNTLGPro-DB",
-        fontSize: 40,
-        fill: 0xffffff,
-        align: "center",
-    });
-    classicSceneTextMiddle.anchor.set(0.5, 0.5);
-    classicSceneTextMiddle.position.set(960, 540);
-
-    const classicSceneTextMiddleContainer = new PIXI.Container();
-    classicSceneTextMiddleContainer.addChildAt(classicSceneTextMiddleSprite, 0);
-    classicSceneTextMiddleContainer.addChildAt(classicSceneTextMiddle, 1);
-
-    // Clssic Top-left Texture
-    const classicSceneTextTopLeftTexture = await Assets.load(
-        "/img/SceneText_TopLeft_Classic.png",
-    );
-    const classicSceneTextTopLeftSprite = new PIXI.Sprite(
-        classicSceneTextTopLeftTexture,
-    );
-    const classicSceneTextTopLeft = new PIXI.Text(scene, {
-        fontFamily: "FOT-RodinNTLGPro-DB",
-        fontSize: 32,
-        fill: 0xffffff,
-        align: "center",
-    });
-    classicSceneTextTopLeft.anchor.set(0, 0.5);
-    classicSceneTextTopLeft.position.set(62, 76);
-
-    const classicSceneTextTopLeftContainer = new PIXI.Container();
-    classicSceneTextTopLeftContainer.addChildAt(
-        classicSceneTextTopLeftSprite,
-        0,
-    );
-    classicSceneTextTopLeftContainer.addChildAt(classicSceneTextTopLeft, 1);
-    classicSceneTextTopLeftContainer.visible = false;
 
     const classicSceneTextBox = new PIXI.Container();
     classicSceneTextBox.addChildAt(classicSceneTextMiddleContainer, 0);
@@ -607,7 +416,7 @@ export const LoadScene = async ({
     initApplication.stage.addChildAt(filterContainer, 0);
     const filter: IFilter = { container: filterContainer };
 
-    setLoading(40);
+    setLoading(30);
     // Load Background
     setStartingMessage("Adding background...");
     const background = await LoadBackground(
@@ -616,12 +425,14 @@ export const LoadScene = async ({
         initialScene["background"],
     );
 
-    setLoading(50);
+    setLoading(40);
     // Load Split Background
+    setStartingMessage("Adding split background...");
     const splitBackground = await LoadSplitBackground(filterContainer, 1);
 
-    setLoading(60);
+    setLoading(50);
     // Load Sample PNG Sprite
+    setStartingMessage("Adding sample model...");
     const { model, modelWrapper, lighting } = await LoadModel(
         filterContainer,
         2,
@@ -631,9 +442,9 @@ export const LoadScene = async ({
         initialScene.modelScale ?? 1,
     );
 
-    setLoading(70);
+    setLoading(60);
     // Load Text
-    setStartingMessage("Adding text...");
+    setStartingMessage("Adding dialogue text...");
     const text = await LoadText(
         initApplication,
         1,
@@ -642,11 +453,13 @@ export const LoadScene = async ({
     );
 
     // Load Choices Text
-    setLoading(75);
+    setLoading(70);
+    setStartingMessage("Adding choices text...");
     const choicesText = await LoadChoicesText(initApplication, 2);
 
     // Load Scene Setting Text
     setLoading(80);
+    setStartingMessage("Adding scene text...");
     const sceneText = await LoadSceneText(
         initApplication,
         3,
@@ -655,6 +468,7 @@ export const LoadScene = async ({
 
     setLoading(90);
     // Load Guideline Tools
+    setStartingMessage("Adding guidelines...");
     const guideline = await LoadGuideline(initApplication, 4);
 
     setLoading(100);
