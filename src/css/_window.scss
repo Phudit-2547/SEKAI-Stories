@@ -47,10 +47,7 @@
     max-height: 80dvh;
     overflow: visible;
     img {
-        @media (width <= 768px) {
-            width: 50%;
-        }
-        max-width: 70%;
+        max-width: 80%;
     }
     .width-100 {
         width: 100%;
@@ -118,8 +115,6 @@
         flex-direction: row;
         gap: 16px;
     }
-
-    
 }
 
 .window__divider {

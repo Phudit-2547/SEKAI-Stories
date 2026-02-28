@@ -317,11 +317,11 @@
             "header": "Background Menu",
             "select-upload": {
                 "header": "Pumili at Mag-upload",
-                "paragraph": "Pumili ng background mula sa Project SEKAI o mag-upload ng sarili mong larawan."
-            },
-            "split": {
-                "header": "Hiwalay na lugar",
-                "paragraph": "Ipakita ang dalawang background sa isang larawan."
+                "paragraph": "Pumili ng background mula sa Project SEKAI o mag-upload ng sarili mong larawan.",
+                "split": {
+                    "header": "Hiwalay na lugar",
+                    "paragraph": "Ipakita ang dalawang background sa isang larawan."
+                }
             }
         },
         "text-menu": {

@@ -326,11 +326,19 @@
             "header": "Background Menu",
             "select-upload": {
                 "header": "Select and Upload",
-                "paragraph": "Select backgrounds from Project SEKAI or upload your own."
+                "paragraph": "Select backgrounds from Project SEKAI or upload your own.",
+                "split": {
+                    "header": "Split Location",
+                    "paragraph": "You can also do Split Location, showing two in one background."
+                }
             },
-            "split": {
-                "header": "Split Location",
-                "paragraph": "You can also do Split Location, showing two in one background."
+            "lighting": {
+                "header": "Lighting",
+                "paragraph": "Change the color tint of the foreground according to your background setting."
+            },
+            "filters": {
+                "header": "Filters",
+                "paragraph": "Add filters to the whole canvas."
             }
         },
         "text-menu": {
@@ -350,6 +358,10 @@
             "scene-text": {
                 "header": "Scene Text",
                 "paragraph": "The time and location of the scene you're making, usually seen at the start of every PJSK story."
+            },
+            "choices-text": {
+                "header": "Choices Text",
+                "paragraph": "Two button choices you can edit, usually seen during OG Miku's conversations."
             }
         },
         "model-menu": {

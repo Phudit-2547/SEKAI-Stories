@@ -36,7 +36,9 @@ const Window: React.FC<WindowProps> = ({
             }
             if (e.key === "Enter" && confirmFunction) {
                 confirmFunction();
-                handleClose();
+                if (!hideClose) {
+                    handleClose();
+                }
             }
         };
         document.addEventListener("keydown", handleKey);

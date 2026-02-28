@@ -303,11 +303,11 @@
             "header": "Menu Arrière-plan",
             "select-upload": {
                 "header": "Sélectionner et uploader",
-                "paragraph": "Sélectionnez des arrière-plans de Project SEKAI ou uploader le vôtre."
-            },
-            "split": {
-                "header": "Lieu partagé",
-                "paragraph": "Vous pouvez aussi afficher deux lieux dans un seul arrière-plan."
+                "paragraph": "Sélectionnez des arrière-plans de Project SEKAI ou uploader le vôtre.",
+                "split": {
+                    "header": "Lieu partagé",
+                    "paragraph": "Vous pouvez aussi afficher deux lieux dans un seul arrière-plan."
+                }
             }
         },
         "text-menu": {

@@ -292,11 +292,11 @@
             "header": "Menu Latar Belakang",
             "select-upload": {
                 "header": "Pilih dan Muatnaik",
-                "paragraph": "Pilih latar belakang dari Project SEKAI atau muatnaik anda punya."
-            },
-            "split": {
-                "header": "Pisahkan Tempat",
-                "paragraph": "Anda juga boleh Pisahkan Tempat, memaparkan dua latar belakang sekaligus."
+                "paragraph": "Pilih latar belakang dari Project SEKAI atau muatnaik anda punya.",
+                "split": {
+                    "header": "Pisahkan Tempat",
+                    "paragraph": "Anda juga boleh Pisahkan Tempat, memaparkan dua latar belakang sekaligus."
+                }
             }
         },
         "text-menu": {

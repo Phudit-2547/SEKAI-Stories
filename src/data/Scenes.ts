@@ -264,6 +264,8 @@ export const CheckSceneCategory = (blank: boolean): string => {
     const [month, day] = [date.getMonth() + 1, date.getDate()];
 
     const exact: Record<string, string> = {
+        "3-4": "memories-of-the-school",
+        "3-5": "memories-of-you",
         "7-27": "727",
         "8-27": "mizuki",
     };

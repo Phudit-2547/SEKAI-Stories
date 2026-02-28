@@ -292,11 +292,11 @@
             "header": "Menu de fondos",
             "select-upload": {
                 "header": "Selecciona y agrega",
-                "paragraph": "Selecciona fondos de project SEKAI o sube los tuyos propios."
-            },
-            "split": {
-                "header": "Dividir lugares",
-                "paragraph": "Tambien puedes dividir lugares, mostrando dos en el mismo fondo."
+                "paragraph": "Selecciona fondos de project SEKAI o sube los tuyos propios.",
+                "split": {
+                    "header": "Dividir lugares",
+                    "paragraph": "Tambien puedes dividir lugares, mostrando dos en el mismo fondo."
+                }
             }
         },
         "text-menu": {

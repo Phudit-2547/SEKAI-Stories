@@ -606,6 +606,10 @@ select:disabled {
   margin-top: 10px;
 }
 
+.margin-left-10 {
+  margin-left: 10px;
+}
+
 #error-img {
   height: 15dvh;
   object-fit: contain;
@@ -1009,12 +1013,7 @@ select:disabled {
   animation: open_window 0.05s linear;
 }
 .window img {
-  max-width: 70%;
-}
-@media (width <= 768px) {
-  .window img {
-    width: 50%;
-  }
+  max-width: 80%;
 }
 .window .width-100 {
   width: 100%;

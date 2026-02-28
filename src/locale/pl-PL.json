@@ -298,11 +298,11 @@
             "header": "Menu Tła",
             "select-upload": {
                 "header": "Wybierz lub prześlij swoje",
-                "paragraph": "Wybierz tło z Project SEKAI lub prześlij swoje własne."
-            },
-            "split": {
-                "header": "Podzielone Tła",
-                "paragraph": "Możesz także użyć podzielonych lokacji, które składają się z dwóch teł."
+                "paragraph": "Wybierz tło z Project SEKAI lub prześlij swoje własne.",
+                "split": {
+                    "header": "Podzielone Tła",
+                    "paragraph": "Możesz także użyć podzielonych lokacji, które składają się z dwóch teł."
+                }
             }
         },
         "text-menu": {

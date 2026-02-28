@@ -304,11 +304,11 @@
             "header": "背景菜单",
             "select-upload": {
                 "header": "选择并上传",
-                "paragraph": "从PJSK中选择背景或者上传你自己的背景"
-            },
-            "split": {
-                "header": "拆分位置",
-                "paragraph": "你也可以使用“拆分位置”，在一个画布中显示两个不同的背景"
+                "paragraph": "从PJSK中选择背景或者上传你自己的背景",
+                "split": {
+                    "header": "拆分位置",
+                    "paragraph": "你也可以使用“拆分位置”，在一个画布中显示两个不同的背景"
+                }
             }
         },
         "text-menu": {
