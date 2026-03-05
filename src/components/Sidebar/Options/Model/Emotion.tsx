@@ -41,7 +41,7 @@ const Emotion: React.FC<EmotionProps> = ({
 
     const handleEmotionChange = async (
         event: React.ChangeEvent<HTMLSelectElement>,
-        type: "expression" | "pose"
+        type: "expression" | "pose",
     ) => {
         if (currentModel?.model instanceof Live2DModel) {
             const value = Number(event?.target.value);
@@ -49,8 +49,8 @@ const Emotion: React.FC<EmotionProps> = ({
                 type === "expression"
                     ? "Expression"
                     : type === "pose"
-                    ? "Motion"
-                    : "";
+                      ? "Motion"
+                      : "";
             const selectedOption =
                 event.target.options[event.target.selectedIndex].text;
             try {
@@ -85,10 +85,10 @@ const Emotion: React.FC<EmotionProps> = ({
                       currentModel.pose
                   ].Name
                 : emotionType === "expression"
-                ? currentModel.modelData?.FileReferences.Motions.Expression[
-                      currentModel.expression
-                  ].Name
-                : "";
+                  ? currentModel.modelData?.FileReferences.Motions.Expression[
+                        currentModel.expression
+                    ].Name
+                  : "";
 
         if (!key) return;
 
@@ -99,7 +99,7 @@ const Emotion: React.FC<EmotionProps> = ({
                 setNameEmotions(updated);
                 localStorage.setItem(
                     "nameEmotionsCookie",
-                    JSON.stringify(updated)
+                    JSON.stringify(updated),
                 );
             }
             return;
@@ -107,7 +107,7 @@ const Emotion: React.FC<EmotionProps> = ({
         setNameEmotions({ ...nameEmotions, [key]: name });
         localStorage.setItem(
             "nameEmotionsCookie",
-            JSON.stringify({ ...nameEmotions, [key]: name })
+            JSON.stringify({ ...nameEmotions, [key]: name }),
         );
     };
 
@@ -136,7 +136,7 @@ const Emotion: React.FC<EmotionProps> = ({
 
         localStorage.setItem(
             "bookmarkEmotionsCookie",
-            JSON.stringify(bookmarkEmotions)
+            JSON.stringify(bookmarkEmotions),
         );
         setBookmarkEmotion({ ...bookmarkEmotions });
     };
@@ -178,7 +178,7 @@ const Emotion: React.FC<EmotionProps> = ({
                                 <option key={idx} value={idx}>
                                     {nameEmotions[o.Name] ?? o.Name}
                                 </option>
-                            )
+                            ),
                         )}
                 </select>
                 {currentModel?.pose !== 99999 && (
@@ -193,7 +193,7 @@ const Emotion: React.FC<EmotionProps> = ({
                                 ) {
                                     currentModel.model.motion(
                                         "Motion",
-                                        currentModel.pose
+                                        currentModel.pose,
                                     );
                                 }
                             }}
@@ -262,7 +262,7 @@ const Emotion: React.FC<EmotionProps> = ({
                                 <option key={idx} value={idx}>
                                     {nameEmotions[o.Name] ?? o.Name}
                                 </option>
-                            )
+                            ),
                         )}
                 </select>
                 {currentModel?.expression !== 99999 && (
@@ -277,7 +277,7 @@ const Emotion: React.FC<EmotionProps> = ({
                                 ) {
                                     currentModel.model.motion(
                                         "Expression",
-                                        currentModel.expression
+                                        currentModel.expression,
                                     );
                                 }
                             }}
@@ -316,7 +316,7 @@ const Emotion: React.FC<EmotionProps> = ({
                     className="btn-blue btn-regular btn-extend-width"
                     onClick={handlePlayTogether}
                 >
-                    Run Both
+                    {t("model.emotion.run-both")}
                 </button>
             </div>
             {showRenameEmotionInput && (

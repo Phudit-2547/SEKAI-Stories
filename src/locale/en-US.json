@@ -136,6 +136,7 @@
             "pose": "Pose",
             "select-pose": "Select a pose",
             "expression": "Expression",
+            "run-both": "Run Both",
             "select-expression": "Select an expression"
         },
         "transform": {
