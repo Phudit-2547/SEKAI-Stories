@@ -89,6 +89,15 @@
             },
             "hide-everything": "Itago ang mga modelo at dayalogo"
         },
+        "choices-text": {
+            "header": "Pagpili",
+            "box-type": {
+                "header": "Uri ng Box",
+                "default": "Default",
+                "classic": "Klasik"
+            },
+            "dialogue-box-visible": "Ipakita ang dayalogo"
+        },
         "y-offset": {
             "header": "Y-Offset",
             "details": "Kung ang teksto sa canvas ay hindi nakaayos ng mabuti, maaaring kailanganin ng pagsasaayos."
@@ -128,7 +137,8 @@
             "pose": "Posisyon",
             "select-pose": "Pumili ng posisyon",
             "expression": "Ekspresyon",
-            "select-expression": "Pumili ng ekspresyon"
+            "select-expression": "Pumili ng ekspresyon",
+            "run-both": "I-apply pareho"
         },
         "transform": {
             "header": "Pagbago",
@@ -161,6 +171,7 @@
                 "header": "Import/Export",
                 "description": "Ang mga ginawa mong pagbabago sa Live2D adjustments ay puwede mong i-save at i-load."
             },
+            "reapply-all": "I-apply lahat",
             "emotion-copy": {
                 "header": "Kopya ng Emosyon",
                 "description": "Kokopyahin nito ang lahat ng parameter mula sa ekspresyon at posisyon na nilagay mo.",
@@ -322,6 +333,14 @@
                     "header": "Hiwalay na lugar",
                     "paragraph": "Ipakita ang dalawang background sa isang larawan."
                 }
+            },
+            "lighting": {
+                "header": "Pag-iilaw",
+                "paragraph": "Palitan ang kulay ng nasa harap ayon sa pinili mong likuran."
+            },
+            "filters": {
+                "header": "Mga Filter",
+                "paragraph": "Lagyan ng filter ang canvas."
             }
         },
         "text-menu": {
@@ -341,6 +360,10 @@
             "scene-text": {
                 "header": "Eksena",
                 "paragraph": "Oras at lokasyon ng eksenang ginagawa mo."
+            },
+            "choices-text": {
+                "header": "Pagpili",
+                "paragraph": "Dalawang button na puwede mong i-edit."
             }
         },
         "model-menu": {
