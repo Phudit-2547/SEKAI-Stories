@@ -97,6 +97,13 @@ const SceneText: React.FC = () => {
             container.visible = value === type;
         });
 
+        Object.entries(sceneText.variant).forEach(([type, containers]) => {
+            containers.forEach(
+                (container) =>
+                    (container.visible = sceneText.variantSelected === type),
+            );
+        });
+
         setSceneText({
             ...sceneText,
             typeSelected: value,
