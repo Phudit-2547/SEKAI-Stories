@@ -244,6 +244,22 @@ export const randomInitialScene: Record<string, InitialScene[]> = {
             sceneText: "???",
         },
     ],
+    "memories-of-you": [
+        {
+            background: "/background_special/Background_Rooftop.jpg",
+            text: "(My eyes feel heavy...)",
+            nameTag: "Mizuki",
+            modelX: 960,
+            modelY: 540,
+            pngName: "transparent",
+            sceneText: "3/5",
+            choicesEnabled: true,
+            choices: {
+                choice1: "......",
+                choice2: "Close them",
+            },
+        },
+    ],
     blank: [
         {
             background: "/background_compressed/bg_white.jpg",
@@ -264,7 +280,6 @@ export const CheckSceneCategory = (blank: boolean): string => {
     const [month, day] = [date.getMonth() + 1, date.getDate()];
 
     const exact: Record<string, string> = {
-        "3-4": "memories-of-the-school",
         "3-5": "memories-of-you",
         "7-27": "727",
         "8-27": "mizuki",
@@ -288,5 +303,5 @@ export const CheckSceneCategory = (blank: boolean): string => {
 
     if (month in months) return months[month];
 
-    return "default";
+    return "memories-of-you";
 };

@@ -40,10 +40,19 @@ export const SetupDialogueText = async (
     textContainer.visible = setup.visible;
     return { textContainer, textNameTag, textDialogue };
 };
-export const SetupChoicesText = async (setup: IChoicesTextSetup) => {
+export const SetupChoicesText = async (
+    setup: IChoicesTextSetup,
+    choices: {
+        choice1: string;
+        choice2: string;
+    },
+) => {
     const choicesTextTexture = await Assets.load(setup.bg);
     const choicesTextSprite = new PIXI.Sprite(choicesTextTexture);
-    const choicesFirstText = new PIXI.Text("Choice 1", setup.choice1.textStyle);
+    const choicesFirstText = new PIXI.Text(
+        choices.choice1,
+        setup.choice1.textStyle,
+    );
     choicesFirstText.anchor.set(
         setup.choice1.textAnchor!.x,
         setup.choice1.textAnchor!.y,
@@ -54,7 +63,7 @@ export const SetupChoicesText = async (setup: IChoicesTextSetup) => {
     );
 
     const choicesSecondText = new PIXI.Text(
-        "Choice 2",
+        choices.choice2,
         setup.choice2.textStyle,
     );
     choicesSecondText.anchor.set(

@@ -257,6 +257,11 @@ const LoadText = async (
 const LoadChoicesText = async (
     app: PIXI.Application,
     childAt: number,
+    enabled: boolean,
+    choices: {
+        choice1: string;
+        choice2: string;
+    },
 ): Promise<IChoicesText> => {
     const choicesTextContainer = new PIXI.Container();
 
@@ -264,18 +269,18 @@ const LoadChoicesText = async (
         choicesTextContainer: defaultChoicesTextContainer,
         choicesFirstText: defaultChoicesFirstText,
         choicesSecondText: defaultChoicesSecondText,
-    } = await SetupChoicesText(choicesTextsSetupData.default);
+    } = await SetupChoicesText(choicesTextsSetupData.default, choices);
     const {
         choicesTextContainer: classicChoicesTextContainer,
         choicesFirstText: classicChoicesFirstText,
         choicesSecondText: classicChoicesSecondText,
-    } = await SetupChoicesText(choicesTextsSetupData.classic);
+    } = await SetupChoicesText(choicesTextsSetupData.classic, choices);
 
     choicesTextContainer.addChildAt(defaultChoicesTextContainer, 0);
     choicesTextContainer.addChildAt(classicChoicesTextContainer, 1);
 
     app.stage.addChildAt(choicesTextContainer, childAt);
-    choicesTextContainer.visible = false;
+    choicesTextContainer.visible = enabled;
 
     return {
         choicesTextContainer,
@@ -285,10 +290,10 @@ const LoadChoicesText = async (
         },
         firstChoiceText: [defaultChoicesFirstText, classicChoicesFirstText],
         secondChoiceText: [defaultChoicesSecondText, classicChoicesSecondText],
-        firstChoiceTextString: "Choice 1",
-        secondChoiceTextString: "Choice 2",
+        firstChoiceTextString: choices.choice1,
+        secondChoiceTextString: choices.choice2,
         typeSelected: "default",
-        visible: false,
+        visible: enabled,
     };
 };
 
@@ -455,7 +460,12 @@ export const LoadScene = async ({
     // Load Choices Text
     setLoading(70);
     setStartingMessage("Adding choices text...");
-    const choicesText = await LoadChoicesText(initApplication, 2);
+    const choicesText = await LoadChoicesText(
+        initApplication,
+        2,
+        initialScene.choicesEnabled ?? false,
+        initialScene.choices ?? { choice1: "Choice 1", choice2: "Choice 2" },
+    );
 
     // Load Scene Setting Text
     setLoading(80);
