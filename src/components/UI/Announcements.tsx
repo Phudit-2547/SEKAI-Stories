@@ -22,9 +22,6 @@ const Announcements: React.FC = () => {
     return (
         <div id="announcements" onClick={handleAnnouncements}>
             <h2>Notice</h2>
-            <p>
-                "Let's stay together, Mizuki... N25's been waiting for you..."
-            </p>
             <p>Few updates has been made:</p>
             <ul>
                 <li>

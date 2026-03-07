@@ -260,6 +260,17 @@ export const randomInitialScene: Record<string, InitialScene[]> = {
             },
         },
     ],
+    sankyuu: [
+        {
+            background: "/background_compressed/bg_white.jpg",
+            text: "<insert text here>",
+            nameTag: "<name>",
+            modelX: 900,
+            modelY: 550,
+            pngName: "blank",
+            sceneText: "<white>",
+        },
+    ],
     blank: [
         {
             background: "/background_compressed/bg_white.jpg",
@@ -281,6 +292,7 @@ export const CheckSceneCategory = (blank: boolean): string => {
 
     const exact: Record<string, string> = {
         "3-5": "memories-of-you",
+        "3-9": "sankyuu",
         "7-27": "727",
         "8-27": "mizuki",
     };
@@ -303,5 +315,5 @@ export const CheckSceneCategory = (blank: boolean): string => {
 
     if (month in months) return months[month];
 
-    return "memories-of-you";
+    return "default";
 };
