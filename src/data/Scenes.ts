@@ -262,13 +262,40 @@ export const randomInitialScene: Record<string, InitialScene[]> = {
     ],
     sankyuu: [
         {
-            background: "/background_compressed/bg_white.jpg",
-            text: "<insert text here>",
-            nameTag: "<name>",
+            background: "/background_special/Background_Figure1.jpg",
+            text: "Happy Miku Day! ♪",
+            nameTag: "",
             modelX: 900,
             modelY: 550,
-            pngName: "blank",
-            sceneText: "<white>",
+            pngName: "transparent",
+            sceneText: "Birthday 2024 Flower Miku",
+        },
+        {
+            background: "/background_special/Background_Figure2.jpg",
+            text: "Happy Miku Day! ♪",
+            nameTag: "",
+            modelX: 900,
+            modelY: 550,
+            pngName: "transparent",
+            sceneText: "Shuttered SEKAI Miku",
+        },
+        {
+            background: "/background_special/Background_Figure3.jpg",
+            text: "Happy Miku Day! ♪",
+            nameTag: "",
+            modelX: 900,
+            modelY: 550,
+            pngName: "transparent",
+            sceneText: "Exceed Creative Figure Sweet Sweets Macaron Miku",
+        },
+        {
+            background: "/background_special/Background_Figure4.jpg",
+            text: "Happy Miku Day! ♪",
+            nameTag: "",
+            modelX: 900,
+            modelY: 550,
+            pngName: "transparent",
+            sceneText: "Fashion Figure Subculture Miku",
         },
     ],
     blank: [
@@ -315,5 +342,5 @@ export const CheckSceneCategory = (blank: boolean): string => {
 
     if (month in months) return months[month];
 
-    return "default";
+    return "defaulta";
 };
