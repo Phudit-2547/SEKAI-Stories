@@ -45,7 +45,7 @@ const NameTags: React.FC<NameTagsProps> = ({
     } = settings;
     const { setErrorInformation } = error;
 
-    if (!text) return <p>{t("please-wait")}</p>;
+    if (!text) return <p>{t("loadings.please-wait")}</p>;
 
     const handleNameTagChange = async (changedNameTag: string) => {
         text.nameTag.forEach((t) => {

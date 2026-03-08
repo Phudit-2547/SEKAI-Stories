@@ -66,7 +66,7 @@ const Dialogue: React.FC<DialogueProps> = ({
         }
     }, []);
 
-    if (!text) return <p>{t("please-wait")}</p>;
+    if (!text) return <p>{t("loadings.please-wait")}</p>;
 
     const handleDialogueBoxVisible = (
         event: React.ChangeEvent<HTMLInputElement>,

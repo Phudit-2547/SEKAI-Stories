@@ -179,7 +179,7 @@ const ModelSidebar: React.FC = () => {
         [currentModel, currentKey, modelWrapper],
     );
 
-    if (!models) return <p>{t("please-wait")}</p>;
+    if (!models) return <p>{t("loadings.please-wait")}</p>;
 
     const updateModelState = (updates: Partial<IModel>) => {
         setModels((prevModels) => ({

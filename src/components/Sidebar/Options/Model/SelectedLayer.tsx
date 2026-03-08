@@ -56,10 +56,10 @@ const SelectedLayer: React.FC<SelectedLayerProps> = ({
 
     const { setErrorInformation } = softError;
 
-    if (!models || !currentModel) return <p>{t("please-wait")}</p>;
+    if (!models || !currentModel) return <p>{t("loadings.please-wait")}</p>;
 
     const handleLayerChange = async (
-        event: React.ChangeEvent<HTMLSelectElement>
+        event: React.ChangeEvent<HTMLSelectElement>,
     ) => {
         const key = event?.target.value;
         setCurrentKey(key);
@@ -72,7 +72,7 @@ const SelectedLayer: React.FC<SelectedLayerProps> = ({
     const handleAddLayer = async (from: string) => {
         const modelName = "none";
         const texture = await PIXI.Texture.fromURL(
-            "/img/Background_New_Layer.png"
+            "/img/Background_New_Layer.png",
         );
         const sprite = new PIXI.Sprite(texture);
         const modelContainer = new PIXI.Container();
@@ -123,7 +123,7 @@ const SelectedLayer: React.FC<SelectedLayerProps> = ({
         modelWrapper?.addChildAt(modelContainer, layers);
         modelContainer.pivot.set(
             modelContainer.width / 2,
-            modelContainer.height / 2
+            modelContainer.height / 2,
         );
         modelContainer.position.set(960, 540);
         const blurFilter = new PIXI.BlurFilter(0);
@@ -181,7 +181,7 @@ const SelectedLayer: React.FC<SelectedLayerProps> = ({
                 setErrorInformation(" ");
             } else {
                 setErrorInformation(
-                    t("model.selected-layer.delete-model-warn")
+                    t("model.selected-layer.delete-model-warn"),
                 );
             }
             return;

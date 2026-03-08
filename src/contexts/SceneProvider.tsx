@@ -115,6 +115,7 @@ export const SceneProvider: React.FC<SceneProviderProps> = ({ children }) => {
         }
         runCanvas().catch((error) => {
             setErrorInformation(t("error.default-scene-fail"));
+            setStartingMessage(t("error.default-scene-fail"));
             setLoading(100);
             console.error(error);
         });

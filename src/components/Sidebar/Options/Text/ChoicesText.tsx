@@ -12,7 +12,7 @@ const ChoicesText: React.FC = () => {
 
     const { text, setText, choicesText, setChoicesText } = scene;
 
-    if (!text || !choicesText) return <p>{t("please-wait")}</p>;
+    if (!text || !choicesText) return <p>{t("loadings.please-wait")}</p>;
 
     const handleChoicesTextVisible = (
         event: React.ChangeEvent<HTMLInputElement>,

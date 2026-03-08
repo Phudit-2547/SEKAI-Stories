@@ -14,7 +14,7 @@ const Select: React.FC = () => {
     const { background, setBackground, splitBackground, setSplitBackground } =
         scene;
     if (!background || !background.backgroundContainer)
-        return <p>{t("please-wait")}</p>;
+        return <p>{t("loadings.please-wait")}</p>;
     const handleUploadImage = async (file: File) => {
         const imgSrc = URL.createObjectURL(file);
         const backgroundImage = await getBackground(imgSrc).catch();
@@ -30,7 +30,7 @@ const Select: React.FC = () => {
     };
 
     const handleSplitImage = async (
-        event: React.ChangeEvent<HTMLInputElement>
+        event: React.ChangeEvent<HTMLInputElement>,
     ) => {
         const value = event.target.checked;
 
